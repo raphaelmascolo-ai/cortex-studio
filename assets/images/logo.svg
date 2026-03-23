@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <!-- Neural network edges -->
+  <g stroke="#C9A84C" stroke-opacity="0.6" stroke-width="0.8">
+    <!-- Hub node to surrounding nodes -->
+    <line x1="18" y1="25" x2="8"  y2="14"/>
+    <line x1="18" y1="25" x2="8"  y2="36"/>
+    <line x1="18" y1="25" x2="30" y2="14"/>
+    <line x1="18" y1="25" x2="30" y2="35"/>
+    <line x1="18" y1="25" x2="32" y2="25"/>
+    <!-- Outer node connections -->
+    <line x1="8"  y1="14" x2="30" y2="14"/>
+    <line x1="8"  y1="36" x2="30" y2="35"/>
+    <line x1="8"  y1="14" x2="8"  y2="36"/>
+    <line x1="30" y1="14" x2="38" y2="20"/>
+    <line x1="30" y1="35" x2="38" y2="20"/>
+    <line x1="32" y1="25" x2="38" y2="20"/>
+    <!-- Small satellite nodes -->
+    <line x1="8"  y1="14" x2="13" y2="6"/>
+    <line x1="8"  y1="36" x2="3"  y2="43"/>
+    <line x1="30" y1="14" x2="25" y2="5"/>
+    <line x1="30" y1="35" x2="36" y2="42"/>
+    <line x1="38" y1="20" x2="44" y2="13"/>
+  </g>
+
+  <!-- Neural network nodes (circles) -->
+  <!-- Central hub — largest -->
+  <circle cx="18" cy="25" r="4.5" fill="#C9A84C" fill-opacity="0.95"/>
+  <!-- Mid-ring nodes -->
+  <circle cx="8"  cy="14" r="3"   fill="#C9A84C" fill-opacity="0.85"/>
+  <circle cx="8"  cy="36" r="2.5" fill="#C9A84C" fill-opacity="0.85"/>
+  <circle cx="30" cy="14" r="3"   fill="#C9A84C" fill-opacity="0.85"/>
+  <circle cx="30" cy="35" r="2.5" fill="#C9A84C" fill-opacity="0.80"/>
+  <circle cx="32" cy="25" r="2"   fill="#C9A84C" fill-opacity="0.75"/>
+  <!-- Outer connector node -->
+  <circle cx="38" cy="20" r="3.5" fill="#C9A84C" fill-opacity="0.90"/>
+  <!-- Small satellite nodes -->
+  <circle cx="13" cy="6"  r="1.5" fill="#C9A84C" fill-opacity="0.65"/>
+  <circle cx="3"  cy="43" r="1.2" fill="#C9A84C" fill-opacity="0.55"/>
+  <circle cx="25" cy="5"  r="1.8" fill="#C9A84C" fill-opacity="0.60"/>
+  <circle cx="36" cy="42" r="1.4" fill="#C9A84C" fill-opacity="0.60"/>
+  <circle cx="44" cy="13" r="1.5" fill="#C9A84C" fill-opacity="0.65"/>
+
+  <!-- Logotype -->
+  <!-- CORTEX — white, bold, uppercase, spaced -->
+  <text
+    x="56"
+    y="31"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="22"
+    font-weight="700"
+    fill="#FFFFFF"
+    letter-spacing="3"
+    text-anchor="start"
+  >CORTEX</text>
+
+  <!-- STUDIO — gold, lighter weight, spaced -->
+  <text
+    x="58"
+    y="43"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="9"
+    font-weight="300"
+    fill="#C9A84C"
+    letter-spacing="5.5"
+    text-anchor="start"
+  >STUDIO</text>
+</svg>
