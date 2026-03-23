@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi de Chantier IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag {
+            display: inline-block;
+            background: rgba(201,168,76,0.15);
+            border: 1px solid #C9A84C;
+            color: #C9A84C;
+            padding: 0.35rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>Suivi de Chantier IA</h1>
+        <div class="subtitle">Application Mobile &amp; Web</div>
+        <p class="description">Application de suivi de chantier avec vision par ordinateur. Analyse les photos pour générer des rapports automatiques, détecter les défauts et prédire les retards. Collaboration temps réel entre tous les intervenants BTP.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">9 000 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 5</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">450k</div>
+                <div class="label">Entreprises BTP</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>L'application de suivi de chantier IA s'adresse aux 450 000 entreprises de construction françaises qui gèrent encore leurs chantiers avec des rapports papier, des échanges WhatsApp et des tableurs. En exploitant la vision par ordinateur pour analyser les photos de chantier, la solution génère automatiquement des rapports d'avancement, détecte les défauts de construction et prédit les risques de retard avant qu'ils ne deviennent critiques. La collaboration entre maîtres d'ouvrage, conducteurs de travaux et sous-traitants est centralisée dans une interface unique.</p>
+            <p>Le modèle à 29,99 €/chantier actif/mois offre une tarification simple et juste. Le point de rentabilité est atteint au mois 5 avec environ 24 chantiers actifs, pour un MRR projeté à 8 997 € à 12 mois (300 chantiers) dans le scénario réaliste.</p>
+            <div class="highlight-box">
+                <p>"Le BTP est l'un des secteurs les moins digitalisés de l'économie française. Les dépassements de budget et de délais représentent 10% du marché total, soit 18 milliards d'euros de pertes annuelles évitables."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Un chantier de construction implique en moyenne 12 corps de métier différents, générant des centaines d'échanges quotidiens par email, SMS et WhatsApp. Les rapports d'avancement sont rédigés manuellement, souvent hebdomadairement, ce qui crée un décalage entre la réalité terrain et les décisions prises en bureau. Les défauts de construction passent inaperçus jusqu'à ce qu'ils deviennent coûteux à corriger, et les retards ne sont identifiés qu'une fois matérialisés.</p>
+            <p>Les solutions existantes comme BulldozAIR ou PlanRadar sont puissantes mais coûteuses (200–500 €/mois) et complexes à déployer pour les PME du BTP. Elles nécessitent une formation longue et un accompagnement à l'onboarding qui freine l'adoption dans les petites structures.</p>
+            <h3>La solution</h3>
+            <p>Notre application permet à n'importe quel ouvrier ou conducteur de travaux de photographier l'avancement du chantier depuis son smartphone. La vision par ordinateur analyse automatiquement ces photos : elle identifie les éléments construits, les compare au plan d'exécution, détecte les anomalies visibles (fissures, mauvais alignement, matériaux incorrects) et génère un rapport d'avancement structuré en moins de 30 secondes. Un moteur prédictif analyse les données historiques de chantiers similaires pour signaler les risques de dépassement de délai avec 2 à 3 semaines d'avance, permettant des actions correctives avant que le problème ne s'emballe.</p>
+            <p>L'interface de collaboration centralise tous les échanges, photos, rapports et validations dans un fil chronologique par chantier, accessible à tous les intervenants autorisés depuis mobile ou desktop.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>La tarification à 29,99 €/chantier actif/mois est simple, transparente et alignée avec la valeur créée : le coût est directement corrélé à l'activité réelle de l'entreprise. Un chef de chantier gérant 5 projets simultanément paie 150 €/mois — une fraction du coût d'une heure de retard sur chantier. Le modèle s'adapte naturellement à la saisonnalité du BTP : les chantiers non actifs (hiver, pause) ne sont pas facturés.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Par chantier</strong></td>
+                    <td>29,99 €/chantier actif/mois</td>
+                    <td>Rapports photo automatiques, timeline d'avancement, collaboration multi-intervenants, stockage photos illimité, export PDF</td>
+                </tr>
+                <tr>
+                    <td><strong>Forfait PME</strong></td>
+                    <td>199 €/mois</td>
+                    <td>Jusqu'à 10 chantiers simultanés, détection défauts IA, planning prédictif, intégration logiciels (Batigest, EBP BTP), support dédié</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Rapport de fin de chantier premium :</strong> document certifié avec photos annotées, défauts listés et historique complet — 49 € par chantier clôturé.</li>
+            <li><strong>Assurances et garanties :</strong> partenariats avec des assureurs BTP pour intégrer la documentation de chantier dans les dossiers de garantie décennale.</li>
+            <li><strong>Données agrégées :</strong> benchmarks de performance de chantier vendus aux fédérations professionnelles (FFB, CAPEB) et aux maîtres d'ouvrage publics.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">300</div>
+                <div class="kpi-label">Chantiers actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">120</div>
+                <div class="kpi-label">Entreprises clientes</div>
+                <div class="kpi-sub">~2,5 chantiers/client</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">8 997 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">300 × 29,99 €</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection chantiers actifs et MRR sur 12 mois</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste (chantiers / MRR)</th><th>Réaliste (chantiers / MRR)</th><th>Optimiste (chantiers / MRR)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 / 0 €</td><td>0 / 0 €</td><td>0 / 0 €</td></tr>
+                <tr><td>Mois 2</td><td>20 / 600 €</td><td>40 / 1 200 €</td><td>70 / 2 100 €</td></tr>
+                <tr><td>Mois 3</td><td>50 / 1 500 €</td><td>100 / 3 000 €</td><td>180 / 5 400 €</td></tr>
+                <tr><td>Mois 6</td><td>80 / 2 400 €</td><td>180 / 5 397 €</td><td>350 / 10 497 €</td></tr>
+                <tr><td>Mois 9</td><td>100 / 3 000 €</td><td>240 / 7 198 €</td><td>450 / 13 496 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">120 / 3 599 €</td><td class="highlight">300 / 8 997 €</td><td class="highlight">500 / 14 995 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Infrastructure cloud (stockage photos, BDD, traitement images)</td><td>200 €</td></tr>
+                <tr><td>APIs Vision IA (Google Vision, analyse photos chantier)</td><td>200 €</td></tr>
+                <tr><td>Marketing digital (LinkedIn B2B, salons BTP, contenu)</td><td>200 €</td></tr>
+                <tr><td>Support client (hotline, documentation, onboarding)</td><td>100 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>700 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 700 €/mois et un revenu de 29,99 € par chantier actif, le seuil de rentabilité est atteint à <strong>24 chantiers actifs</strong>. Dans le scénario réaliste, ce palier est franchi au <strong>mois 5</strong>. La croissance est portée par les recommandations terrain — les conducteurs de travaux partagent l'outil entre collègues et partenaires, créant un effet réseau organique dans les réseaux professionnels BTP.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le secteur BTP en France représente 180 milliards d'euros de CA annuel, avec 450 000 entreprises actives dont 95% sont des PME et artisans. C'est l'un des secteurs les moins digitalisés de l'économie française : selon le McKinsey Global Institute, le BTP se classe avant-dernier en termes d'adoption numérique, juste devant l'agriculture. Cette inertie crée une opportunité exceptionnelle pour les outils accessibles et adaptés aux contraintes du terrain.</p>
+        <p>Le marché adressable initial cible les entreprises de gros oeuvre, de second oeuvre et les promoteurs immobiliers gérant plus de 3 chantiers simultanément — soit environ 50 000 entreprises en France. Les maîtres d'ouvrage publics (communes, bailleurs sociaux) représentent un second segment à fort potentiel, sensibles à la traçabilité et à la documentation réglementaire.</p>
+        <p>Les concurrents directs (BulldozAIR, PlanRadar, Procore) ciblent les grandes entreprises et ETI avec des solutions complexes et onéreuses, laissant le segment PME/artisans largement sous-adressé. Notre positionnement mobile-first, sans formation, à prix accessible répond précisément à ce vide de marché.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Upload et analyse photos chantier</li>
+                    <li>Rapport d'avancement automatique</li>
+                    <li>Timeline et fil d'actualités chantier</li>
+                    <li>Partage multi-intervenants</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Détection de défauts par vision IA</li>
+                    <li>Planning prédictif des retards</li>
+                    <li>Annotations et commentaires sur photos</li>
+                    <li>Export PDF certifié</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Collaboration multi-intervenants avancée</li>
+                    <li>Intégration BIM (maquette 3D)</li>
+                    <li>Intégration logiciels BTP (Batigest)</li>
+                    <li>Tableau de bord multi-chantiers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

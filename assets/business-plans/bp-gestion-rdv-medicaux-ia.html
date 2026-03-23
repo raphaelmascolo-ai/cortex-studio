@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion RDV Médicaux IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1E293B; line-height: 1.7; background: #fff; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 4rem 2rem; margin: -2rem -2rem 0; page-break-after: always; }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print { body { padding: 0; max-width: none; } .cover { margin: 0; min-height: auto; padding: 3cm 2cm; } .bp-section { page-break-inside: avoid; } .bp-table { page-break-inside: avoid; } .roadmap { page-break-inside: avoid; } .kpi-grid { page-break-inside: avoid; } .bp-cta { display: none; } a { color: inherit; text-decoration: none; } }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>Gestion de RDV Médicaux IA</h1>
+        <div class="subtitle">SaaS B2B Santé</div>
+        <p class="description">Plateforme de gestion de rendez-vous pour praticiens médicaux avec prise de RDV en ligne, rappels intelligents adaptatifs et pré-diagnostic par questionnaire IA. Réduction des no-shows de 60%.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">5 500 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 4</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">530k</div>
+                <div class="label">Praticiens FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>La plateforme de gestion de RDV médicaux IA cible les 530 000 praticiens français — médecins généralistes, spécialistes, kinésithérapeutes, dentistes, psychologues — qui gèrent encore leur agenda avec des outils rudimentaires ou sont captifs de Doctolib à des tarifs élevés. Notre solution combine prise de RDV en ligne, rappels SMS intelligents adaptatifs et un questionnaire pré-consultation généré par IA pour préparer chaque rendez-vous. La réduction des no-shows atteint 60% grâce aux rappels multi-canaux personnalisés.</p>
+            <p>L'offre Solo à 49,99 €/praticien/mois cible les indépendants, l'offre Cabinet à 99,99 €/mois les structures multi-praticiens. Le point de rentabilité est atteint dès le mois 4 avec environ 16 praticiens abonnés, pour un MRR projeté à 5 500 € à 12 mois dans le scénario réaliste.</p>
+            <div class="highlight-box">
+                <p>"Les no-shows médicaux coûtent 6 milliards d'euros par an au système de santé français. Une réduction de 60% représente un gain de 15 000 € par an pour un médecin généraliste actif."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Les praticiens médicaux français font face à deux problèmes critiques : les rendez-vous non honorés (no-shows), qui représentent en moyenne 15 à 25% de leur agenda, et la surcharge administrative liée à la gestion des plannings. Doctolib a résolu la prise de RDV en ligne mais à un coût élevé (150 € à 300 €/mois selon la spécialité) et sans fonctionnalités de gestion cabinet avancées. Les secrétariats téléphoniques coûtent 400 à 800 €/mois supplémentaires.</p>
+            <p>Par ailleurs, les praticiens arrivent souvent en consultation sans information sur le motif précis de la visite, perdant un temps précieux en anamnèse. Un questionnaire pré-consultation bien structuré peut faire gagner 5 à 10 minutes par RDV, soit 1 à 2 consultations supplémentaires par jour.</p>
+            <h3>La solution</h3>
+            <p>Notre plateforme fournit un agenda en ligne personnalisable par type de consultation et durée, avec prise de RDV 24h/24 par les patients. Le module de rappels intelligents envoie automatiquement SMS, email et notification push selon un calendrier adaptatif : 7 jours avant, 48h avant, 2h avant — avec possibilité de confirmation ou d'annulation en un clic. En cas d'annulation, le créneau est automatiquement remis en ligne et proposé aux patients en liste d'attente.</p>
+            <p>Le questionnaire pré-RDV IA est généré automatiquement en fonction du type de consultation déclaré par le patient. Les réponses sont synthétisées dans une fiche patient que le praticien consulte avant d'entrer dans la salle d'attente. Ce gain de temps est directement mesurable et constitue l'argument de vente principal auprès des praticiens surchargés.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle SaaS à abonnement mensuel par praticien est le standard du secteur médical. La tarification Solo/Cabinet permet d'adresser aussi bien les médecins indépendants que les maisons de santé pluridisciplinaires. Contrairement à Doctolib qui facture selon la spécialité, notre tarification fixe est plus prévisible et accessible pour les petits praticiens.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Solo</strong></td>
+                    <td>49,99 €/praticien/mois</td>
+                    <td>Agenda en ligne, prise de RDV 24h/24, rappels SMS + email, questionnaire pré-RDV IA, fiche patient synthèse, export agenda</td>
+                </tr>
+                <tr>
+                    <td><strong>Cabinet</strong></td>
+                    <td>99,99 €/mois</td>
+                    <td>Multi-praticiens illimité, secrétariat partagé, gestion des urgences, statistiques cabinet, intégration logiciel médical, support prioritaire</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>SMS premium :</strong> au-delà de 500 SMS/mois inclus, facturation à 0,08 €/SMS supplémentaire — directement refacturé au coût Twilio avec marge.</li>
+            <li><strong>Module téléconsultation :</strong> add-on à 19,99 €/mois pour la vidéo-consultation intégrée, facturation sécurisée et feuille de soin numérique.</li>
+            <li><strong>Partenariats assureurs :</strong> intégration avec mutuelles et assurances pour la déclaration automatique des actes — revenus B2B récurrents.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">90</div>
+                <div class="kpi-label">Praticiens abonnés</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">25</div>
+                <div class="kpi-label">Cabinets multi-prat.</div>
+                <div class="kpi-sub">Offre Cabinet</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">5 500 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Mix Solo/Cabinet</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>500 €</td><td>800 €</td><td>1 500 €</td></tr>
+                <tr><td>Mois 3</td><td>1 200 €</td><td>2 000 €</td><td>3 500 €</td></tr>
+                <tr><td>Mois 6</td><td>2 000 €</td><td>3 500 €</td><td>6 000 €</td></tr>
+                <tr><td>Mois 9</td><td>2 600 €</td><td>4 500 €</td><td>8 000 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">3 000 €</td><td class="highlight">5 500 €</td><td class="highlight">10 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Infrastructure cloud (hébergement HDS, RGPD santé)</td><td>150 €</td></tr>
+                <tr><td>APIs IA — génération questionnaires, synthèse (OpenAI)</td><td>100 €</td></tr>
+                <tr><td>Twilio — SMS rappels patients</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (LinkedIn praticiens, presse médicale)</td><td>200 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>550 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 550 €/mois et un ARPU moyen de 60 € (mix Solo/Cabinet), le seuil de rentabilité est atteint à <strong>10 praticiens/cabinets abonnés</strong> — soit environ 16 comptes au total. Dans le scénario réaliste, ce palier est franchi au <strong>mois 4</strong>. Le churn est naturellement faible dans le secteur médical : un praticien qui intègre un outil dans son workflow quotidien le conserve en moyenne 3 ans. Le LTV est donc très élevé (2 160 € en moyenne sur 3 ans pour un abonné Solo).</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché adressable comprend 230 000 médecins en France (généralistes et spécialistes) auxquels s'ajoutent 300 000 professionnels paramédicaux (kinésithérapeutes, dentistes, orthophonistes, psychologues, etc.), soit un total de 530 000 praticiens potentiels. La quasi-totalité dispose déjà d'un smartphone et est sensible aux outils qui économisent du temps administratif.</p>
+        <p>Doctolib domine la prise de RDV en ligne avec 300 000 professionnels de santé inscrits, mais sa tarification (150–300 €/mois) est perçue comme excessive par les petits praticiens, notamment les paramédicaux. Notre positionnement à 49,99 €/mois représente une économie de 60 à 80% par rapport au leader, tout en ajoutant les fonctionnalités de gestion cabinet absentes chez Doctolib.</p>
+        <p>La réglementation HDS (Hébergement de Données de Santé) impose que les données patients soient hébergées sur des serveurs certifiés en France — contrainte que nous respectons d'emblée et qui constitue une barrière à l'entrée pour les acteurs étrangers. Le marché healthtech en France croît de +18% par an.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Agenda en ligne personnalisable</li>
+                    <li>Prise de RDV patients 24h/24</li>
+                    <li>Rappels SMS et email automatiques</li>
+                    <li>Gestion des annulations/listes d'attente</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Questionnaire pré-RDV IA</li>
+                    <li>Synthèse patient avant consultation</li>
+                    <li>Multi-praticiens (offre Cabinet)</li>
+                    <li>Statistiques no-shows et taux de remplissage</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Module téléconsultation vidéo</li>
+                    <li>Intégration logiciels médicaux (Maiia, Docaposte)</li>
+                    <li>Feuille de soin numérique</li>
+                    <li>API partenaires assureurs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=saas-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

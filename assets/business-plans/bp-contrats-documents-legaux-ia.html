@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrats & Documents Légaux IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1E293B; line-height: 1.7; background: #fff; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 4rem 2rem; margin: -2rem -2rem 0; page-break-after: always; }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print { body { padding: 0; max-width: none; } .cover { margin: 0; min-height: auto; padding: 3cm 2cm; } .bp-section { page-break-inside: avoid; } .bp-table { page-break-inside: avoid; } .roadmap { page-break-inside: avoid; } .kpi-grid { page-break-inside: avoid; } .bp-cta { display: none; } a { color: inherit; text-decoration: none; } }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>Contrats &amp; Documents Légaux IA</h1>
+        <div class="subtitle">SaaS &amp; Pay-per-use</div>
+        <p class="description">Plateforme de génération de documents juridiques par IA. L'utilisateur répond à des questions simples, l'IA génère un contrat personnalisé et conforme au droit français. Bail, CGV, NDA, contrat freelance, statuts et plus.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">4 500 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 4</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">4M</div>
+                <div class="label">Entreprises FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>La plateforme de génération de contrats et documents légaux IA répond à un besoin massif et quotidien des 4 millions d'entreprises françaises dont 95% sont des PME et TPE sans service juridique interne. En posant une dizaine de questions simples en langage naturel, l'IA génère en moins de 2 minutes un document juridique personnalisé et conforme au droit français en vigueur : bail commercial, contrat de prestation freelance, CGV pour e-commerce, NDA, statuts de SAS, etc.</p>
+            <p>Le modèle hybride pay-per-use / abonnement maximise l'acquisition (pas de barrière financière au premier document) et la rétention (abonnement pour les utilisateurs récurrents). Le point de rentabilité est atteint dès le mois 4 avec environ 47 abonnés, pour un MRR projeté à 4 500 € à 12 mois dans le scénario réaliste.</p>
+            <div class="highlight-box">
+                <p>"Un entrepreneur français signe en moyenne 8 documents juridiques par an. Un avocat facture 150 à 400 € pour chaque contrat rédigé. Notre solution réduit ce coût de 95% tout en garantissant la conformité légale."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Les entrepreneurs et indépendants français sont confrontés à un dilemme juridique permanent : rédiger eux-mêmes leurs contrats en utilisant des modèles trouvés sur internet (souvent obsolètes ou génériques) en prenant des risques légaux, ou faire appel à un avocat pour un coût prohibitif de 150 à 400 € par document. Cette situation conduit à des pratiques dangereuses : contrats copiés-collés sans adaptation, CGV non conformes au RGPD, baux sans clauses essentielles.</p>
+            <p>Les solutions existantes comme Captain Contrat ou Legalstart proposent soit l'intervention humaine d'avocats (cher et lent), soit des templates statiques sans personnalisation (risqué et inadapté). Le marché legaltech en France est estimé à 700 millions d'euros avec une croissance de +15%/an, mais reste dominé par des acteurs positionnés sur le haut de gamme.</p>
+            <h3>La solution</h3>
+            <p>Notre plateforme guide l'utilisateur avec un questionnaire conversationnel intelligent : en répondant à 8 à 15 questions simples ("Quel est le montant mensuel du loyer ?", "Quelle est la durée de la prestation ?"), l'IA génère un document juridique complet, structuré selon les standards du droit français, avec toutes les clauses obligatoires et les mentions légales à jour. Le document est exportable en PDF et Word, signable électroniquement via intégration DocuSign, et stocké dans un espace documentaire personnel.</p>
+            <p>Un système de veille juridique automatisé maintient les templates conformes aux dernières évolutions législatives (réformes du droit des contrats, nouvelles obligations RGPD, loi PACTE, etc.), éliminant le risque de travailler avec des modèles obsolètes. Les mises à jour sont automatiquement appliquées aux documents déjà générés si nécessaire.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>La combinaison pay-per-use et abonnement permet d'adresser deux profils distincts : l'utilisateur occasionnel (freelance qui génère 3–4 contrats par an) et l'utilisateur intensif (entrepreneur ou cabinet comptable qui génère des dizaines de documents). L'offre Entreprise avec API cible les plateformes et logiciels qui souhaitent intégrer la génération de documents dans leur propre outil.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pay-per-use</strong></td>
+                    <td>4,99 €/document</td>
+                    <td>1 document généré, export PDF + Word, conformité droit français, accès 30 jours</td>
+                </tr>
+                <tr>
+                    <td><strong>Abonnement</strong></td>
+                    <td>14,99 €/mois</td>
+                    <td>Documents illimités, tous types de contrats, espace documentaire, mises à jour légales auto, signature électronique</td>
+                </tr>
+                <tr>
+                    <td><strong>Entreprise</strong></td>
+                    <td>49,99 €/mois</td>
+                    <td>Multi-utilisateurs, API REST, templates custom, assistance juridique par chat, onboarding dédié</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Marketplace avocats :</strong> mise en relation avec des avocats partenaires pour la relecture et la validation de documents complexes — commission de 15% sur chaque prestation.</li>
+            <li><strong>Packs sectoriels :</strong> bundles de documents spécifiques à un secteur (pack freelance, pack e-commerce, pack immobilier) à tarif préférentiel.</li>
+            <li><strong>Formation :</strong> webinaires "droit des contrats pour entrepreneurs" en partenariat avec des chambres de commerce — revenus d'audience et de sponsoring.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">400</div>
+                <div class="kpi-label">Utilisateurs actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">200</div>
+                <div class="kpi-label">Abonnés payants</div>
+                <div class="kpi-sub">Mix Abo/Entreprise</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">4 500 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">+ revenus pay-per-use</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>400 €</td><td>700 €</td><td>1 200 €</td></tr>
+                <tr><td>Mois 3</td><td>1 000 €</td><td>1 800 €</td><td>3 000 €</td></tr>
+                <tr><td>Mois 6</td><td>1 600 €</td><td>2 800 €</td><td>5 000 €</td></tr>
+                <tr><td>Mois 9</td><td>2 000 €</td><td>3 700 €</td><td>6 500 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">2 200 €</td><td class="highlight">4 500 €</td><td class="highlight">8 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>APIs IA — génération et analyse de documents (OpenAI)</td><td>150 €</td></tr>
+                <tr><td>Infrastructure cloud (hébergement, BDD, stockage documents)</td><td>100 €</td></tr>
+                <tr><td>Veille juridique (abonnements Dalloz, Lexis, juriste consultant)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (SEA, SEO, content marketing juridique)</td><td>200 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>550 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 550 €/mois et un ARPU moyen de 18 € (mix pay-per-use/abonnement/entreprise), le seuil de rentabilité est atteint à <strong>31 clients actifs</strong> — soit environ 47 comptes en tenant compte des utilisateurs gratuits et des conversions en cours. Dans le scénario réaliste, ce palier est franchi au <strong>mois 4</strong>. Le modèle pay-per-use crée un flux de revenus immédiats dès les premières semaines, avant même que la base d'abonnés ne soit significative.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché adressable comprend les 4 millions d'entreprises françaises, dont 95% sont des TPE et PME sans accès à un service juridique interne. S'y ajoutent 3 millions de micro-entrepreneurs et freelances qui signent régulièrement des contrats de prestation. Chaque entrepreneur génère en moyenne 5 à 10 documents juridiques par an, créant un besoin récurrent et prévisible.</p>
+        <p>Le marché legaltech en France est estimé à 700 millions d'euros avec une croissance de +15% par an. Les acteurs historiques — Captain Contrat (60M€ de valorisation), Legalstart (service en ligne avec avocats) — opèrent sur des modèles humains ou semi-automatisés, avec des délais de 24 à 72h et des prix de 50 à 300 € par document. Notre positionnement IA-native offre une rupture de prix (4,99 € par document) et de délai (2 minutes) qui redefine les attentes du marché.</p>
+        <p>La conformité RGPD et la sécurité des données sont des préoccupations légitimes dans ce secteur. Notre plateforme est hébergée en France chez un prestataire certifié, et chaque document généré est stocké de manière chiffrée. Cette rigueur en matière de sécurité constitue un argument commercial différenciant auprès des professionnels sensibles à la confidentialité.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>5 types de documents (CGV, NDA, bail, freelance, statuts)</li>
+                    <li>Questionnaire conversationnel IA</li>
+                    <li>Export PDF et Word</li>
+                    <li>Espace documentaire personnel</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>15+ types de documents</li>
+                    <li>Signature électronique intégrée</li>
+                    <li>Mises à jour légales automatiques</li>
+                    <li>Marketplace avocats partenaires</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Multi-langues (anglais, espagnol)</li>
+                    <li>API REST publique</li>
+                    <li>Templates custom entreprise</li>
+                    <li>Analyse et relecture de contrats existants</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=saas-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

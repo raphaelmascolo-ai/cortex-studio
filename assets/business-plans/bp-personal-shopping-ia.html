@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Shopping IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1E293B; line-height: 1.7; background: #fff; max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 4rem 2rem; margin: -2rem -2rem 0; page-break-after: always; }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print { body { padding: 0; max-width: none; } .cover { margin: 0; min-height: auto; padding: 3cm 2cm; } .bp-section { page-break-inside: avoid; } .bp-table { page-break-inside: avoid; } .roadmap { page-break-inside: avoid; } .kpi-grid { page-break-inside: avoid; } .bp-cta { display: none; } a { color: inherit; text-decoration: none; } }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>Personal Shopping IA</h1>
+        <div class="subtitle">Application Mobile</div>
+        <p class="description">Application de personal shopping alimentée par IA. Apprend le style vestimentaire de l'utilisateur et propose des looks complets personnalisés avec liens d'achat directs via affiliation. Adaptation aux occasions, morphologie et budget.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">7 000 €</div>
+                <div class="label">MRR + affil. M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 3</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">20Md€</div>
+                <div class="label">Mode en ligne FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>L'application de personal shopping IA démocratise un service réservé aux clients aisés des grands magasins et aux abonnés de services premium comme Stitch Fix aux États-Unis. En apprenant le style, la morphologie, le budget et les occasions vestimentaires de l'utilisateur, l'IA génère des looks complets et cohérents avec des liens d'achat directs via des partenariats d'affiliation avec les marques et enseignes. Chaque suggestion est justifiée et accompagnée d'alternatives budgétaires.</p>
+            <p>Le modèle combine freemium (3 looks/mois gratuits) et abonnement Premium à 6,99 €/mois, auquel s'ajoutent des commissions d'affiliation de 5 à 15% sur les achats réalisés via l'application. Ce double moteur de revenus permet une rentabilité dès le mois 3 et un MRR consolidé (abonnements + affiliation) projeté à 7 000 € à 12 mois dans le scénario réaliste.</p>
+            <div class="highlight-box">
+                <p>"30% des vêtements achetés en ligne sont retournés faute de cohérence avec le style personnel. Notre IA réduit ce taux à moins de 10% en proposant des looks pensés pour chaque profil — ce qui est aussi un argument fort pour nos partenaires marques."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>S'habiller bien et de manière cohérente est un exercice complexe que la majorité des consommateurs ne maîtrisent pas. Face à l'abondance de l'offre en ligne, les acheteurs sont submergés et font des choix impulsifs qui résultent en un dressing plein mais inutilisable. Le taux de retour de 30% en mode en ligne illustre parfaitement ce problème : on achète sans vision d'ensemble, sans coordination, sans adaptation à sa morphologie et ses occasions réelles.</p>
+            <p>Les stylistes personnels sont inaccessibles (200 à 500 €/heure), et les services d'abonnement mode comme Stitch Fix imposent des livraisons physiques lourdes, coûteuses et peu flexibles. Il manque un personal shopper digital, toujours disponible, qui connaît parfaitement son client et lui propose des looks achetables immédiatement en ligne, à son budget.</p>
+            <h3>La solution</h3>
+            <p>Notre application commence par un onboarding quiz de style (10 questions, 2 minutes) qui établit le profil vestimentaire complet de l'utilisateur : style préféré, couleurs, matières, morphologie, budget par pièce et occasions récurrentes (travail, casual, soirée, sport). Ce profil s'enrichit en continu grâce aux interactions : likes/dislikes des looks proposés, achats réalisés, retours effectués.</p>
+            <p>Sur cette base, l'IA génère des looks complets et stylés, chaque vêtement étant sélectionné dans le catalogue en ligne de nos partenaires (Zara, H&M, ASOS, Sézane, etc.) et ajusté au budget de l'utilisateur. Un lien d'achat direct avec prix en temps réel est associé à chaque pièce. Le dressing virtuel permet de visualiser l'intégralité de sa garde-robe et d'identifier les pièces manquantes pour compléter ses looks.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle repose sur deux piliers complémentaires : l'abonnement récurrent (prévisible, fidélisant) et l'affiliation (scalable, aligné avec la valeur créée). Plus l'utilisateur achète grâce aux looks suggérés, plus les revenus d'affiliation augmentent — sans coût marginal pour nous. Ce modèle crée une incitation naturelle à proposer des looks achetables et adaptés au budget, renforçant la qualité du service.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gratuit</strong></td>
+                    <td>0 €</td>
+                    <td>3 looks IA par mois, 3 enseignes partenaires, profil style basique, liens d'achat directs</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>6,99 €/mois</td>
+                    <td>Looks illimités, toutes les enseignes partenaires, alertes soldes personnalisées, dressing virtuel, analyse morpho IA, looks par occasion</td>
+                </tr>
+                <tr>
+                    <td><strong>Affiliation</strong></td>
+                    <td>5–15% par achat</td>
+                    <td>Commission sur chaque achat réalisé via l'application (inclus dans les deux offres), aucun frais supplémentaire pour l'utilisateur</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Mise en avant sponsorisée :</strong> les marques peuvent payer pour être prioritairement recommandées dans les looks de leur segment — sans compromettre la pertinence (l'IA sélectionne parmi les produits sponsorisés uniquement si ils correspondent au profil).</li>
+            <li><strong>Données de style anonymisées :</strong> tendances vestimentaires par profil, zone géographique et tranche de budget vendues aux marques et aux instituts de mode.</li>
+            <li><strong>Collaboration marques :</strong> capsules exclusives co-créées avec des enseignes partenaires, proposées en avant-première aux utilisateurs Premium.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">4 000</div>
+                <div class="kpi-label">Utilisateurs actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">800</div>
+                <div class="kpi-label">Abonnés Premium</div>
+                <div class="kpi-sub">Taux conversion 20%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">7 000 €</div>
+                <div class="kpi-label">Revenus totaux M12</div>
+                <div class="kpi-sub">5 500 € abo + 1 500 € affil.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR abonnements + revenus affiliation sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste (abo + affil.)</th><th>Réaliste (abo + affil.)</th><th>Optimiste (abo + affil.)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 € + 0 €</td><td>0 € + 0 €</td><td>0 € + 0 €</td></tr>
+                <tr><td>Mois 2</td><td>400 € + 100 €</td><td>800 € + 200 €</td><td>1 500 € + 400 €</td></tr>
+                <tr><td>Mois 3</td><td>1 000 € + 250 €</td><td>2 000 € + 500 €</td><td>3 500 € + 800 €</td></tr>
+                <tr><td>Mois 6</td><td>1 800 € + 500 €</td><td>3 500 € + 900 €</td><td>6 000 € + 1 800 €</td></tr>
+                <tr><td>Mois 9</td><td>2 200 € + 600 €</td><td>4 500 € + 1 200 €</td><td>8 000 € + 2 400 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">2 500 € + 700 €</td><td class="highlight">5 500 € + 1 500 €</td><td class="highlight">10 000 € + 3 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>APIs IA/Vision — génération de looks et analyse morpho</td><td>150 €</td></tr>
+                <tr><td>Infrastructure cloud (hébergement, BDD, CDN images)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (Instagram, TikTok, influenceurs micro)</td><td>200 €</td></tr>
+                <tr><td>Partenariats enseignes (intégration catalogues, feeds produits)</td><td>100 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>550 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 550 €/mois et une combinaison d'abonnements (6,99 €/mois) et de revenus d'affiliation, le seuil de rentabilité est atteint dès que l'application génère environ 550 € de revenus mensuels combinés. Dans le scénario réaliste, ce palier est franchi au <strong>mois 3</strong>, grâce au levier de l'affiliation qui contribue aux revenus dès les premières semaines — même avant la conversion en abonnements. Le modèle double-revenu est l'atout principal de ce business plan : il anticipe la rentabilité et réduit la dépendance à un seul vecteur.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché de la mode en ligne en France représente 20 milliards d'euros avec une croissance de +12% par an. C'est le premier secteur de l'e-commerce français par volume de transactions, mais aussi le premier en termes de retours (30% des commandes sont retournées), générant des coûts logistiques et environnementaux considérables. La réduction du taux de retour via une meilleure personnalisation est un argument stratégique auprès des marques partenaires.</p>
+        <p>Le personal shopping digital est une tendance émergente qui croît de +35% par an en Europe, portée par la montée des "outfit planners" sur TikTok et Instagram, et par les services de curation mode de Zalando (Fy! studio) et H&M. Stitch Fix aux États-Unis a démontré la viabilité du modèle avec une valorisation de 2 milliards de dollars — mais son approche par livraisons physiques est inadaptée au marché européen et à la génération Z, qui préfère les recommandations digitales instantanées.</p>
+        <p>En Europe, aucun acteur dominant ne propose un personal shopping IA mobile-first, gratuit à l'entrée et combinant affiliation multi-enseignes et apprentissage du style. Le marché est à prendre, notamment sur les 18–35 ans hyper-connectés qui consomment la mode principalement via leur smartphone.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Quiz style onboarding</li>
+                    <li>Génération de looks IA</li>
+                    <li>3 enseignes partenaires (Zara, H&amp;M, ASOS)</li>
+                    <li>Liens d'achat avec tracking affiliation</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Dressing virtuel (ma garde-robe)</li>
+                    <li>Alertes soldes personnalisées</li>
+                    <li>Analyse morpho IA</li>
+                    <li>10+ enseignes partenaires</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Vision IA (photo → identification style)</li>
+                    <li>Social features (partage de looks)</li>
+                    <li>Marketplace looks communautaire</li>
+                    <li>Collaborations marques exclusives</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>
