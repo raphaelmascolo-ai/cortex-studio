@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/business-plans/
+
+Sitemap: https://cortex-studio.com/sitemap.xml
