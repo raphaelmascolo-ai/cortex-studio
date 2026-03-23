@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Cortex Studio | Contactez notre équipe IA</title>
+    <meta name="description" content="Contactez Cortex Studio pour discuter de votre projet IA. Formulaire de contact, email, téléphone — nous répondons sous 24h.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Cortex Studio">
+    <meta property="og:description" content="Contactez Cortex Studio pour discuter de votre projet IA. Réponse sous 24h.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cortex-studio.com/contact.html">
+    <meta property="og:image" content="https://cortex-studio.com/assets/images/og-image.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        /* Two-column contact layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* Contact info block */
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .contact-info-item .contact-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: var(--color-primary, #6366f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #fff;
+        }
+        .contact-info-item .contact-icon svg {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+        .contact-info-item .contact-detail {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-info-item .contact-detail strong {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary, #94a3b8);
+            margin-bottom: 0.2rem;
+        }
+        .contact-info-item .contact-detail a,
+        .contact-info-item .contact-detail span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Social section inside info */
+        .contact-social {
+            margin-top: 1rem;
+        }
+        .contact-social h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary, #94a3b8);
+            margin-bottom: 0.75rem;
+        }
+        .contact-social .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .contact-social .social-links a {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: var(--color-surface, #1e293b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact-social .social-links a:hover {
+            background: var(--color-primary, #6366f1);
+            color: #fff;
+        }
+        .contact-social .social-links a svg {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- ============================================================
+         HERO MINI
+         ============================================================ -->
+    <section class="hero-mini" aria-label="En-tête de la page contact">
+        <div class="container text-center">
+            <h1 data-i18n="contact.title">Contactez-nous</h1>
+            <p class="text-secondary" data-i18n="contact.subtitle">Une question, un projet ? Nous répondons sous 24h.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT CONTENT
+         ============================================================ -->
+    <section class="section" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 id="contact-heading" class="visually-hidden">Formulaire et coordonnées</h2>
+
+            <div class="contact-grid">
+
+                <!-- LEFT: Contact form -->
+                <div>
+                    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="quote-form" id="contactForm" novalidate>
+                        <!-- Honeypot -->
+                        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name" data-i18n="contact.form.name">Nom complet</label>
+                            <input type="text" id="contact-name" name="name" class="form-input" required data-i18n-placeholder="contact.form.name.placeholder" placeholder="Jean Dupont">
+                            <span class="form-error" data-i18n="contact.error.name">Ce champ est requis</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email" data-i18n="contact.form.email">Email</label>
+                            <input type="email" id="contact-email" name="email" class="form-input" required data-i18n-placeholder="contact.form.email.placeholder" placeholder="jean@entreprise.com">
+                            <span class="form-error" data-i18n="contact.error.email">Email invalide</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message" data-i18n="contact.form.message">Message</label>
+                            <textarea id="contact-message" name="message" class="form-textarea" required data-i18n-placeholder="contact.form.message.placeholder" placeholder="Votre message..."></textarea>
+                            <span class="form-error" data-i18n="contact.error.message">Ce champ est requis</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Envoyer le message</button>
+                        <p class="form-success" style="display:none" data-i18n="contact.success">Merci ! Votre message a été envoyé.</p>
+                        <p class="form-submit-error" style="display:none" data-i18n="contact.error.submit">Une erreur est survenue. Veuillez réessayer.</p>
+                    </form>
+                </div>
+
+                <!-- RIGHT: Contact info -->
+                <div>
+                    <div class="contact-info-block">
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <strong data-i18n="contact.info.email.label">Email</strong>
+                                <a href="mailto:contact@cortex-studio.com" data-i18n="contact.info.email">contact@cortex-studio.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <strong data-i18n="contact.info.phone.label">Téléphone</strong>
+                                <a href="tel:+33123456789" data-i18n="contact.info.phone">+33 1 23 45 67 89</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon" aria-hidden="true">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <strong data-i18n="contact.info.address.label">Adresse</strong>
+                                <span data-i18n="contact.info.address">Paris, France</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <h3 data-i18n="contact.social.title">Retrouvez-nous sur</h3>
+                            <div class="social-links">
+                                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <img src="assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+
+            <!-- Quick links -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+
+<script>
+(function () {
+    'use strict';
+
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+
+    function showError(input, show) {
+        var group = input.closest('.form-group');
+        if (!group) return;
+        var errorEl = group.querySelector('.form-error');
+        if (show) {
+            input.classList.add('is-invalid');
+            if (errorEl) errorEl.style.display = 'block';
+        } else {
+            input.classList.remove('is-invalid');
+            if (errorEl) errorEl.style.display = 'none';
+        }
+    }
+
+    function validateField(input) {
+        if (input.required && !input.value.trim()) {
+            showError(input, true);
+            return false;
+        }
+        if (input.type === 'email' && input.value.trim()) {
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(input.value.trim())) {
+                showError(input, true);
+                return false;
+            }
+        }
+        showError(input, false);
+        return true;
+    }
+
+    var inputs = form.querySelectorAll('.form-input, .form-textarea');
+    inputs.forEach(function (input) {
+        input.addEventListener('blur', function () { validateField(input); });
+        input.addEventListener('input', function () {
+            if (input.classList.contains('is-invalid')) validateField(input);
+        });
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var valid = true;
+        inputs.forEach(function (input) {
+            if (!validateField(input)) valid = false;
+        });
+        if (!valid) return;
+
+        var successMsg = form.querySelector('.form-success');
+        var errorMsg = form.querySelector('.form-submit-error');
+        var submitBtn = form.querySelector('[type="submit"]');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = '...';
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(function (response) {
+            if (response.ok) {
+                form.reset();
+                if (successMsg) successMsg.style.display = 'block';
+                if (errorMsg) errorMsg.style.display = 'none';
+            } else {
+                if (errorMsg) errorMsg.style.display = 'block';
+                if (successMsg) successMsg.style.display = 'none';
+            }
+        })
+        .catch(function () {
+            if (errorMsg) errorMsg.style.display = 'block';
+            if (successMsg) successMsg.style.display = 'none';
+        })
+        .finally(function () {
+            submitBtn.disabled = false;
+            var i18nKey = submitBtn.getAttribute('data-i18n');
+            submitBtn.textContent = (window.__translations && window.__translations[i18nKey]) || 'Envoyer le message';
+        });
+    });
+}());
+</script>
+
+</body>
+</html>

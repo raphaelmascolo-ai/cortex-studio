@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis — Cortex Studio | Demandez une estimation gratuite</title>
+    <meta name="description" content="Demandez un devis gratuit pour votre projet IA. Application IA, automatisation, site web IA ou application web — réponse sous 48h.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Devis — Cortex Studio">
+    <meta property="og:description" content="Demandez un devis gratuit pour votre projet IA. Réponse sous 48h.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cortex-studio.com/quote.html">
+    <meta property="og:image" content="https://cortex-studio.com/assets/images/og-image.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- ============================================================
+         HERO MINI
+         ============================================================ -->
+    <section class="hero-mini" aria-label="En-tête de la page devis">
+        <div class="container text-center">
+            <h1 data-i18n="quote.title">Demandez un devis gratuit</h1>
+            <p class="text-secondary" data-i18n="quote.subtitle">Décrivez votre projet et recevez une estimation personnalisée sous 48h.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         QUOTE FORM
+         ============================================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+
+                <form action="https://formspree.io/f/YOUR_ID" method="POST" class="quote-form" id="quoteForm" novalidate>
+                    <!-- Honeypot -->
+                    <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                    <div class="form-group">
+                        <label class="form-label" for="name" data-i18n="quote.name">Nom complet</label>
+                        <input type="text" id="name" name="name" class="form-input" required data-i18n-placeholder="quote.name.placeholder" placeholder="Jean Dupont">
+                        <span class="form-error" data-i18n="quote.error.name">Ce champ est requis</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email" data-i18n="quote.email">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required data-i18n-placeholder="quote.email.placeholder" placeholder="jean@entreprise.com">
+                            <span class="form-error" data-i18n="quote.error.email">Email invalide</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone" data-i18n="quote.phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" data-i18n-placeholder="quote.phone.placeholder" placeholder="+33 6 12 34 56 78">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="company" data-i18n="quote.company">Entreprise</label>
+                        <input type="text" id="company" name="company" class="form-input" data-i18n-placeholder="quote.company.placeholder" placeholder="Nom de votre entreprise">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="service" data-i18n="quote.service">Type de service</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="" data-i18n="quote.service.placeholder">Sélectionnez un service</option>
+                            <option value="app-ia" data-i18n="quote.service.app-ia">Application IA</option>
+                            <option value="auto-ia" data-i18n="quote.service.auto-ia">Automatisation IA</option>
+                            <option value="site-ia" data-i18n="quote.service.site-ia">Site IA</option>
+                            <option value="app-web" data-i18n="quote.service.app-web">Application Web</option>
+                        </select>
+                        <span class="form-error" data-i18n="quote.error.service">Veuillez sélectionner un service</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="description" data-i18n="quote.description">Description du projet</label>
+                        <textarea id="description" name="description" class="form-textarea" required data-i18n-placeholder="quote.description.placeholder" placeholder="Décrivez votre projet..."></textarea>
+                        <span class="form-error" data-i18n="quote.error.description">Ce champ est requis</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="budget" data-i18n="quote.budget">Budget estimé</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="" data-i18n="quote.budget.placeholder">Sélectionnez</option>
+                                <option value="&lt;1000" data-i18n="quote.budget.1">Moins de 1 000€</option>
+                                <option value="1000-2500" data-i18n="quote.budget.2">1 000€ - 2 500€</option>
+                                <option value="2500-5000" data-i18n="quote.budget.3">2 500€ - 5 000€</option>
+                                <option value="5000-10000" data-i18n="quote.budget.4">5 000€ - 10 000€</option>
+                                <option value="&gt;10000" data-i18n="quote.budget.5">Plus de 10 000€</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="timeline" data-i18n="quote.timeline">Délai souhaité</label>
+                            <select id="timeline" name="timeline" class="form-select">
+                                <option value="" data-i18n="quote.timeline.placeholder">Sélectionnez</option>
+                                <option value="&lt;1month" data-i18n="quote.timeline.1">Moins d'1 mois</option>
+                                <option value="1-3months" data-i18n="quote.timeline.2">1 à 3 mois</option>
+                                <option value="3-6months" data-i18n="quote.timeline.3">3 à 6 mois</option>
+                                <option value="&gt;6months" data-i18n="quote.timeline.4">Plus de 6 mois</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" data-i18n="quote.submit">Envoyer la demande</button>
+                    <p class="form-success" style="display:none" data-i18n="quote.success">Merci ! Votre demande a été envoyée.</p>
+                    <p class="form-submit-error" style="display:none" data-i18n="quote.error">Une erreur est survenue.</p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <img src="assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+
+            <!-- Quick links -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+
+<script>
+(function () {
+    'use strict';
+
+    // Pre-select service from URL param ?service=app-ia
+    var urlParams = new URLSearchParams(window.location.search);
+    var serviceParam = urlParams.get('service');
+    if (serviceParam) {
+        var serviceSelect = document.getElementById('service');
+        if (serviceSelect) {
+            serviceSelect.value = serviceParam;
+        }
+    }
+
+    var form = document.getElementById('quoteForm');
+    if (!form) return;
+
+    function showError(input, show) {
+        var group = input.closest('.form-group');
+        if (!group) return;
+        var errorEl = group.querySelector('.form-error');
+        if (show) {
+            input.classList.add('is-invalid');
+            if (errorEl) errorEl.style.display = 'block';
+        } else {
+            input.classList.remove('is-invalid');
+            if (errorEl) errorEl.style.display = 'none';
+        }
+    }
+
+    function validateField(input) {
+        if (input.required && !input.value.trim()) {
+            showError(input, true);
+            return false;
+        }
+        if (input.type === 'email' && input.value.trim()) {
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(input.value.trim())) {
+                showError(input, true);
+                return false;
+            }
+        }
+        showError(input, false);
+        return true;
+    }
+
+    // Live validation on blur
+    var inputs = form.querySelectorAll('.form-input, .form-select, .form-textarea');
+    inputs.forEach(function (input) {
+        input.addEventListener('blur', function () {
+            validateField(input);
+        });
+        input.addEventListener('input', function () {
+            if (input.classList.contains('is-invalid')) {
+                validateField(input);
+            }
+        });
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var valid = true;
+        inputs.forEach(function (input) {
+            if (!validateField(input)) valid = false;
+        });
+        if (!valid) return;
+
+        var successMsg = form.querySelector('.form-success');
+        var errorMsg = form.querySelector('.form-submit-error');
+        var submitBtn = form.querySelector('[type="submit"]');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = '...';
+
+        var data = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(function (response) {
+            if (response.ok) {
+                form.reset();
+                if (successMsg) successMsg.style.display = 'block';
+                if (errorMsg) errorMsg.style.display = 'none';
+            } else {
+                if (errorMsg) errorMsg.style.display = 'block';
+                if (successMsg) successMsg.style.display = 'none';
+            }
+        })
+        .catch(function () {
+            if (errorMsg) errorMsg.style.display = 'block';
+            if (successMsg) successMsg.style.display = 'none';
+        })
+        .finally(function () {
+            submitBtn.disabled = false;
+            var i18nKey = submitBtn.getAttribute('data-i18n');
+            submitBtn.textContent = (window.__translations && window.__translations[i18nKey]) || 'Envoyer la demande';
+        });
+    });
+}());
+</script>
+
+</body>
+</html>
