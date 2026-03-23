@@ -26,6 +26,7 @@
 .booking-steps { grid-template-columns: 1fr; }
 .contact-grid { grid-template-columns: 1fr; }
 .service-details { grid-template-columns: 1fr; }
+.svc-grid { grid-template-columns: 1fr; }
 .breadcrumb { padding-top: calc(60px + 1rem); }
 .hero-mini, .section-hero-mini { padding-top: calc(60px + 3rem); }
 .modal { margin: 1rem; padding: 1.5rem; }
@@ -50,6 +51,7 @@
   .booking-steps { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr 1fr; }
   .service-details { grid-template-columns: 1fr 1fr; }
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
   .hero-mini, .section-hero-mini { padding-top: calc(72px + var(--spacing-xl)); }
   .breadcrumb { padding-top: calc(72px + 1.5rem); }
   .modal { margin: 0; padding: 2.5rem; }
