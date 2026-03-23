@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Génération de Contrats & Documents Légaux IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application de génération de contrats et documents juridiques propulsée par l'IA : baux, CGV, NDA, contrats freelance conformes et personnalisés. MRR estimé ~2 998€/mois.">
+    <meta property="og:title" content="App Génération de Contrats & Documents Légaux IA — Cortex Studio">
+    <meta property="og:description" content="L'IA génère des documents juridiques complets, personnalisés et conformes à la réglementation en vigueur à partir de vos réponses en langage naturel.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Contrats & Documents Légaux IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de génération de contrats & documents légaux IA</h1>
+            <p class="hero-subtitle">Répondez à quelques questions en langage naturel et l'IA génère en minutes un document juridique complet, personnalisé et conforme à la réglementation en vigueur — sans avocat, sans attente.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 998€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les entrepreneurs, freelances et PME ont régulièrement besoin de documents juridiques : contrats de prestation, CGV, accords de confidentialité (NDA), baux commerciaux, conditions d'utilisation, politiques de confidentialité. Pourtant, les avocats facturent entre 200 et 500€ par document standard — un coût prohibitif pour une jeune entreprise ou un indépendant qui peut avoir besoin de plusieurs dizaines de documents différents au cours de sa vie professionnelle.</p>
+            <p>Les modèles gratuits disponibles en ligne sont doublement problématiques : ils sont génériques (non adaptés à la situation spécifique de l'entreprise) et souvent obsolètes (non mis à jour après les évolutions législatives). Or, une erreur juridique dans un contrat peut coûter des milliers d'euros en contentieux. Une CGV non conforme au RGPD expose à des amendes allant jusqu'à 4% du chiffre d'affaires mondial. 60% des PME françaises n'ont pas de CGV conformes à la réglementation en vigueur selon les études du secteur.</p>
+            <p>La complexité du droit français et européen (RGPD, droit du travail, droit commercial, droit immobilier) décourage les non-juristes de rédiger eux-mêmes leurs documents. Le résultat est un marché de masse mal servi : trop cher pour faire appel à un professionnel pour chaque document, trop risqué pour utiliser des modèles génériques non vérifiés. Il existe une opportunité massive pour démocratiser l'accès à des documents juridiques de qualité.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'utilisateur sélectionne le type de document dont il a besoin (bail, CGV, NDA, contrat de prestation freelance, conditions d'utilisation, politique de confidentialité, statuts de société) puis répond à une série de questions simples en langage naturel via un formulaire conversationnel. L'IA — un GPT-4 fine-tuné sur un corpus juridique français actualisé — analyse les réponses et génère un document juridique complet, structuré selon les standards du droit français, avec toutes les clauses nécessaires adaptées à la situation spécifique décrite.</p>
+            <p>La différence fondamentale avec les modèles génériques est la personnalisation contextuelle. Le contrat de prestation d'un développeur freelance n'est pas le même que celui d'un consultant en marketing ou d'un photographe. Les CGV d'une boutique e-commerce B2C ne ressemblent pas à celles d'un prestataire B2B. L'IA intègre ces nuances et génère un document qui correspond réellement à la situation de l'utilisateur, avec les clauses pertinentes pour son secteur d'activité et son modèle commercial.</p>
+            <p>Les mises à jour automatiques sont un avantage décisif sur le long terme : quand la loi change (nouveau règlement RGPD, réforme du droit du travail, évolution de la jurisprudence), tous les modèles sont mis à jour et les utilisateurs sont notifiés que leurs documents existants nécessitent une révision. La signature électronique intégrée (via DocuSign API) permet de signer les documents directement dans l'application, et l'archivage sécurisé conserve l'historique complet de tous les documents générés.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle propose deux modes de paiement pour s'adapter aux différents usages. Le pay-per-use à <strong>4,99€/document</strong> convient aux utilisateurs occasionnels qui ont besoin d'un contrat spécifique ponctuellement. L'abonnement mensuel à <strong>14,99€/mois</strong> est optimal pour les freelances et entrepreneurs réguliers : il inclut les documents illimités, les mises à jour automatiques légales, l'accès à la bibliothèque complète, la signature électronique et l'archivage sécurisé.</p>
+            <p>Le tier Entreprise à <strong>49,99€/mois</strong> débloque le multi-utilisateurs (toute l'équipe peut créer des documents), l'accès API pour intégration dans les outils internes, et un support juridique prioritaire. Ce tier est particulièrement adapté aux cabinets comptables, aux agences et aux startups en forte croissance qui génèrent régulièrement de nouveaux documents contractuels.</p>
+            <p>La proposition de valeur financière est immédiate et concrète : un abonnement annuel à 14,99€/mois représente 180€/an — le prix d'environ la moitié d'un seul document rédigé par un avocat. Pour un freelance qui génère 5 à 10 contrats par an, l'économie est évidente. Le bouche-à-oreille dans les communautés de freelances et d'entrepreneurs constitue le principal levier d'acquisition organique.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 abonnés</th>
+                        <th>200 abonnés</th>
+                        <th>500 abonnés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>749€</td>
+                        <td>2 998€</td>
+                        <td>7 495€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>400€</td>
+                        <td>800€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>549€</td>
+                        <td>2 598€</td>
+                        <td>6 695€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Génération de documents juridiques par questionnaire conversationnel IA</li>
+                <li>Personnalisation complète au contexte et secteur d'activité de l'utilisateur</li>
+                <li>Conformité réglementaire vérifiée (RGPD, droit français, droit commercial)</li>
+                <li>Bibliothèque complète : bail, CGV, NDA, contrat freelance, CGU, politique RGPD, statuts</li>
+                <li>Mises à jour automatiques quand la réglementation évolue</li>
+                <li>Export des documents en PDF et Word</li>
+                <li>Signature électronique intégrée (DocuSign)</li>
+                <li>Archivage sécurisé et historique complet des documents générés</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">GPT-4 fine-tuned (corpus juridique)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Puppeteer (génération PDF)</span>
+                <span class="tech-badge">DocuSign API (signature)</span>
+                <span class="tech-badge">Vercel + AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-contrats-documents-legaux-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

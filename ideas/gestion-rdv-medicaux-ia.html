@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Gestion de RDV Médicaux IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une plateforme de gestion de rendez-vous médicaux propulsée par l'IA : rappels intelligents, questionnaire pré-RDV et réduction des no-shows de 60%. MRR estimé ~2 999€/mois.">
+    <meta property="og:title" content="App Gestion de RDV Médicaux IA — Cortex Studio">
+    <meta property="og:description" content="Agenda en ligne intelligent pour praticiens : rappels adaptatifs, questionnaire pré-RDV analysé par IA et liste d'attente automatique.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion de RDV Médicaux IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de gestion de RDV médicaux IA</h1>
+            <p class="hero-subtitle">Une plateforme pour praticiens médicaux avec agenda en ligne, rappels intelligents adaptatifs et questionnaire pré-RDV analysé par IA pour préparer chaque consultation et réduire les no-shows de 60%.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 999€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les praticiens médicaux libéraux perdent en moyenne 2 à 3 heures par jour en gestion administrative — un temps précieux soustrait au soin des patients. La prise de rendez-vous par téléphone mobilise une secrétaire ou le praticien lui-même, les rappels sont manuels ou inexistants, et les no-shows représentent 15 à 20% des créneaux — soit une perte économique directe de plusieurs centaines d'euros par semaine pour un cabinet actif.</p>
+            <p>Les solutions existantes créent autant de problèmes qu'elles en résolvent. Doctolib, le leader du marché, prend une commission substantielle sur chaque rendez-vous pris et crée une dépendance forte vis-à-vis d'une plateforme tierce qui détient la relation patient. Par ailleurs, aucun outil ne résout le problème de la qualité de la consultation elle-même : les patients arrivent sans avoir préparé leurs informations médicales, ce qui fait perdre les premières minutes en anamnèse basique (antécédents, traitements en cours, raison de la consultation).</p>
+            <p>La gestion des urgences et des créneaux annulés au dernier moment est entièrement manuelle : le praticien ou sa secrétaire doit appeler les patients en liste d'attente un par un pour proposer le créneau libéré. Cette inefficacité organisationnelle coûte cher en temps et en revenus perdus, et nuit à l'expérience patient qui attend parfois des semaines pour un rendez-vous alors que des créneaux se libèrent sans être pourvus.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>La plateforme offre aux praticiens un agenda en ligne complet avec prise de rendez-vous 24/7 par les patients, directement depuis un lien personnalisé. Contrairement à Doctolib, il n'y a pas de commission et le praticien conserve la pleine propriété de la relation avec ses patients. L'agenda s'intègre aux logiciels médicaux existants (Médiboard, Doctogest) pour ne pas perturber les habitudes de travail établies.</p>
+            <p>L'innovation principale réside dans les rappels intelligents adaptatifs. Plutôt qu'un simple SMS de rappel 24h avant, l'IA analyse le profil de chaque patient (historique de no-shows, mode de communication préféré, heure de consultation) et choisit automatiquement le canal optimal (SMS, email, notification push), le moment idéal et le message le plus susceptible de déclencher une confirmation. Cette approche réduit les no-shows de 60% selon les données de nos projets pilotes.</p>
+            <p>Le questionnaire pré-RDV est la fonctionnalité qui améliore le plus la qualité des soins. 48h avant la consultation, le patient reçoit un questionnaire adapté au type de rendez-vous (généraliste, spécialiste, suivi). Ses réponses sont analysées par l'IA qui génère un résumé structuré transmis au praticien avant la consultation : motif réel de la visite, traitements en cours, antécédents pertinents, éléments d'alerte. La consultation commence immédiatement sur le fond, sans perdre de temps sur la collecte d'informations basiques. La liste d'attente automatique contacte instantanément le patient suivant dès qu'un créneau se libère.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement par praticien est fixé à <strong>49,99€/mois</strong> — intentionnellement positionné en dessous du coût d'un seul no-show évité par mois (une consultation à 50-80€). Le calcul est immédiat pour le praticien : si la plateforme évite un seul rendez-vous manqué supplémentaire par mois, elle est rentabilisée. En pratique, la réduction moyenne des no-shows génère des économies de 200 à 400€/mois, soit un ROI de 4 à 8x l'abonnement.</p>
+            <p>L'abonnement standard inclut l'agenda en ligne illimité, les rappels IA, le questionnaire pré-RDV, les analytics de cabinet (taux d'occupation, taux de no-shows, revenus mensuels) et l'intégration avec les principaux logiciels médicaux. La version Cabinet à <strong>99,99€/mois</strong> couvre plusieurs praticiens dans un même cabinet avec une vue de gestion centralisée et des fonctionnalités de secrétariat partagé.</p>
+            <p>Des revenus additionnels sont générés via des partenariats avec les éditeurs de logiciels médicaux (intégrations natives rémunérées), et à terme via un module de téléconsultation intégré qui capture une part des consultations à distance, un marché en forte croissance depuis la crise sanitaire.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>20 praticiens</th>
+                        <th>60 praticiens</th>
+                        <th>200 praticiens</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>999€</td>
+                        <td>2 999€</td>
+                        <td>9 998€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>300€</td>
+                        <td>500€</td>
+                        <td>1 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>699€</td>
+                        <td>2 499€</td>
+                        <td>8 498€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Agenda en ligne intelligent avec prise de RDV 24/7 par les patients</li>
+                <li>Rappels adaptatifs SMS et email choisis par l'IA selon le profil patient</li>
+                <li>Questionnaire pré-RDV analysé et résumé par l'IA pour le praticien</li>
+                <li>Résumé patient structuré transmis avant chaque consultation</li>
+                <li>Liste d'attente automatique pour remplir les créneaux annulés</li>
+                <li>Réduction des no-shows de 60% grâce aux rappels intelligents</li>
+                <li>Analytics et statistiques du cabinet (occupation, no-shows, revenus)</li>
+                <li>Intégration avec les principaux logiciels médicaux (Médiboard, Doctogest)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI API (questionnaire IA)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Twilio (SMS)</span>
+                <span class="tech-badge">Cal.com API</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-gestion-rdv-medicaux-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

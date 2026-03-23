@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Personal Shopping IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application de personal shopping propulsée par l'IA : analyse de style, looks personnalisés avec liens d'achat directs et commissions d'affiliation. MRR estimé ~3 495€/mois.">
+    <meta property="og:title" content="App Personal Shopping IA — Cortex Studio">
+    <meta property="og:description" content="L'IA apprend votre style vestimentaire et propose des looks complets avec liens d'achat directs, adaptés aux occasions, à la météo et à votre budget.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Personal Shopping IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de personal shopping IA</h1>
+            <p class="hero-subtitle">L'IA apprend votre style vestimentaire et propose des looks complets avec liens d'achat directs, personnalisés selon l'occasion, la météo et votre budget — votre personal shopper disponible 24/7.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 495€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Le shopping en ligne est devenu écrasant. Sur ASOS, Zalando ou Amazon Fashion, des millions de références sont disponibles, mais cette abondance crée de la paralysie et de la frustration : trop de choix, pas de conseil personnalisé, des recommandations algorithmiques basées sur l'historique d'achat plutôt que sur le style réel. Le résultat est un taux de retour de 30% pour les vêtements achetés en ligne en France — une proportion qui coûte plusieurs milliards d'euros par an au secteur.</p>
+            <p>Les personal shoppers humains offrent une expérience incomparable mais à un prix inaccessible pour la grande majorité : 100 à 300€ par session pour un styliste personnel. Ce service a toujours été réservé aux clients à hauts revenus des boutiques de luxe. Le marché de masse souffre d'un vide béant entre les recommandations algorithmiques impersonnelles des grandes plateformes et le service d'exception des personal shoppers humains — un vide que l'IA peut désormais combler.</p>
+            <p>Au-delà du prix, les solutions existantes manquent de contexte. Acheter un vêtement pour aller au bureau est différent d'acheter pour une soirée habillée ou un week-end casual. La morphologie de chaque personne, ses couleurs naturelles et son style de vie influencent profondément ce qui lui va réellement. Ces paramètres complexes et personnels sont impossibles à traiter avec les algorithmes de recommandation standard basés sur les clics et les achats passés.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'application commence par construire un profil de style complet grâce à une session d'onboarding immersive : l'utilisateur indique ses préférences à travers des photos de tenues aimées (analysées par OpenAI Vision + CLIP pour extraire les éléments stylistiques), renseigne sa morphologie et ses mesures, définit ses occasions habituelles (bureau, casual, soirée, sport) et son budget par achat. L'IA extrait automatiquement les patterns : couleurs dominantes préférées, coupes favorisées, styles vestimentaires (classique, décontracté, bohème, streetwear) et constructions un "ADN stylistique" unique.</p>
+            <p>Chaque jour, l'application propose des looks complets et cohérents : haut, bas, chaussures, accessoires. Chaque pièce est accompagnée d'un lien direct vers une boutique partenaire où elle est disponible dans la bonne taille et au bon prix. Les suggestions s'adaptent en temps réel à la météo du jour et à l'occasion prévue. Une intégration avec le calendrier de l'utilisateur permet à l'IA d'anticiper ses besoins : réunion importante demain, sortie ce week-end, voyage la semaine prochaine.</p>
+            <p>Le dressing virtuel archive toutes les pièces déjà possédées et permet à l'IA de proposer des combinaisons nouvelles avec l'existant avant de suggérer des achats. Les alertes soldes personnalisées notifient l'utilisateur quand une pièce de sa wishlist passe en promotion. L'IA s'améliore continuellement grâce aux feedbacks (j'aime / je n'aime pas sur chaque look), affinant ses recommandations pour devenir de plus en plus précise au fil du temps. Chaque feedback négatif est une donnée précieuse qui réduit les erreurs futures.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle combine abonnement et commissions d'affiliation pour maximiser les revenus. La version gratuite offre 3 looks par mois — suffisant pour démontrer la valeur et créer le désir d'accès illimité. L'abonnement Premium à <strong>6,99€/mois</strong> débloque les looks illimités, les alertes soldes personnalisées, le conseil morphologie et couleurs approfondi, et le dressing virtuel complet.</p>
+            <p>Les commissions d'affiliation sur les ventes constituent le second flux de revenus, potentiellement plus important que l'abonnement à grande échelle. Pour chaque achat réalisé via les liens de l'application, une commission de 5 à 15% est perçue auprès des boutiques partenaires (Zara, H&M, ASOS, boutiques indépendantes). Ce modèle est aligné avec les intérêts des utilisateurs — l'application gagne uniquement quand l'utilisateur achète quelque chose qu'il aime vraiment, ce qui incite à des recommandations toujours plus pertinentes.</p>
+            <p>Aux 500 utilisateurs premium (3 495€/mois en abonnements), s'ajoutent les commissions estimées à 1 000€/mois sur les ventes générées — soit un revenu combiné de 4 495€/mois à ce stade. À 1 000 utilisateurs, l'abonnement atteint 6 990€/mois et les commissions 2 000€/mois, pour un total de près de 9 000€/mois. Le modèle d'affiliation crée une croissance des revenus non-linéaire : plus la base d'utilisateurs est engagée, plus les achats générés et les commissions perçues croissent.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 utilisateurs</th>
+                        <th>500 utilisateurs</th>
+                        <th>1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>699€ + 200€ commissions</td>
+                        <td>3 495€ + 1 000€ commissions</td>
+                        <td>6 990€ + 2 000€ commissions</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>150€</td>
+                        <td>400€</td>
+                        <td>700€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>749€</td>
+                        <td>4 095€</td>
+                        <td>8 290€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td>
+                        <td>1 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Analyse de style par IA (OpenAI Vision + CLIP) à partir des photos de l'utilisateur</li>
+                <li>Looks complets personnalisés générés quotidiennement</li>
+                <li>Liens d'achat directs intégrés vers les boutiques partenaires</li>
+                <li>Adaptation aux occasions (bureau, casual, soirée) et à la météo en temps réel</li>
+                <li>Dressing virtuel pour organiser et réutiliser l'existant</li>
+                <li>Alertes soldes personnalisées sur les pièces de la wishlist</li>
+                <li>Conseil morphologie et harmonie des couleurs par l'IA</li>
+                <li>Feedback et apprentissage continu pour des recommandations toujours plus précises</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native (mobile)</span>
+                <span class="tech-badge">Python FastAPI (backend)</span>
+                <span class="tech-badge">OpenAI Vision</span>
+                <span class="tech-badge">CLIP (IA style)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Pinecone (vector search)</span>
+                <span class="tech-badge">Affiliate APIs (liens)</span>
+                <span class="tech-badge">AWS + CloudFront</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-personal-shopping-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

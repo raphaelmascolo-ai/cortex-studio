@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Nutrition & Meal Planning IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application de nutrition et meal planning propulsée par l'IA : plans repas personnalisés, liste de courses optimisée et suivi nutritionnel automatique. MRR estimé ~3 192€/mois.">
+    <meta property="og:title" content="App Nutrition & Meal Planning IA — Cortex Studio">
+    <meta property="og:description" content="L'IA crée des plans repas personnalisés selon vos objectifs nutritionnels, budget et préférences, avec liste de courses optimisée et suivi automatique.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Nutrition & Meal Planning IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de nutrition & meal planning IA</h1>
+            <p class="hero-subtitle">L'IA crée des plans repas personnalisés selon vos objectifs nutritionnels, votre budget hebdomadaire et vos allergies, avec une liste de courses optimisée en temps réel.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 192€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Planifier des repas équilibrés est d'une complexité sous-estimée : il faut tenir compte des allergies alimentaires, des objectifs personnels (perte de poids, prise de muscle, régime végan ou sans gluten), du budget hebdomadaire disponible et de ce qui se trouve déjà dans les placards. La majorité des foyers abordent cette tâche sans méthode, ce qui entraîne des achats impulsifs et du gaspillage massif.</p>
+            <p>Les chiffres sont éloquents : 40% des aliments achetés en France sont gaspillés faute de planification. Pourtant, faire appel à un diététicien coûte entre 50 et 80€ par consultation — un luxe inaccessible pour la plupart des ménages. Les applications de nutrition existantes se contentent de proposer des plans génériques sans tenir compte du budget disponible, des promotions en cours en supermarché ou des restes à écouler. Elles traitent la nutrition de façon isolée alors que la cuisine s'inscrit dans une réalité économique et pratique.</p>
+            <p>Le résultat est une frustration chronique : des courses qui dépassent le budget, des ingrédients qui se périment, une alimentation déséquilibrée et un sentiment de culpabilité récurrent. Il manque un outil qui combine vraiment nutrition, budget et logistique d'achat en une expérience cohérente et personnalisée.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'application utilise l'IA pour créer chaque semaine un plan repas entièrement personnalisé. L'utilisateur renseigne une seule fois ses objectifs nutritionnels (calories, macros, régime alimentaire), ses allergies et intolérances, la taille de son foyer et son budget hebdomadaire alimentaire. L'IA génère alors un planning complet 7 jours sur 7, avec petit-déjeuner, déjeuner, dîner et collations, optimisé pour atteindre ses objectifs tout en restant dans l'enveloppe budgétaire.</p>
+            <p>La véritable innovation réside dans la liste de courses intelligente. En se connectant aux APIs des grandes enseignes (Carrefour, Intermarché, Leclerc), l'application détecte les promotions en cours et adapte automatiquement les recettes proposées pour maximiser les économies. Si les tomates sont en promo cette semaine, l'IA propose des recettes qui les utilisent. Les ingrédients déjà présents dans le frigo (renseignés par l'utilisateur) sont pris en compte pour éviter les achats inutiles.</p>
+            <p>Le suivi nutritionnel est automatique : chaque repas validé met à jour le tableau de bord calories et macros en temps réel. Une fonctionnalité "vide ton frigo" permet de générer des recettes à partir des ingrédients disponibles, réduisant drastiquement le gaspillage. L'IA s'adapte quotidiennement : si un repas est sauté ou remplacé, le planning de la semaine se réajuste automatiquement pour maintenir les objectifs nutritionnels.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'application adopte un modèle d'abonnement mensuel à <strong>3,99€/mois</strong>, intentionnellement positionné sous le prix d'un seul repas au restaurant. Ce prix bas facilite l'acquisition et réduit la friction à l'abonnement. La version gratuite propose un plan repas par semaine avec suivi basique des calories, suffisant pour prouver la valeur du produit et créer l'habitude.</p>
+            <p>L'abonnement Premium débloque les plans repas illimités, les recettes générées par IA, la liste de courses optimisée avec détection des promotions, le suivi nutritionnel complet (calories, protéines, glucides, lipides, fibres, vitamines), le coaching IA et la fonctionnalité partage familial pour planifier pour toute la famille. À 3,99€/mois, le rapport valeur-prix est imbattable comparé aux 50€ d'une seule consultation avec un diététicien.</p>
+            <p>Des revenus complémentaires sont générés via des partenariats avec des marques alimentaires (mise en avant de produits dans les recettes, commissions sur les ventes en ligne), et à terme via une intégration avec les services de livraison de repas (HelloFresh, Marley Spoon) pour lesquels l'application peut servir de canal d'acquisition qualifié.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 utilisateurs</th>
+                        <th>800 utilisateurs</th>
+                        <th>1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>399€</td>
+                        <td>3 192€</td>
+                        <td>3 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>150€</td>
+                        <td>500€</td>
+                        <td>600€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>249€</td>
+                        <td>2 692€</td>
+                        <td>3 390€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>7 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Plans repas IA personnalisés selon objectifs, allergies et budget</li>
+                <li>Liste de courses optimisée générée automatiquement</li>
+                <li>Détection des promotions en cours dans les supermarchés partenaires</li>
+                <li>Suivi nutritionnel automatique (calories, macros, micronutriments)</li>
+                <li>Recettes générées à partir du contenu du frigo pour éviter le gaspillage</li>
+                <li>Adaptation aux allergies, intolérances et régimes alimentaires</li>
+                <li>Objectifs santé personnalisés (perte de poids, muscle, végan, sportif)</li>
+                <li>Partage familial des plans repas pour toute la famille</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Base nutritionnelle (CIQUAL)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">API supermarchés (promos)</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-nutrition-meal-planning-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
