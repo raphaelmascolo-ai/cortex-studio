@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Suivi Santé & Bien-être IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Un journal de santé intelligent qui centralise humeur, sommeil, nutrition et activité physique. L'IA détecte les corrélations et fournit des recommandations bien-être personnalisées. MRR estimé ~2 994€/mois.">
+    <meta property="og:title" content="App Suivi Santé & Bien-être IA — Cortex Studio">
+    <meta property="og:description" content="Une seule app pour suivre votre santé holistique. L'IA analyse les liens entre votre sommeil, humeur, nutrition et activité pour des recommandations vraiment personnalisées.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Suivi Santé & Bien-être IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de suivi santé &amp; bien-être IA</h1>
+            <p class="hero-subtitle">Un journal de santé holistique propulsé par l'IA qui centralise humeur, sommeil, nutrition et activité physique — et révèle les connexions invisibles entre vos habitudes pour vous aider à vous sentir vraiment mieux.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 994€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les applications de santé existantes souffrent toutes du même défaut fondamental : elles sont fragmentées. Une app pour le sommeil (Sleep Cycle), une pour la nutrition (MyFitnessPal), une pour l'humeur (Daylio), une pour l'activité physique (Strava). Chacune collecte des données dans son silo, sans jamais faire le lien entre elles. Résultat : l'utilisateur qui se couche tard, mange mal et se sent épuisé ne peut pas voir que ces trois phénomènes sont directement corrélés dans ses propres données.</p>
+            <p>Les médecins généralistes voient leurs patients en moyenne 15 à 20 minutes par consultation, sans aucun accès aux données quotidiennes de santé et bien-être. Cette asymétrie d'information est un obstacle majeur à un suivi médical vraiment personnalisé. Pourtant, les données comportementales — qualité du sommeil, niveaux d'énergie, habitudes alimentaires, stress — sont des marqueurs précoces puissants pour détecter des problèmes avant qu'ils ne deviennent sérieux.</p>
+            <p>Le bien-être mental touche 1 personne sur 4 en France. Le suivi régulier de la santé mentale — journaling, tracking de l'humeur, identification des déclencheurs de stress — est démontré scientifiquement comme efficace pour prévenir les épisodes dépressifs. Mais les outils qui existent aujourd'hui sont soit trop cliniques et rebutants, soit trop superficiels pour produire de vraies insights. Il manque une application grand public, belle, simple et véritablement intelligente.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un journal de santé unifié qui collecte chaque jour, en moins de 3 minutes, les données essentielles : humeur (échelle et tags contextuels), qualité du sommeil, repas principaux, activité physique, niveau d'énergie et de stress. L'interface est délibérément simple et rapide — un check-in quotidien qui devient une habitude saine plutôt qu'une corvée. Les données des wearables (Apple Watch, Fitbit, Garmin) sont importées automatiquement via HealthKit et Google Fit.</p>
+            <p>Le coeur différenciant est le moteur d'analyse de corrélations de l'IA. Après quelques semaines de données, l'application révèle des patterns invisibles propres à l'utilisateur : "Votre humeur est systématiquement 40% plus basse les jours qui suivent un sommeil inférieur à 6h30", "Vos niveaux d'énergie sont plus élevés les jours où vous faites 8 000 pas minimum", "Vous mangez plus sucré lors de vos semaines de stress professionnel élevé". Ces insights personnalisés, basés sur les données réelles de l'utilisateur, ont une puissance de persuasion et d'engagement incomparablement supérieure aux conseils génériques.</p>
+            <p>L'application génère des recommandations quotidiennes actionnables, adaptées au profil et aux patterns détectés : suggestions d'heure de coucher optimale, exercices de respiration ciblés lors de pics de stress détectés, alertes proactives si des patterns négatifs émergent sur plusieurs jours consécutifs. Les rapports de santé hebdomadaires et mensuels sont partageables avec un médecin ou un coach bien-être, transformant l'app en véritable outil de santé préventive collaborative.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement premium à <strong>4,99€/mois</strong> est la colonne vertébrale du modèle. La version gratuite permet le suivi basique de l'humeur et du sommeil avec des graphiques simples — suffisant pour créer l'habitude quotidienne et démontrer la valeur des données accumulées. La limite est intentionnelle : sans l'IA, les données brutes restent inexploitables.</p>
+            <p>Le premium débloque l'analyse de corrélations complète, les recommandations personnalisées quotidiennes, les alertes proactives sur les patterns négatifs, l'intégration Apple Health / Google Fit pour l'import automatique, les rapports de santé détaillés partageables avec des professionnels de santé, et l'accès au coaching IA conversationnel pour des conseils bien-être en langage naturel.</p>
+            <p>Un second axe de revenus est le partenariat B2B avec des coachs bien-être et des professionnels de santé. L'application propose une version "praticien" qui permet à un coach ou médecin d'accéder (avec consentement) aux données de ses clients/patients pour un suivi enrichi entre les séances. Les praticiens paient un abonnement mensuel (29-49€/mois) pour accéder à ce tableau de bord professionnel, créant une acquisition organique via les recommandations des professionnels à leurs clients.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th data-i18n="idea.projections.100">100 utilisateurs</th>
+                        <th data-i18n="idea.projections.500">600 utilisateurs</th>
+                        <th data-i18n="idea.projections.1000">1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>499€</td>
+                        <td>2 994€</td>
+                        <td>4 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>500€</td>
+                        <td>800€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>299€</td>
+                        <td>2 494€</td>
+                        <td>4 190€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>7 mois</td>
+                        <td>3 mois</td>
+                        <td>2 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Journal quotidien intelligent en moins de 3 minutes : humeur, sommeil, repas, activité, énergie</li>
+                <li>Suivi multi-dimensions : humeur, sommeil, alimentation, activité physique, niveau de stress</li>
+                <li>Analyse de corrélations IA : révèle les liens invisibles entre vos habitudes</li>
+                <li>Recommandations personnalisées quotidiennes basées sur vos patterns uniques</li>
+                <li>Alertes proactives lors de la détection de patterns négatifs récurrents</li>
+                <li>Rapports de santé hebdomadaires et mensuels partageables avec des professionnels</li>
+                <li>Intégration native Apple Health et Google Fit pour import automatique des données wearables</li>
+                <li>Coaching IA conversationnel 24/7 pour questions et conseils bien-être personnalisés</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">TensorFlow (corrélations)</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">HealthKit / Google Fit API</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Chart.js</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-suivi-sante-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

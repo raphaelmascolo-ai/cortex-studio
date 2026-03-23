@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App CV & Lettre de Motivation IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application qui génère des CV optimisés ATS et des lettres de motivation personnalisées par offre en quelques secondes grâce à l'IA. Scoring ATS en temps réel. MRR estimé ~2 997€/mois.">
+    <meta property="og:title" content="App CV & Lettre de Motivation IA — Cortex Studio">
+    <meta property="og:description" content="Passez les filtres ATS et démarquez-vous : l'IA génère un CV et une lettre de motivation sur mesure pour chaque offre d'emploi en 30 secondes.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>CV & Lettre de Motivation IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de génération de CV &amp; lettres de motivation IA</h1>
+            <p class="hero-subtitle">Entrez votre parcours une seule fois. L'IA génère un CV optimisé ATS et une lettre de motivation sur mesure pour chaque offre en 30 secondes — et passe les filtres là où 75% des candidats échouent.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 997€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Chaque candidature à un emploi représente 1 à 2 heures de travail invisible : adapter son CV, rédiger une lettre de motivation personnalisée, chercher les mots-clés de l'annonce, reformuler ses expériences pour qu'elles résonnent avec le poste. Pour un chercheur d'emploi qui postule à 5 offres par semaine, c'est 5 à 10 heures perdues dans un exercice répétitif et éprouvant — sans aucune garantie de résultat.</p>
+            <p>Le problème est amplifié par les systèmes ATS (Applicant Tracking System) utilisés par 99% des grandes entreprises et cabinets de recrutement. Ces logiciels filtrent automatiquement les candidatures avant qu'un œil humain ne les lise. Selon les études, 75% des CV sont rejetés par les ATS à cause d'une mauvaise utilisation des mots-clés, d'un mauvais formatage ou d'une structure non reconnue par le logiciel. Le candidat parfait peut être éliminé sans jamais être vu — uniquement à cause de la forme de son document.</p>
+            <p>Les alternatives existantes sont soit trop chères, soit insuffisantes. Les services de rédaction professionnelle de CV coûtent 100 à 500€ par document, sans personnalisation par offre. Les créateurs de CV en ligne (Canva, Novoresume) proposent de beaux templates mais aucune optimisation IA ni personnalisation contextuelle. ChatGPT aide à rédiger mais ne comprend pas les subtilités des ATS, ne score pas le document et ne formate pas le PDF final.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'utilisateur crée son profil complet une seule fois : formation, expériences, compétences, réalisations chiffrées. Ensuite, pour chaque nouvelle candidature, il colle l'URL ou le texte de l'annonce. L'IA analyse l'offre en profondeur : identification des mots-clés critiques, détection des compétences techniques et soft skills recherchées, compréhension du niveau hiérarchique et du secteur. En 30 secondes, un CV optimisé ATS et une lettre de motivation entièrement personnalisée sont générés.</p>
+            <p>La différence fondamentale avec les solutions existantes est le scoring ATS en temps réel. L'interface affiche un score de compatibilité (0-100%) entre le CV généré et l'offre d'emploi, avec des suggestions d'amélioration précises : "Ajoutez le terme 'gestion de projet Agile' dans votre expérience chez X", "Reformulez votre accroche pour inclure le mot-clé 'transformation digitale'". L'utilisateur peut itérer en quelques clics jusqu'à atteindre un score optimal avant d'envoyer.</p>
+            <p>L'application inclut également un module de suivi des candidatures complet : statut (envoyé, entretien, refus, offre), rappels de relance automatiques, statistiques personnelles (taux de réponse par secteur, par type de poste) et conseils d'amélioration basés sur les patterns de succès détectés. Avec le temps, l'IA apprend le profil de l'utilisateur et ses candidatures deviennent de plus en plus précises et efficaces.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Deux modèles coexistent pour s'adapter aux profils d'utilisation : le <strong>pay-per-use à 1,99€ par document</strong> généré (CV ou lettre), idéal pour les utilisateurs occasionnels qui postulent à quelques offres ciblées. Ce modèle réduit la friction à l'entrée car aucun abonnement n'est requis — l'utilisateur ne paye que ce qu'il consomme.</p>
+            <p>L'<strong>abonnement illimité à 9,99€/mois</strong> est le moteur du MRR récurrent : générations CV et lettres illimitées, scoring ATS complet, accès à tous les templates premium par secteur (tech, finance, santé, marketing...), exports PDF et Word, suivi des candidatures avec rappels automatiques. Pour un chercheur d'emploi actif qui postule à 20+ offres par mois, l'abonnement devient rentable dès la 6e génération — une valeur évidente.</p>
+            <p>Des revenus B2B additionnels sont atteignables via des partenariats avec les plateformes d'emploi (Indeed, LinkedIn, Welcome to the Jungle) sous forme d'intégration native, et avec les cabinets de recrutement et écoles (licence entreprise pour coaching collectif des étudiants en recherche de stage/emploi).</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th data-i18n="idea.projections.100">100 utilisateurs</th>
+                        <th data-i18n="idea.projections.500">300 utilisateurs</th>
+                        <th data-i18n="idea.projections.1000">1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>999€</td>
+                        <td>2 997€</td>
+                        <td>9 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>400€</td>
+                        <td>1 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>799€</td>
+                        <td>2 597€</td>
+                        <td>8 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>4 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Génération de CV optimisé ATS à partir d'un profil unique, adapté à chaque offre</li>
+                <li>Lettre de motivation personnalisée par offre, entreprise et secteur en 30 secondes</li>
+                <li>Analyse automatique des annonces pour extraction des mots-clés critiques</li>
+                <li>Scoring ATS en temps réel (0-100%) avec suggestions d'amélioration concrètes</li>
+                <li>Templates professionnels premium par secteur (tech, finance, santé, marketing, juridique)</li>
+                <li>Export PDF et Word haute qualité, mise en page professionnelle</li>
+                <li>Suivi complet des candidatures avec rappels automatiques de relance</li>
+                <li>Suggestions d'amélioration IA basées sur les patterns de candidatures réussies</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python FastAPI</span>
+                <span class="tech-badge">GPT-4 fine-tuned</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Puppeteer (PDF)</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">AWS S3</span>
+                <span class="tech-badge">Stripe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-cv-lettre-motivation-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

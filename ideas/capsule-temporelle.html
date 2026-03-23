@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Capsule Temporelle — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application de capsules temporelles numériques : créez des messages, photos et vidéos verrouillés jusqu'à une date future. L'IA génère des montages automatiques et améliore vos souvenirs. MRR estimé ~2 990€/mois.">
+    <meta property="og:title" content="App Capsule Temporelle — Cortex Studio">
+    <meta property="og:description" content="Envoyez un message à votre futur vous. Capsules numériques enrichies par l'IA pour couples, familles et entreprises.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Capsule Temporelle</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App capsule temporelle</h1>
+            <p class="hero-subtitle">Créez des capsules numériques enrichies par l'IA — messages, photos, vidéos — verrouillées jusqu'à un moment précis de votre vie. Pour les couples, familles, amis et entreprises qui veulent transmettre l'essentiel.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 990€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les souvenirs numériques sont devenus à la fois omniprésents et éphémères. Nous prenons des centaines de photos par semaine, mais elles disparaissent dans des galeries infinies que personne ne reregardera jamais vraiment. Les plateformes sociales ont remplacé les albums photo et les lettres manuscrites, mais au prix d'une perte totale de contexte émotionnel : un post Instagram vieux de 3 ans n'a plus aucune charge affective.</p>
+            <p>Les gens ont une envie profonde de transmettre des messages importants à des moments précis de leur vie — pour le 18e anniversaire de leur enfant, pour le diplôme d'une personne aimée, pour une naissance à venir, pour la retraite d'un collègue. Aujourd'hui, il n'existe aucun outil fiable et engageant pour le faire. Les quelques services de "time capsule" existants sur le marché sont des sites web datés, peu intuitifs, avec aucune dimension émotionnelle ou IA, et des modèles économiques peu pérennes.</p>
+            <p>Les réseaux sociaux suppriment la profondeur : tout est immédiat, tout est public, tout est oublié en 24 heures. La dimension temporelle — ce sentiment puissant d'écrire à quelqu'un dans le futur — est totalement absente des outils numériques actuels. C'est un vide émotionnel et technologique que personne n'a encore comblé sérieusement.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une application mobile qui permet de créer des "capsules temporelles" numériques — des contenus multimédia (messages texte, photos, vidéos, enregistrements audio) scellés cryptographiquement jusqu'à une date précise choisie par l'expéditeur. La capsule ne peut être ouverte ni par l'utilisateur ni par les destinataires avant la date programmée, ce qui crée une véritable tension émotionnelle et une valeur d'attente unique.</p>
+            <p>L'IA enrichit profondément l'expérience créative. Elle génère des montages vidéo automatiques à partir des photos et vidéos déposées dans la capsule, avec musique adaptée à l'ambiance détectée. Elle améliore et restaure les photos anciennes ou de faible qualité. Elle propose des suggestions de dates significatives basées sur les événements détectés dans le contenu (anniversaires, diplômes, mariages). Pour les capsules texte, elle propose une assistance à la rédaction de "lettres au futur" personnalisées et touchantes.</p>
+            <p>L'application est pensée pour de multiples usages : un parent qui prépare une capsule pour les 18 ans de son enfant, un couple qui scelle des vœux pour leur 10e anniversaire de mariage, une entreprise qui archive sa "photo de famille" annuelle à rouvrir dans 5 ans, des amis qui s'envoient des défis pour leur réunion de lycée. La dimension sociale et le partage de capsules en groupe créent une viralité organique puissante.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>La version gratuite est volontairement limitée pour démontrer la valeur sans friction : 3 capsules maximum, 1 Go de stockage total, pas d'amélioration IA ni de montage automatique. C'est suffisant pour vivre l'expérience émotionnelle de base et comprendre la proposition de valeur, mais insuffisant pour les usages réguliers et familiaux.</p>
+            <p>L'abonnement Premium à <strong>2,99€/mois</strong> débloque l'expérience complète : capsules illimitées, 50 Go de stockage cloud sécurisé et chiffré, montages vidéo automatiques générés par l'IA, amélioration et restauration de photos anciennes, rappels IA (l'app vous notifie des prochaines dates importantes de votre entourage), et partage familial jusqu'à 8 membres. À ce tarif très accessible — un café par mois — le taux de conversion attendu est élevé car l'émotion générée par le produit justifie facilement l'investissement.</p>
+            <p>Des opportunités de revenus additionnels existent via des partenariats avec des services d'impression (livres photo physiques générés depuis les capsules), ainsi qu'une offre B2B pour les entreprises souhaitant créer des capsules d'équipe ou des archives institutionnelles (tarif custom à partir de 29€/mois/organisation).</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th data-i18n="idea.projections.100">100 utilisateurs</th>
+                        <th data-i18n="idea.projections.500">500 utilisateurs</th>
+                        <th data-i18n="idea.projections.1000">1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>299€</td>
+                        <td>1 495€</td>
+                        <td>2 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>150€</td>
+                        <td>400€</td>
+                        <td>700€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>149€</td>
+                        <td>1 095€</td>
+                        <td>2 290€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>8 mois</td>
+                        <td>4 mois</td>
+                        <td>2 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Création de capsules multimédia (texte, photos, vidéos, audio) avec interface intuitive</li>
+                <li>Verrouillage temporel sécurisé par chiffrement : ouverture impossible avant la date définie</li>
+                <li>Montages vidéo automatiques générés par IA avec musique adaptée à l'ambiance</li>
+                <li>Amélioration et restauration de photos anciennes ou de faible résolution par IA</li>
+                <li>Suggestions intelligentes de dates significatives basées sur le contenu de la capsule</li>
+                <li>Partage familial et en groupes jusqu'à 8 membres par capsule</li>
+                <li>Notifications de déverrouillage avec cérémonie d'ouverture animée</li>
+                <li>Stockage cloud sécurisé et chiffré de bout en bout (50 Go en premium)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Firebase</span>
+                <span class="tech-badge">Cloud Functions</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Stable Diffusion</span>
+                <span class="tech-badge">Cloud Storage (GCP)</span>
+                <span class="tech-badge">FFmpeg</span>
+                <span class="tech-badge">AES-256 Encryption</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-capsule-temporelle.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

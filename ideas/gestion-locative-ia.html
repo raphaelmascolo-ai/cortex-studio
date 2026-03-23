@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Gestion Locative IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une plateforme de gestion locative automatisée par l'IA : quittances automatiques, estimation du loyer optimal, alertes réglementaires et suivi des paiements. Idéal pour les propriétaires bailleurs de 1 à 20 biens. MRR estimé ~2 994€/mois.">
+    <meta property="og:title" content="App Gestion Locative IA — Cortex Studio">
+    <meta property="og:description" content="Gérez vos locations comme un pro sans agence : quittances auto, loyer optimal par IA, alertes DPE/réglementaires et tableau de bord multi-biens centralisé.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion Locative IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de gestion locative IA</h1>
+            <p class="hero-subtitle">La plateforme IA qui automatise entièrement la gestion de vos locations : quittances, relances, estimation du loyer optimal, alertes réglementaires et suivi multi-biens — sans agence, sans tableur Excel.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 994€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>En France, près de 3 millions de propriétaires bailleurs gèrent leurs biens en direct, sans passer par une agence. Pour la plupart, cela signifie jongler avec des tableurs Excel artisanaux, des fichiers Word pour les quittances, des rappels mentaux pour les révisions de loyer et une surveillance manuelle des échéances réglementaires. Dès 2 ou 3 biens, cette gestion devient une deuxième activité chronophage — sans en avoir les outils professionnels.</p>
+            <p>La réglementation locative française est l'une des plus complexes et des plus évolutives d'Europe. Encadrement des loyers dans les zones tendues (Paris, Lille, Lyon...), obligation de DPE (Diagnostic de Performance Energétique) avec interdiction de louer les passoires thermiques G dès 2025, révision annuelle des loyers selon l'IRL, normes de décence... Chaque année, de nouvelles obligations s'ajoutent. Un propriétaire non informé s'expose à des sanctions, des litiges ou une impossibilité légale de louer. Suivre ces évolutions sans outil dédié est une charge administrative et juridique permanente.</p>
+            <p>Les impayés touchent environ 3% des locations en France — soit des dizaines de milliers de situations douloureuses chaque année. La procédure de relance, puis d'expulsion, est longue, coûteuse et éprouvante. La prévention des impayés passe par un suivi rigoureux des paiements dès le premier retard et des relances rapides et documentées. La majorité des propriétaires en direct n'ont pas de système de suivi structuré, ce qui laisse les retards s'accumuler sans action préventive.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une plateforme web et mobile qui automatise l'intégralité des tâches administratives d'un bailleur privé. Chaque mois, les quittances de loyer et les avis d'échéance sont générés et envoyés automatiquement aux locataires par email. Les révisions de loyer selon l'Indice de Référence des Loyers (IRL) sont calculées et appliquées sans intervention. En cas de retard de paiement, une séquence de relances progressive et documentée est déclenchée automatiquement — de la relance amicale à la mise en demeure formelle.</p>
+            <p>Le module d'estimation du loyer optimal est le premier différenciateur concurrentiel fort. En analysant les données des transactions immobilières DVF (Demandes de Valeurs Foncières), les annonces de location en cours dans le quartier et les caractéristiques précises du bien (surface, DPE, étage, équipements), l'IA calcule le loyer de marché optimal — ni trop bas (manque à gagner), ni trop haut (vacance locative prolongée). Pour un propriétaire qui n'a pas réévalué son loyer depuis 5 ans, cet outil seul peut représenter plusieurs centaines d'euros de revenu mensuel supplémentaire.</p>
+            <p>Le centre d'alertes réglementaires personnalisées est le second différenciateur majeur. L'application surveille les obligations légales propres à chaque bien et envoie des alertes proactives : diagnostic DPE à renouveler dans 3 mois, obligation de travaux pour reclasser un bien F en zone encadrée, révision IRL disponible, changement des plafonds d'encadrement des loyers dans la commune. Le propriétaire est toujours en conformité, sans devoir surveiller lui-même la veille réglementaire.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle de prix est à l'usage, par bien géré : <strong>4,99€ par bien et par mois</strong>. Ce modèle est particulièrement intelligent car il aligne la valeur perçue avec la facturation — un propriétaire avec 3 biens paie 14,97€/mois, ce qui est marginal face aux revenus locatifs générés et aux économies réalisées en évitant une agence (qui prend généralement 6-10% des loyers annuels).</p>
+            <p>Un mois d'essai gratuit pour le premier bien permet à l'utilisateur de configurer complètement sa gestion, d'importer ses données et de constater les premiers automatismes avant de s'engager. La friction est minimale à l'entrée, et la valeur est immédiatement visible dès la première quittance générée automatiquement. Le churn est structurellement faible : quitter l'application signifie retrouver toutes les tâches manuelles et administratives que le propriétaire a quittées.</p>
+            <p>Des services complémentaires premium peuvent être proposés à la demande : génération assistée de baux de location conformes à la loi Alur, aide à la déclaration fiscale des revenus fonciers (2044/2044S), mise en relation avec des artisans certifiés pour les travaux de conformité DPE, et interface expert-comptable pour les propriétaires SCI. Ces services additionnels augmentent significativement l'ARPU (revenu moyen par utilisateur) sans augmenter le coût de base.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 proprio (150 biens)</th>
+                        <th>200 proprio (600 biens)</th>
+                        <th>500 proprio (1 500 biens)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>749€</td>
+                        <td>2 994€</td>
+                        <td>7 485€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>300€</td>
+                        <td>600€</td>
+                        <td>1 200€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>449€</td>
+                        <td>2 394€</td>
+                        <td>6 285€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td>
+                        <td>3 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Quittances de loyer et avis d'échéance générés et envoyés automatiquement chaque mois</li>
+                <li>Estimation du loyer optimal par IA grâce aux données DVF et aux annonces du marché local</li>
+                <li>Alertes réglementaires personnalisées : DPE, encadrement des loyers, diagnostics à renouveler</li>
+                <li>Suivi des paiements en temps réel avec relances automatiques progressives en cas de retard</li>
+                <li>Gestion des travaux et charges locatives avec répartition automatique propriétaire/locataire</li>
+                <li>Tableau de bord multi-biens centralisé avec indicateurs de rentabilité par bien</li>
+                <li>Documents légaux pré-remplis et conformes : baux, états des lieux, lettres recommandées</li>
+                <li>Assistance à la déclaration fiscale des revenus fonciers (régimes réel et micro-foncier)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Données DVF (estimation)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">AWS SES (emails)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-gestion-locative-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

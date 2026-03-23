@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Micro-Formation IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Des micro-cours de 5-10 minutes générés par IA et personnalisés au niveau de chaque apprenant. Langues, programmation, business, soft skills. Taux de complétion 5x supérieur aux MOOCs classiques. MRR estimé ~3 196€/mois.">
+    <meta property="og:title" content="App Micro-Formation IA — Cortex Studio">
+    <meta property="og:description" content="L'apprentissage enfin adapté à votre cerveau : micro-leçons IA de 5-10 min, personnalisées à votre niveau et révisées au bon moment grâce au spaced repetition.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Micro-Formation IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de micro-formation IA</h1>
+            <p class="hero-subtitle">Des micro-cours de 5 à 10 minutes générés et personnalisés par l'IA selon votre niveau réel, avec révisions espacées intelligentes. Apprenez enfin efficacement dans vos interstices de temps — dans le bus, entre deux réunions, avant de dormir.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 196€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>L'e-learning souffre d'une crise d'engagement structurelle. Les MOOCs (Coursera, Udemy, LinkedIn Learning) affichent des taux d'abandon supérieurs à 90% : les apprenants s'inscrivent avec enthousiasme à des cours de 20, 30 ou 50 heures, puis les abandonnent en quelques jours face à la longueur, la généricité des contenus et l'inadaptation au niveau réel. Ils paient pour une culpabilité, pas pour un apprentissage.</p>
+            <p>Le problème fondamental est la désadaptation entre le contenu et l'apprenant. Un cours conçu pour un débutant absolu est ennuyeux pour quelqu'un qui a déjà des bases. Un cours avancé est décourageant pour quelqu'un qui manque de prérequis. La personnalisation de masse — donner à chaque personne exactement le contenu dont elle a besoin à son niveau précis — était jusqu'ici impossible sans des équipes pédagogiques dédiées et des budgets de production colossaux (5 000 à 50 000€ par cours de qualité).</p>
+            <p>Du côté des employeurs et des professionnels, la pression de montée en compétences n'a jamais été aussi forte. Les métiers évoluent rapidement avec l'IA, et les employés ont besoin d'apprendre en continu — mais ils n'ont que 15 à 30 minutes par jour disponibles pour la formation. Les outils de formation corporate actuels sont souvent perçus comme une corvée administrative plutôt qu'un investissement personnel. Il manque un outil de formation qui soit à la fois ultra-personnalisé, ultra-court et réellement plaisant à utiliser.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une application de micro-apprentissage où chaque leçon dure entre 5 et 10 minutes et est entièrement générée par l'IA en fonction du niveau réel de l'apprenant. Au démarrage, un test de positionnement adaptatif (lui-même généré par l'IA) évalue précisément les connaissances existantes sur le domaine choisi — en 3-5 minutes, l'app sait exactement où l'apprenant en est et calibre l'intégralité du parcours en conséquence. Plus de contenu trop facile ni trop difficile.</p>
+            <p>Le contenu lui-même est généré à la volée par l'IA : explications textuelles concises, exemples concrets tirés du contexte professionnel de l'apprenant, exercices pratiques, mini-quiz de validation. L'IA adapte non seulement le niveau mais aussi le format pédagogique préféré (lecture, exercice pratique, questions-réponses) appris au fil des sessions. Les domaines couverts sont larges : langues étrangères, programmation, finance, marketing, management, soft skills, IA et data.</p>
+            <p>Le système de révisions espacées (spaced repetition) est le secret de la rétention à long terme. L'algorithme planifie automatiquement les révisions au moment optimal du point de vue cognitif — juste avant que le souvenir ne s'efface — garantissant une mémorisation durable sans effort conscient de mémorisation. L'app notifie l'apprenant au bon moment : "C'est le moment parfait pour réviser la leçon sur les closures JavaScript que tu as apprise il y a 3 jours." Ce système, combiné aux sessions courtes, génère un taux de complétion 5 fois supérieur aux MOOCs classiques.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement à <strong>7,99€/mois</strong> donne accès illimité à tous les domaines et toutes les fonctionnalités de l'application : parcours personnalisés IA illimités, tous les domaines (langues, tech, business, soft skills), suivi de progression détaillé, certificats de complétion téléchargeables, et mode offline pour apprendre sans connexion dans le transport.</p>
+            <p>La version gratuite est généreuse en fonctionnalités de base — 1 cours par jour, 1 domaine au choix — pour démontrer la qualité et la personnalisation du contenu généré. La barrière à la mise à niveau est faible car l'expérience est qualitativement supérieure à tout ce qui existe. À 7,99€/mois, c'est moins cher qu'une heure de cours particulier ou qu'un abonnement Coursera — pour un contenu infiniment plus personnalisé.</p>
+            <p>Le marché B2B représente un potentiel significatif via des licences entreprise (formation continue des équipes) avec des tarifs dégressifs par salarié (à partir de 5€/utilisateur/mois pour 50+ sièges). Les PME qui ne peuvent pas financer des formations formelles trouveront une solution de montée en compétences continue à un coût marginal. Les partenariats avec des OPCO (organismes financeurs de formation) pour la prise en charge via le CPF sont également envisageables à moyen terme.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th data-i18n="idea.projections.100">100 utilisateurs</th>
+                        <th data-i18n="idea.projections.500">400 utilisateurs</th>
+                        <th data-i18n="idea.projections.1000">1 000 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>799€</td>
+                        <td>3 196€</td>
+                        <td>7 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>300€</td>
+                        <td>600€</td>
+                        <td>1 200€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>499€</td>
+                        <td>2 596€</td>
+                        <td>6 790€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Cours personnalisés générés par IA selon le niveau précis et les objectifs de l'apprenant</li>
+                <li>Micro-leçons de 5 à 10 minutes adaptées aux contraintes de temps réelles</li>
+                <li>Test de positionnement adaptatif pour calibrer le niveau initial en 3-5 minutes</li>
+                <li>Algorithme de spaced repetition intelligent pour une rétention maximale à long terme</li>
+                <li>Quiz et exercices interactifs générés à la volée, jamais identiques</li>
+                <li>Suivi de progression détaillé avec statistiques d'apprentissage et streaks</li>
+                <li>Certificats de complétion téléchargeables pour valoriser les acquis</li>
+                <li>Mode offline : téléchargement des leçons pour apprendre sans connexion</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">Python Django</span>
+                <span class="tech-badge">GPT-4 (génération contenu)</span>
+                <span class="tech-badge">Whisper (audio)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Redis (cache/sessions)</span>
+                <span class="tech-badge">AWS S3 + CloudFront</span>
+                <span class="tech-badge">Celery (tâches asynchrones)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-micro-formation-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

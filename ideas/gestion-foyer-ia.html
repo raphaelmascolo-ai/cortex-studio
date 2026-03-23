@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Gestion de Foyer IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une application tout-en-un de gestion familiale augmentée par l'IA : menus hebdomadaires personnalisés, liste de courses optimisée, budget familial et répartition équitable des tâches. MRR estimé ~2 995€/mois.">
+    <meta property="og:title" content="App Gestion de Foyer IA — Cortex Studio">
+    <meta property="og:description" content="L'assistant familial IA qui planifie les repas, optimise les courses, suit le budget et répartit les tâches ménagères équitablement.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion de Foyer IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de gestion de foyer IA</h1>
+            <p class="hero-subtitle">L'assistant familial intelligent qui remplace 5 applications distinctes : planification des repas, liste de courses optimisée, budget familial en temps réel et répartition équitable des tâches ménagères.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 995€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Gérer un foyer est un travail invisible et chronophage qui accapare en moyenne 3 heures par jour : planifier les repas, faire les courses, gérer le budget, organiser les tâches ménagères, suivre les activités des enfants. Ce travail domestique — souvent appelé "charge mentale" — retombe massivement sur une seule personne au sein du foyer, source de conflits et de fatigue profonde.</p>
+            <p>Le problème est amplifié par la fragmentation des outils numériques. Une famille moderne utilise en moyenne 5 à 10 applications différentes sans coordination entre elles : une app pour la liste de courses (Bring!, OurGroceries), un calendrier partagé (Google Calendar), une app budget (Bankin'), un gestionnaire de tâches (Todoist), et des recettes éparpillées entre Pinterest, Marmiton et des photos de captures d'écran. Aucune de ces apps ne communique avec les autres et ne propose une vue d'ensemble intelligente.</p>
+            <p>Le gaspillage alimentaire atteint des niveaux préoccupants : 400€ par foyer et par an en moyenne en France. Il est dû en grande partie à une mauvaise planification des menus et des achats. Un foyer qui pense "au jour le jour" achète trop, achète mal et jette l'équivalent d'un repas par semaine. Il existe un potentiel d'économies immédiat et concret pour toute famille qui adopterait un outil de planification intelligent.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une application tout-en-un qui centralise l'intégralité de la gestion familiale et l'augmente par l'IA. Le cœur du produit est la planification des repas : chaque semaine, l'IA génère un menu personnalisé de 7 jours en tenant compte des préférences alimentaires de chaque membre de la famille, des allergies, du budget hebdomadaire défini et même du contenu du frigo (grâce à la prise de photo des courses existantes). Les recettes sont sélectionnées pour optimiser les restes et minimiser les achats inutiles.</p>
+            <p>La liste de courses est générée automatiquement depuis le menu de la semaine, regroupée par rayon pour optimiser le temps en magasin, et enrichie par la détection des promotions en cours dans les enseignes proches de l'utilisateur. Le budget familial est synchronisé en temps réel : chaque course complétée est enregistrée, le budget restant du mois est affiché clairement, et des alertes sont envoyées si les tendances de dépenses dépassent l'enveloppe définie.</p>
+            <p>La répartition des tâches ménagères est le troisième pilier différenciant. L'IA propose un planning hebdomadaire équitable en tenant compte des contraintes de chaque membre (emploi du temps, disponibilités, compétences), évitant que toujours la même personne prenne en charge le nettoyage ou les courses. Le système de gamification intégré (points, badges) encourage l'engagement de toute la famille, y compris des enfants.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle est basé sur un abonnement familial au prix unitaire accessible de <strong>5,99€/mois</strong>, incluant jusqu'à 6 membres dans le foyer. C'est délibérément un abonnement foyer et non individuel : une famille qui adopte l'app a un LTV (lifetime value) beaucoup plus élevé qu'un utilisateur solo, avec un churn (taux de désabonnement) bien plus faible car la dépendance est collective.</p>
+            <p>La version gratuite permet à 2 membres de tester les fonctions basiques : liste de courses manuelle, calendrier familial et 1 suggestion de menu par semaine sans personnalisation IA. L'abonnement premium débloque les menus IA hebdomadaires personnalisés et illimités, la liste de courses automatique optimisée avec détection des promos, le suivi de budget en temps réel, le planning de tâches ménagères équitable par IA et le mode multi-membres complet.</p>
+            <p>Des partenariats avec les grandes enseignes de distribution (Carrefour, Leclerc, Intermarché) représentent un vecteur de revenus additionnel significatif : intégration de leur catalogue et promos en échange d'une commission sur les courses réalisées via l'app. Un modèle win-win qui améliore le service pour l'utilisateur tout en créant une nouvelle source de revenus.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th data-i18n="idea.projections.100">100 foyers</th>
+                        <th data-i18n="idea.projections.500">500 foyers</th>
+                        <th data-i18n="idea.projections.1000">1 000 foyers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>599€</td>
+                        <td>2 995€</td>
+                        <td>5 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>450€</td>
+                        <td>800€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>399€</td>
+                        <td>2 545€</td>
+                        <td>5 190€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Menus hebdomadaires IA personnalisés selon préférences, allergies et budget familial</li>
+                <li>Liste de courses automatique générée depuis le menu, optimisée par rayon</li>
+                <li>Détection des promotions en cours dans les enseignes proches de l'utilisateur</li>
+                <li>Suivi du budget familial en temps réel avec alertes de dépassement</li>
+                <li>Planning de tâches ménagères réparti équitablement par l'IA entre les membres</li>
+                <li>Gestion des allergies, intolérances et préférences alimentaires par personne</li>
+                <li>Mode multi-membres jusqu'à 6 personnes avec profils individuels</li>
+                <li>Suggestions de recettes adaptées au contenu du frigo pour zéro gaspillage</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Scraping API (promos)</span>
+                <span class="tech-badge">AWS Lambda</span>
+                <span class="tech-badge">Firebase FCM</span>
+                <span class="tech-badge">Stripe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-gestion-foyer-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required data-i18n-placeholder="modal.firstname.placeholder">
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required data-i18n-placeholder="modal.email.placeholder">
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input" data-i18n-placeholder="modal.company.placeholder">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
