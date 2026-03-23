@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace de Services de Niche — Cortex Studio | Idée de projet</title>
+    <meta name="description" content="Une marketplace verticale avec matching IA qui connecte les bons prestataires aux bons clients, avec vérification des compétences et paiement sécurisé. MRR estimé ~4 000€/mois.">
+    <meta property="og:title" content="Marketplace de Services de Niche — Cortex Studio">
+    <meta property="og:description" content="La marketplace spécialisée avec matching IA qui met fin à la jungle Fiverr — prestataires vérifiés, matching précis, paiement sécurisé.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Marketplace de Services</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-web">App Web</span>
+            <h1>Marketplace de services de niche</h1>
+            <p class="hero-subtitle">Une marketplace verticale avec algorithme de matching IA qui connecte les bons prestataires aux bons clients — prestataires vérifiés, devis instantanés, paiement sécurisé en escrow.</p>
+            <span class="badge badge-mrr">MRR estimé : ~4 000€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les marketplaces généralistes comme Fiverr et Upwork sont devenues des jungles saturées où la qualité est inconsistante. Pour les secteurs spécialisés — juridique, médical, ingénierie, tech avancée — ces plateformes ne proposent pas les mécanismes de vérification nécessaires pour rassurer les clients sur les compétences réelles des prestataires. Un avocat ou un médecin ne peut pas être présenté sur le même plan qu'un rédacteur débutant.</p>
+            <p>Les clients perdent un temps considérable à trier des centaines de profils non pertinents. Le matching repose sur des critères primaires — prix, note globale, nombre de missions — qui ne capturent pas les dimensions essentielles d'une bonne collaboration : spécialité précise, expérience sectorielle, disponibilité, style de travail, zone géographique. Le résultat est une loterie qui génère des déceptions et des litiges fréquents.</p>
+            <p>Du côté des prestataires qualifiés, la frustration est symétrique : être noyé dans une masse de profils de qualité inégale, se retrouver en compétition sur le prix avec des prestataires sous-qualifiés, ne pas pouvoir valoriser correctement son expertise et sa spécialisation. Les meilleurs professionnels d'une niche évitent ces plateformes et manquent ainsi d'un canal d'acquisition digital efficace.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une marketplace verticale pour un secteur spécifique, construite autour d'un algorithme de matching IA qui va bien au-delà des filtres classiques. Quand un client soumet un besoin — en langage naturel ou via un formulaire guidé — l'IA analyse sa demande et la compare aux profils des prestataires selon 15 à 20 dimensions : spécialité exacte, expériences passées pertinentes, disponibilité, localisation, tarif horaire, style de communication décrit dans les avis.</p>
+            <p>La vérification des compétences est le point différenciant majeur. Chaque prestataire passe un processus d'onboarding rigoureux : vérification des diplômes et certifications, test pratique dans sa spécialité, entretien vidéo pour les profils premium, et système d'avis client vérifiés avec modération IA pour détecter les faux témoignages. Le badge "Prestataire Vérifié" garantit un niveau minimum de compétence que les marketplaces généralistes ne peuvent pas offrir.</p>
+            <p>Le devis instantané intégré fluidifie le parcours d'achat : au lieu d'attendre que le prestataire réponde à une demande ouverte, l'IA génère une estimation tarifaire indicative dès la saisie du besoin, basée sur les tarifs pratiqués pour des missions similaires. Le paiement en escrow sécurise la transaction — les fonds sont libérés progressivement à la validation de chaque étape de la mission, protégeant à la fois le client et le prestataire.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle SaaS</h2>
+            <p>La commission sur les transactions de 10 à 15% sur chaque mission réalisée via la plateforme constitue le revenu principal. C'est le modèle marketplace classique, vertueux car aligné sur la valeur créée : plus la plateforme génère de mises en relation réussies, plus elle est rémunérée. Pour une mission à 500€, la commission représente 50 à 75€ — un coût raisonnable au regard de la valeur du matching de qualité.</p>
+            <p>Les abonnements pro à <strong>29,99€/mois</strong> offrent aux prestataires une visibilité accrue dans les résultats de matching (sans biaiser l'algorithme), un accès prioritaire aux nouvelles demandes et des outils de gestion de leur activité (facturation, planning, CRM simplifié). C'est un revenu récurrent stable qui s'additionne aux commissions transactionnelles.</p>
+            <p>Les services premium (badge vérifié avancé, mise en avant sur la page d'accueil, accès aux demandes de grandes entreprises) complètent le modèle. Côté client, le freemium est maintenu — accès gratuit aux prestataires standard, option premium pour accéder aux prestataires experts et aux garanties renforcées.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 transactions/mois</th>
+                        <th>130 transactions/mois</th>
+                        <th>400 transactions/mois</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>1 500€</td>
+                        <td>4 000€</td>
+                        <td>12 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>400€</td>
+                        <td>700€</td>
+                        <td>1 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>1 100€</td>
+                        <td>3 300€</td>
+                        <td>10 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités</h2>
+            <ul class="feature-list">
+                <li>Matching IA prestataire-client sur 15+ dimensions de correspondance</li>
+                <li>Profils vérifiés avec diplômes, certifications et tests de compétences</li>
+                <li>Devis instantané basé sur les tarifs pratiqués pour missions similaires</li>
+                <li>Paiement sécurisé en escrow avec libération progressive par étapes</li>
+                <li>Messagerie intégrée avec historique et partage de fichiers</li>
+                <li>Système d'avis et notation vérifiés avec modération IA anti-faux avis</li>
+                <li>Gestion des litiges avec médiation et remboursement automatisé</li>
+                <li>Dashboard analytics pour prestataires : revenus, taux de succès, profil de clients</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI (matching)</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Stripe Connect</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application web pour vous.</p>
+            <a href="../quote.html?service=app-web" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Devis Instantané IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Un site où l'IA conversationnelle génère un devis personnalisé en 2 minutes au lieu de 2 jours, pour n'importe quel secteur. MRR estimé ~2 500€/mois.">
+    <meta property="og:title" content="Site de Devis Instantané IA — Cortex Studio">
+    <meta property="og:description" content="Fini les délais de 2-7 jours : obtenez un devis personnalisé en 2 minutes grâce à un chatbot IA conversationnel.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Devis Instantané IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Site de devis instantané IA</h1>
+            <p class="hero-subtitle">Un chatbot IA conversationnel qui pose les bonnes questions et génère un devis personnalisé en 2 minutes au lieu de 2 jours — pour le déménagement, la rénovation, l'assurance et bien plus.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 500€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Obtenir un devis prend en moyenne 2 à 7 jours dans la plupart des secteurs de services. Pour un déménagement, une rénovation ou une assurance, le processus est identique : remplir un formulaire long, attendre qu'un commercial soit disponible, recevoir un devis par email et souvent relancer pour obtenir une réponse. Ce délai coûte cher aux entreprises.</p>
+            <p>Les formulaires de devis classiques sont longs et découragent 70% des visiteurs avant qu'ils arrivent au bout. Chaque champ supplémentaire réduit le taux de complétion. Les entreprises font face à un arbitrage impossible : collecter suffisamment d'informations pour faire un devis précis, ou simplifier au point de rendre le devis trop approximatif pour être utile.</p>
+            <p>Du côté des entreprises, établir des devis manuellement représente 20% du temps des équipes commerciales — un temps qui n'est pas consacré à la vente. Pour 100 demandes par mois, si 30% seulement sont converties, l'entreprise passe du temps sur 70 devis qui ne servent à rien. Un système automatisé libère les commerciaux pour se concentrer sur les leads à fort potentiel de conversion.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un site web où l'IA conversationnelle mène un dialogue naturel avec le visiteur pour collecter les informations nécessaires au devis. Au lieu d'un formulaire à 15 champs, le chatbot pose 5 à 8 questions ciblées selon le secteur, dans un format conversationnel fluide : "Vous déménagez de quelle taille d'appartement ?", "Avez-vous des objets encombrants (piano, bibliothèque) ?". L'expérience ressemble à une conversation, pas à un formulaire administratif.</p>
+            <p>En temps réel, pendant la conversation, l'IA calcule l'estimation tarifaire et l'affiche de manière progressive. Le visiteur voit le devis prendre forme au fur et à mesure — ce principe de transparence et d'immédiateté réduit l'abandon à moins de 20%. En 2 minutes, il reçoit un devis complet en PDF avec le détail des prestations et la fourchette de prix personnalisée.</p>
+            <p>L'IA s'adapte au secteur d'activité de chaque entreprise cliente et prend en compte les spécificités locales (tarifs selon la ville, réglementations locales pour l'assurance...). Les leads générés sont directement intégrés dans le CRM de l'entreprise avec un score de qualification, et un suivi automatique de relance est déclenché si le prospect n'a pas répondu sous 48h.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement par entreprise à <strong>49,99€/mois</strong> inclut le chatbot de devis IA configuré pour leur secteur, l'intégration CRM, les devis PDF automatiques et les relances automatisées. La valeur est immédiatement mesurable : une entreprise qui reçoit 50 demandes de devis par mois et économise 2h de travail par devis a un ROI de plusieurs milliers d'euros dès le premier mois.</p>
+            <p>Une commission de 2% sur les devis convertis en commandes constitue un revenu variable qui s'aligne avec la réussite commerciale du client. Ce mécanisme rend la plateforme naturellement incitée à améliorer la qualité des devis et le taux de conversion.</p>
+            <p>Une offre White Label à <strong>99,99€/mois</strong> permet aux agences et intégrateurs de revendre la solution sous leur propre marque à leurs clients. Ce canal indirect multiplie la distribution sans effort commercial proportionnel, avec un ticket moyen significativement plus élevé.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>15 entreprises</th>
+                        <th>50 entreprises</th>
+                        <th>150 entreprises</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>750€</td>
+                        <td>2 500€</td>
+                        <td>7 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>400€</td>
+                        <td>1 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>550€</td>
+                        <td>2 100€</td>
+                        <td>6 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités IA</h2>
+            <ul class="feature-list">
+                <li>Chatbot IA de devis conversationnel adapté à chaque secteur d'activité</li>
+                <li>Estimation tarifaire en temps réel affichée pendant la conversation</li>
+                <li>Personnalisation par secteur : déménagement, rénovation, assurance, nettoyage...</li>
+                <li>Intégration CRM automatique avec score de qualification du lead</li>
+                <li>PDF devis généré instantanément avec détail des prestations</li>
+                <li>Suivi et relance automatique des prospects non convertis sous 48h</li>
+                <li>A/B testing des questions pour optimiser le taux de complétion</li>
+                <li>Analytics conversion : taux de complétion, abandon par étape, ROI estimé</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Puppeteer (PDF)</span>
+                <span class="tech-badge">HubSpot API</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer ce site IA pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

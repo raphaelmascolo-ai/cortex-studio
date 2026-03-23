@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire Intelligent de Niche — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Un annuaire spécialisé avec recherche sémantique IA et matching intelligent entre professionnels et clients. MRR estimé ~2 000€/mois.">
+    <meta property="og:title" content="Annuaire Intelligent de Niche — Cortex Studio">
+    <meta property="og:description" content="Trouvez le bon professionnel en décrivant votre besoin en langage naturel — l'IA identifie les meilleurs correspondants.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Annuaire Intelligent</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Annuaire intelligent de niche</h1>
+            <p class="hero-subtitle">Un annuaire spécialisé avec recherche sémantique IA : décrivez votre besoin en langage naturel et l'IA identifie les meilleurs professionnels selon vos critères, leur disponibilité et la qualité de leur travail.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 000€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les annuaires classiques comme les Pages Jaunes sont devenus obsolètes et non spécialisés. Google donne trop de résultats non pertinents quand on cherche un professionnel spécialisé dans une niche précise. Trouver un "artisan carreleur spécialisé en rénovation de salle de bain style haussmannien" ou un "coach certifié ICF axé sur les transitions de carrière" prend des heures de recherche et de tri.</p>
+            <p>Les plateformes de niche existantes n'offrent pas de mise en relation intelligente. Elles proposent des filtres statiques (localisation, catégorie, note) mais ne comprennent pas les nuances d'un besoin. La correspondance entre un client et un professionnel repose sur la chance de tomber sur le bon profil, pas sur un algorithme qui comprend vraiment ce que le client cherche.</p>
+            <p>Du côté des professionnels, la visibilité en ligne est un enjeu critique. Un artisan ou un thérapeute indépendant n'a ni le temps ni le budget pour se positionner sur Google. Il dépend du bouche-à-oreille, des plateformes généralistes saturées ou de Pages Jaunes qui ne sont plus consultées. Il manque une plateforme verticale sérieuse, spécialisée dans son domaine, qui lui apporte des leads qualifiés régulièrement.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un annuaire spécialisé dans une niche précise (artisans, thérapeutes, coachs, freelances tech, juristes...) avec une recherche sémantique IA au coeur de l'expérience. Au lieu de remplir des filtres, l'utilisateur décrit son besoin en quelques mots : "Je cherche un plombier disponible rapidement pour une fuite sous évier, Paris 15e, pas cher". L'IA analyse cette description et retourne les professionnels les mieux alignés avec ces critères implicites et explicites.</p>
+            <p>Le matching intelligent va bien au-delà des mots-clés : il prend en compte les compétences déclarées, la qualité et la pertinence des avis clients, les créneaux de disponibilité en temps réel, la localisation et les tarifs pratiqués. Chaque résultat est accompagné d'un score de correspondance expliqué — "95% : spécialiste plomberie urgence, disponible demain, très bien noté dans votre quartier".</p>
+            <p>Les professionnels bénéficient d'un profil enrichi avec portfolio photo, certifications vérifiées, témoignages clients et zone d'intervention. Un chatbot IA permet aux visiteurs d'obtenir un devis indicatif instantané en posant quelques questions simples, sans que le professionnel soit dérangé en dehors de ses heures de travail.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Trois niveaux de revenus s'articulent autour de la visibilité des professionnels. Le profil premium à <strong>14,99€/mois</strong> donne accès aux fonctionnalités avancées : portfolio illimité, certifications mises en avant, devis instantané via chatbot et statistiques de profil. C'est l'entrée de gamme accessible pour tout indépendant.</p>
+            <p>La mise en avant sponsorisée à <strong>29,99€/mois</strong> positionne le professionnel en tête des résultats pour les recherches pertinentes dans sa zone géographique. La visibilité est ciblée et géo-qualifiée, ce qui en fait une dépense marketing très rentable comparée à Google Ads pour une niche locale.</p>
+            <p>La vente de leads qualifiés à <strong>3€ par lead</strong> (client ayant soumis une demande précise) complète le modèle. À terme, une évolution vers un modèle marketplace avec commission sur les transactions réalisées est envisageable une fois la confiance établie entre les deux parties via la plateforme.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 pros premium</th>
+                        <th>130 pros premium</th>
+                        <th>400 pros premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>750€</td>
+                        <td>2 000€</td>
+                        <td>6 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>400€</td>
+                        <td>800€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>550€</td>
+                        <td>1 600€</td>
+                        <td>5 200€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>8 mois</td>
+                        <td>3 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités IA</h2>
+            <ul class="feature-list">
+                <li>Recherche sémantique IA en langage naturel pour décrire son besoin précis</li>
+                <li>Matching intelligent pro-client basé sur compétences, disponibilité et avis</li>
+                <li>Profils enrichis avec portfolio, certifications vérifiées et témoignages</li>
+                <li>Avis et notations vérifiés avec détection des faux avis par IA</li>
+                <li>Disponibilité en temps réel synchronisée avec l'agenda du professionnel</li>
+                <li>Devis instantané via chatbot IA en quelques questions</li>
+                <li>Géolocalisation et carte interactive avec zones d'intervention</li>
+                <li>Dashboard professionnel avec statistiques de visibilité et de leads</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python FastAPI</span>
+                <span class="tech-badge">OpenAI + Pinecone</span>
+                <span class="tech-badge">PostgreSQL + PostGIS</span>
+                <span class="tech-badge">Mapbox</span>
+                <span class="tech-badge">Stripe Connect</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer ce site IA pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

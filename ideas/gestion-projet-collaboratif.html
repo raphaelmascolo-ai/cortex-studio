@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outil de Gestion de Projet Collaboratif — Cortex Studio | Idée de projet</title>
+    <meta name="description" content="Un outil de gestion de projet all-in-one avec tâches, Gantt, chat, docs collaboratifs et IA qui prédit les retards et génère des rapports automatiques. MRR estimé ~2 800€/mois.">
+    <meta property="og:title" content="Outil de Gestion de Projet Collaboratif — Cortex Studio">
+    <meta property="og:description" content="Tâches, Gantt, chat, docs et reporting automatique en un seul outil — l'IA prédit les retards avant qu'ils n'arrivent.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion de Projet Collaboratif</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-web">App Web</span>
+            <h1>Outil de gestion de projet collaboratif</h1>
+            <p class="hero-subtitle">Un outil all-in-one qui réunit tâches, timeline Gantt, chat, documents collaboratifs et reporting automatique — avec une IA qui prédit les retards et suggère des réallocations de ressources avant que le projet ne déraille.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 800€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les outils de gestion de projet actuels souffrent d'un paradoxe : soit ils sont trop simples (Trello), soit trop complexes (Jira, Monday). Les équipes petites et moyennes (5 à 50 personnes) n'ont pas besoin d'un outil conçu pour des équipes engineering de 500 personnes, mais elles ont dépassé le stade du tableau Kanban basique. Elles se retrouvent dans un vide entre les deux.</p>
+            <p>La vraie douleur, c'est la fragmentation des outils. Une équipe de 10 personnes utilise en parallèle : Trello pour les tâches, Slack pour la communication, Notion pour la documentation, Toggl pour le time tracking, Google Sheets pour les rapports de projet. Chaque outil est excellent dans son domaine, mais l'ensemble crée une friction permanente : les informations sont dispersées, les mises à jour sont dupliquées, et personne n'a une vision claire de l'avancement réel du projet à un instant T.</p>
+            <p>Le coût des retards de projet est massif : selon le PMI, 70% des projets dépassent leur budget ou leur délai initial. La principale cause est l'absence de visibilité proactive sur les risques — on découvre le retard quand il est déjà là, pas avant. Les chefs de projet passent 30 à 40% de leur temps à produire des rapports d'avancement manuels au lieu de se concentrer sur la résolution des blocages. C'est du temps perdu qui n'apporte aucune valeur au projet.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un outil de gestion de projet all-in-one conçu pour les équipes de 5 à 100 personnes, avec une interface épurée qui privilégie la simplicité d'utilisation sans sacrifier la puissance. Tâches avec sous-tâches, assignation, dates et priorités ; timeline Gantt interactive avec dépendances ; chat intégré par projet et par tâche ; éditeur de documents collaboratif en temps réel (Google Docs-like) — tout est dans le même outil, sans jamais changer d'application.</p>
+            <p>Le time tracking automatique enregistre le temps passé sur chaque tâche en arrière-plan, sans action manuelle de l'utilisateur. Ce tracking silencieux génère des données précieuses sur la vélocité réelle de l'équipe et alimente les prédictions de l'IA. Quand l'IA détecte qu'une tâche estimée à 2 jours n'a pas avancé depuis 3 jours, elle alerte proactivement et suggère une action : "La tâche X est bloquée depuis 3 jours. Considérez de redistribuer une partie à Y qui a de la capacité cette semaine".</p>
+            <p>Les rapports de progression sont générés automatiquement chaque semaine et envoyés aux parties prenantes selon un format personnalisable. Le chef de projet n'a plus jamais à ouvrir Excel pour produire un reporting. Des intégrations avec Slack (notifications), GitHub (lien commits/issues) et Google Calendar (deadlines dans l'agenda) permettent à l'outil de s'insérer naturellement dans l'environnement de travail existant.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle SaaS</h2>
+            <p>Un modèle par utilisateur favorise l'adoption progressive. L'offre Starter à <strong>9,99€/utilisateur/mois</strong> cible les petites équipes de 3 à 10 personnes avec les fonctionnalités core : tâches, Gantt, chat et documents. Limitée à 10 utilisateurs, elle permet aux équipes de tester l'outil avant de monter en gamme.</p>
+            <p>L'offre Business à <strong>19,99€/utilisateur/mois</strong> débloque l'IA complète (prédictions de retard, suggestions de réallocation, rapports automatiques), le time tracking automatique, les intégrations tierces et un nombre d'utilisateurs illimité. C'est l'offre principale qui cible les équipes de 10 à 100 personnes avec des projets à enjeux.</p>
+            <p>Une offre Entreprise sur devis couvre les équipes de plus de 100 utilisateurs avec SSO, audit logs, support dédié et contrat de niveau de service. Ce palier, bien que moins fréquent, génère des tickets moyens élevés et des contrats pluriannuels à forte valeur. L'enjeu à ce stade est de se positionner comme alternative crédible à Monday ou Asana pour des entreprises mid-market.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 utilisateurs</th>
+                        <th>280 utilisateurs</th>
+                        <th>700 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>500€</td>
+                        <td>2 800€</td>
+                        <td>7 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>500€</td>
+                        <td>1 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>300€</td>
+                        <td>2 300€</td>
+                        <td>6 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>8 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités</h2>
+            <ul class="feature-list">
+                <li>Gestion des tâches et sous-tâches avec assignation, priorités et dates limites</li>
+                <li>Timeline Gantt interactive avec dépendances entre tâches et jalons</li>
+                <li>Chat et discussions intégrés par projet, par tâche et par équipe</li>
+                <li>Documents collaboratifs en temps réel avec historique de versions</li>
+                <li>Time tracking automatique silencieux sans saisie manuelle</li>
+                <li>Rapports automatiques IA générés et envoyés chaque semaine aux parties prenantes</li>
+                <li>Prédiction de retards IA avec suggestions de réallocation de ressources</li>
+                <li>Intégrations natives Slack, GitHub et Google Calendar</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React + TypeScript</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">WebSocket (temps réel)</span>
+                <span class="tech-badge">OpenAI (IA)</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application web pour vous.</p>
+            <a href="../quote.html?service=app-web" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

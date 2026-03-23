@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Réservation avec Assistant IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Une plateforme de réservation avec assistant IA qui répond aux questions, recommande les meilleurs créneaux et gère les listes d'attente automatiquement. MRR estimé ~2 800€/mois.">
+    <meta property="og:title" content="Plateforme de Réservation avec Assistant IA — Cortex Studio">
+    <meta property="og:description" content="Supprimez les appels téléphoniques inutiles avec un assistant IA qui gère les réservations 24/7 pour restaurants, salons et cliniques.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Réservation Assistant IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Plateforme de réservation avec assistant IA</h1>
+            <p class="hero-subtitle">Un système de réservation intelligent qui répond aux questions des clients, recommande le meilleur créneau et remplit automatiquement les annulations — zéro appel téléphonique, zéro créneau vide.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 800€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les systèmes de réservation classiques sont des formulaires froids : date, heure, nombre de personnes, confirmer. Cette expérience minimaliste ne répond pas aux vraies questions des clients avant qu'ils réservent. Résultat : 30 à 40% des réservations passent encore par téléphone, car les clients ont des questions spécifiques que le formulaire ne peut pas traiter.</p>
+            <p>Les restaurants, salons de coiffure, kinés, cliniques et studios sportifs perdent un temps considérable en gestion téléphonique — en moyenne 2 à 3 heures par jour pour un établissement de taille moyenne. Ce temps est soustrait du coeur de métier et génère des frustrations des deux côtés : clients qui attendent en ligne, équipes interrompues dans leurs tâches.</p>
+            <p>Le problème des annulations est encore plus critique : un créneau annulé la veille reste vide dans 80% des cas, car l'information ne parvient pas à temps aux clients en attente. Pour un cabinet médical à 60€ la consultation, une demi-journée de no-shows représente 180 à 360€ de pertes directes. Multipliés par 250 jours ouvrés, ce sont des dizaines de milliers d'euros évaporés chaque année.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Une plateforme de réservation avec un assistant IA intégré qui répond instantanément à toutes les questions des clients en langage naturel : "Avez-vous une table en terrasse vendredi soir pour 4 ?", "Combien de temps dure une coupe avec brushing ?", "Le Dr Martin est-il disponible la semaine prochaine ?". L'assistant connaît les services, les tarifs, les disponibilités et les préférences des clients habituels.</p>
+            <p>La recommandation de créneaux est intelligente : l'IA prend en compte les préférences du client (matin, soir, semaine), l'historique des réservations, la durée de la prestation et la charge de l'établissement pour suggérer le créneau optimal. Elle peut aussi gérer les modifications et annulations de manière autonome, sans intervention humaine.</p>
+            <p>La liste d'attente automatique est le feature tueur : dès qu'un créneau se libère, l'IA contacte immédiatement par SMS et email les clients en attente par ordre de priorité. Le premier à répondre "OUI" récupère automatiquement le créneau. Pour l'établissement, c'est 95% des annulations comblées en moins de 15 minutes. Des confirmations et rappels SMS automatiques réduisent les no-shows de 60%.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement par établissement offre deux niveaux. L'offre Basique à <strong>29,99€/mois</strong> couvre la réservation en ligne, les confirmations automatiques et les rappels SMS. C'est suffisant pour les petits établissements qui veulent juste supprimer les appels téléphoniques.</p>
+            <p>L'offre Premium à <strong>59,99€/mois</strong> débloque l'assistant IA conversationnel complet, la liste d'attente intelligente, les recommandations de créneaux personnalisées et le dashboard analytics avancé. Cette offre cible les établissements avec un fort volume de réservations et des enjeux économiques importants sur l'occupation des créneaux.</p>
+            <p>Une commission de <strong>0,50€ par réservation</strong> s'ajoute aux abonnements, alignant la plateforme avec la réussite de l'établissement. Sur 200 réservations par mois — un volume courant pour un restaurant actif — cela représente 100€ supplémentaires, soit une enveloppe totale raisonnable au regard des économies générées (temps, no-shows comblés).</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>30 établissements</th>
+                        <th>90 établissements</th>
+                        <th>250 établissements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>900€</td>
+                        <td>2 800€</td>
+                        <td>7 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>250€</td>
+                        <td>500€</td>
+                        <td>1 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>650€</td>
+                        <td>2 300€</td>
+                        <td>6 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités IA</h2>
+            <ul class="feature-list">
+                <li>Assistant IA conversationnel qui répond aux questions sur services, prix et disponibilités</li>
+                <li>Réservation en langage naturel sans formulaire rigide</li>
+                <li>Recommandation intelligente de créneaux basée sur les préférences et habitudes</li>
+                <li>Liste d'attente automatique avec notification instantanée dès annulation</li>
+                <li>SMS et email de confirmation et de rappel automatiques (réduction no-shows de 60%)</li>
+                <li>Gestion multi-établissements depuis un seul dashboard</li>
+                <li>Synchronisation calendrier Google et Outlook en temps réel</li>
+                <li>Dashboard analytics : taux d'occupation, heures de pointe, clients récurrents</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Node.js + Express</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Twilio (SMS)</span>
+                <span class="tech-badge">Cal.com</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer ce site IA pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Immobilier avec Estimation IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Un portail immobilier avec estimation instantanée par IA utilisant les données DVF, recherche sémantique et alertes personnalisées. MRR estimé ~2 500€/mois.">
+    <meta property="og:title" content="Site Immobilier avec Estimation IA — Cortex Studio">
+    <meta property="og:description" content="Estimation instantanée de biens immobiliers par IA, recherche en langage naturel et alertes personnalisées.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Site Immobilier IA</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Site immobilier avec estimation IA</h1>
+            <p class="hero-subtitle">Un portail immobilier intelligent avec estimation instantanée par IA, recherche sémantique en langage naturel et alertes personnalisées — pour enfin connaître la valeur réelle d'un bien.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 500€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les portails immobiliers affichent des prix non vérifiés et les estimations des agents sont systématiquement biaisées à la hausse de 15 à 20 %, car leur commission dépend directement du prix de vente. Les acheteurs et vendeurs n'ont pas accès à un outil fiable et objectif pour connaître la valeur réelle d'un bien sur le marché actuel.</p>
+            <p>Les sites de référence comme SeLoger ou LeBonCoin proposent des formulaires de recherche rigides — surface, nombre de pièces, prix — sans aucune intelligence dans la recherche. Il est impossible d'exprimer un besoin naturel comme "appartement lumineux avec balcon près d'une école" et d'obtenir des résultats pertinents. La recherche immobilière en 2026 ressemble encore à celle de 2005.</p>
+            <p>Les conséquences sont réelles : des vendeurs qui surévaluent leur bien et restent bloqués pendant des mois, des acheteurs qui surpayent faute d'information fiable, et des agents immobiliers qui perdent du temps sur des prospects non qualifiés. Le marché immobilier a besoin d'un outil qui apporte transparence, intelligence et personnalisation.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un portail immobilier avec estimation instantanée par IA utilisant les données DVF (Demandes de Valeurs Foncières), la localisation précise, la surface, l'état du bien et les tendances récentes du marché. En quelques secondes, le propriétaire ou l'acheteur obtient une fourchette de prix fiable basée sur les transactions réelles enregistrées par les notaires.</p>
+            <p>La recherche intelligente est le coeur différenciant : au lieu de filtres classiques, l'utilisateur décrit son besoin en langage naturel — "appartement lumineux avec balcon près d'une école, budget 350 000€, Paris 11e" — et l'IA analyse cette description pour identifier les annonces les plus pertinentes, en croisant les données textuelles des annonces avec les critères implicites exprimés.</p>
+            <p>Le système génère des alertes personnalisées IA dès qu'un bien correspondant aux critères de l'utilisateur est mis en ligne ou change de prix, avec un score de correspondance calculé en temps réel. Les propriétaires bénéficient d'un tableau de bord détaillé avec statistiques de vues, comparaison par rapport aux biens similaires du quartier et recommandations pour optimiser leur annonce.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle repose sur trois sources de revenus complémentaires. Les annonces premium pour les propriétaires et agences immobilières à <strong>29,99€/mois</strong> offrent une mise en avant visuelle, des statistiques détaillées et l'accès à l'outil d'estimation IA pour valoriser leur bien. C'est le coeur du revenu récurrent.</p>
+            <p>La vente de leads qualifiés aux agents immobiliers constitue une deuxième source à fort potentiel : un lead immobilier qualifié (acheteur avec budget défini et projet précis) vaut <strong>5 à 15€</strong> sur le marché. Le site capte naturellement ces leads via les formulaires de contact et les demandes d'estimation, et les revend aux agences partenaires de la zone géographique concernée.</p>
+            <p>La publicité ciblée par secteur géographique et type de bien complète le modèle, avec des espaces réservés aux promoteurs, courtiers et professionnels de l'habitat (architectes, déménageurs). La donnée de navigation des utilisateurs permet un ciblage précis à forte valeur ajoutée pour les annonceurs.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 clients</th>
+                        <th>500 clients</th>
+                        <th>1 000 clients</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>500€</td>
+                        <td>2 500€</td>
+                        <td>5 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>200€</td>
+                        <td>500€</td>
+                        <td>900€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>300€</td>
+                        <td>2 000€</td>
+                        <td>4 100€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>8 mois</td>
+                        <td>3 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités IA</h2>
+            <ul class="feature-list">
+                <li>Estimation IA instantanée par adresse basée sur les données DVF et le marché en temps réel</li>
+                <li>Recherche sémantique en langage naturel pour décrire son bien idéal</li>
+                <li>Alertes personnalisées IA dès qu'un bien correspondant est mis en ligne</li>
+                <li>Comparaison automatique des prix du quartier avec les transactions récentes</li>
+                <li>Tendances de marché par zone géographique avec prévisions à 3-6 mois</li>
+                <li>Scoring de qualité des annonces avec recommandations d'optimisation</li>
+                <li>Visite virtuelle intégrée via upload de photos 360°</li>
+                <li>Tableau de bord propriétaire avec statistiques de vues et performance</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python FastAPI</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Données DVF</span>
+                <span class="tech-badge">PostgreSQL + PostGIS</span>
+                <span class="tech-badge">Mapbox</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer ce site IA pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

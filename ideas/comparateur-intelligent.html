@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparateur Intelligent de Niche — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Un comparateur spécialisé qui utilise l'IA pour analyser en profondeur les produits selon vos besoins et fournir une recommandation personnalisée argumentée. MRR estimé ~2 200€/mois.">
+    <meta property="og:title" content="Comparateur Intelligent de Niche — Cortex Studio">
+    <meta property="og:description" content="Décrivez vos besoins en langage naturel, l'IA compare et recommande le meilleur choix avec des scores pondérés selon vos priorités.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Comparateur Intelligent</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Comparateur intelligent de niche</h1>
+            <p class="hero-subtitle">Un comparateur spécialisé qui utilise l'IA pour analyser en profondeur les options selon vos priorités et fournit une recommandation finale argumentée — fini les heures de comparaison sans conclusion claire.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 200€/mois</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les comparateurs existants comme Comparatif ou LeLynx sont généralistes et reposent sur des filtres rigides qui ne comprennent pas les nuances d'un besoin. Pour des produits ou services complexes — assurances, logiciels SaaS, formations professionnelles, équipements techniques — la comparaison ne peut pas se réduire à trois critères numériques. Elle demande de comprendre le contexte, les priorités et les compromis acceptables pour l'utilisateur.</p>
+            <p>Les résultats de ces comparateurs sont biaisés par la publicité : les options affichées en premier sont celles qui paient le plus, pas celles qui correspondent le mieux. L'utilisateur ne sait jamais si le classement reflète la qualité réelle ou le budget marketing des acteurs. Cette asymétrie d'information crée une défiance croissante envers les comparateurs traditionnels.</p>
+            <p>L'utilisateur finit par passer plusieurs heures à consulter des avis sur différents sites, des forums spécialisés, des vidéos YouTube — sans jamais obtenir une conclusion claire adaptée à sa situation précise. Il prend finalement une décision intuitive et non éclairée, ou abandonne sa démarche d'achat. Un comparateur vraiment intelligent, qui comprend ses priorités et les intègre dans l'analyse, représenterait un gain de temps et de confiance considérable.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un comparateur spécialisé dans une niche précise (assurances, logiciels SaaS pour PME, formations certifiantes, matériel photo...) où l'IA joue le rôle d'un expert indépendant. L'utilisateur commence par décrire sa situation et ses priorités en langage naturel : "Je cherche un logiciel de comptabilité pour une micro-entreprise, je ne suis pas comptable, budget max 50€/mois, j'ai besoin d'un suivi de TVA automatique". L'IA comprend ces contraintes et les intègre dans son analyse.</p>
+            <p>La comparaison générée est personnalisée et pondérée selon les priorités exprimées. Si l'utilisateur a mentionné "simplicité" et "budget", l'IA pondère ces critères plus fortement que "fonctionnalités avancées" dans ses scores. Chaque option est évaluée sur une grille de critères pertinents avec une note et une explication. La recommandation finale est argumentée : "Pour votre profil, nous recommandons X car il est le seul à proposer Y sans nécessiter de formation, et son prix est 40% inférieur à Z pour des besoins similaires aux vôtres".</p>
+            <p>L'analyse approfondie premium va plus loin : l'IA synthétise des centaines d'avis utilisateurs réels, identifie les cas d'usage correspondant au profil du visiteur et alerte sur les points faibles souvent mentionnés. Un système d'alertes notifie l'utilisateur en cas de changement de prix ou de nouvelle offre pertinente dans sa niche.</p>
+        </div>
+    </section>
+
+    <!-- Monetization -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle hybride combine affiliation et abonnements. Les partenariats d'affiliation avec les acteurs de la niche génèrent une commission de 5 à 15% sur chaque conversion directement attribuable au comparateur. C'est le revenu variable le plus important, car les niches à valeur élevée (assurances, logiciels) offrent des commissions substantielles.</p>
+            <p>Les listings premium à <strong>19,99€/mois</strong> permettent aux acteurs de la niche d'enrichir leur profil avec des informations détaillées, des cas d'usage et des témoignages clients — sans biais sur le classement IA, qui reste objectif. La transparence sur ce point est cruciale pour la crédibilité du comparateur.</p>
+            <p>L'accès "analyse approfondie" premium à <strong>4,99€/mois</strong> débloque des rapports complets avec synthèse des avis, grille de comparaison exportable en PDF et alertes de prix. Ce palier payant cible les professionnels et les acheteurs avertis qui ont besoin d'une analyse exhaustive avant un achat à fort enjeu.</p>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 membres premium</th>
+                        <th>300 membres premium</th>
+                        <th>800 membres premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>500€ + 800€ affiliation</td>
+                        <td>1 500€ + 2 000€ affiliation</td>
+                        <td>4 000€ + 5 000€ affiliation</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>300€</td>
+                        <td>500€</td>
+                        <td>1 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>1 000€</td>
+                        <td>3 000€</td>
+                        <td>8 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td>
+                        <td>2 mois</td>
+                        <td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités IA</h2>
+            <ul class="feature-list">
+                <li>Comparaison IA personnalisée selon les priorités exprimées par l'utilisateur</li>
+                <li>Recherche en langage naturel pour décrire sa situation et ses besoins</li>
+                <li>Scores pondérés dynamiquement selon les priorités de chaque profil</li>
+                <li>Analyse approfondie avec synthèse de centaines d'avis utilisateurs réels</li>
+                <li>Avis utilisateurs vérifiés avec détection des faux avis par IA</li>
+                <li>Alertes de prix et de nouvelles offres personnalisées par niche</li>
+                <li>Export comparatif PDF personnalisé pour partage et archivage</li>
+                <li>API pour intégration partenaires et distribution via des sites tiers</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python FastAPI</span>
+                <span class="tech-badge">OpenAI + Scraping APIs</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Redis (cache)</span>
+                <span class="tech-badge">Affiliate APIs</span>
+                <span class="tech-badge">Vercel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer ce site IA pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
