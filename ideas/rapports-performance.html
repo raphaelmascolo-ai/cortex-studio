@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports de performance automatiques IA — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Génération automatique de rapports d'activité, KPIs et insights depuis vos outils existants. Recevez votre rapport complet chaque lundi à 8h sans lever le petit doigt.">
+    <meta property="og:title" content="Rapports de performance automatiques IA — Cortex Studio">
+    <meta property="og:description" content="Collecte automatique depuis Google Analytics, HubSpot, Meta Ads, Stripe. L'IA rédige les insights et recommandations. Rapport livré chaque lundi matin.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Rapports de performance automatiques</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Rapports de performance automatiques</h1>
+            <p class="hero-subtitle">Génération automatique de rapports d'activité, KPIs et insights depuis vos outils existants. Recevez chaque lundi un rapport complet avec analyses IA sans passer 6 heures à consolider des données.</p>
+            <span class="badge badge-mrr">À partir de 400€</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Créer des rapports de performance prend de 4 à 8 heures par semaine pour la plupart des équipes marketing et dirigeants. Le problème n'est pas l'analyse — c'est la collecte et la mise en forme. Il faut se connecter successivement à Google Analytics, HubSpot, Meta Ads, LinkedIn Ads, Stripe, ActiveCampaign et souvent 3 ou 4 autres outils, exporter chaque donnée en CSV, tout consolider dans Excel, créer des graphiques et finalement rédiger les insights. Ce processus représente 80% de temps de plomberie pour 20% de valeur réelle.</p>
+            <p>Le résultat est souvent décevant : les rapports arrivent avec du retard, contiennent des erreurs de consolidation, ou sont abandonnés faute de temps. Les décisions sont prises sur la base d'une intuition plutôt que sur des données récentes. Une campagne publicitaire déficitaire continue de tourner parce que personne n'a eu le temps de regarder les chiffres cette semaine.</p>
+            <p>Les outils de reporting existants (Looker Studio, Datadog, Tableau) sont puissants mais nécessitent des compétences techniques avancées pour être configurés, et produisent des dashboards que les dirigeants doivent interpréter eux-mêmes. Ils affichent des données — ils n'expliquent pas ce qui se passe ni ce qu'il faut faire.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un workflow qui se connecte à tous vos outils via leurs APIs et collecte automatiquement les métriques clés chaque semaine : trafic et conversions (Google Analytics), deals et pipeline (HubSpot), performances publicitaires (Meta Ads, Google Ads), revenus et LTV (Stripe), ouvertures et clics (ActiveCampaign ou Mailchimp). Toutes les données sont centralisées et consolidées automatiquement.</p>
+            <p>L'IA analyse ensuite les données et rédige les insights en langage naturel : "Le taux de conversion a baissé de 12% cette semaine, corrélé à une augmentation du CPC de 18% sur la campagne Retargeting Meta. Recommandation : réviser les audiences ou le budget." Ce niveau d'analyse, qui demandait auparavant une heure de travail analytique, est généré en quelques secondes.</p>
+            <p>Chaque lundi à 8h, le rapport complet est envoyé par email à toute l'équipe. Il contient le résumé exécutif en 5 points, les graphiques de tendances pour chaque KPI, les variations semaine-sur-semaine et mois-sur-mois, et les 3 recommandations prioritaires de l'IA. Le rapport est aussi disponible dans Google Slides pour les présentations aux investisseurs ou à la direction.</p>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+                        <li>Connexion à 8 outils différents, export CSV de chacun</li>
+                        <li>Consolidation manuelle dans Excel (2h)</li>
+                        <li>Création des graphiques et tableaux (1h)</li>
+                        <li>Rédaction des insights et analyses (1h)</li>
+                        <li>Mise en forme et envoi du rapport (30min)</li>
+                        <li>Total : 6h chaque semaine, souvent en retard ou incomplet</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+                        <li>Collecte automatique depuis toutes les APIs</li>
+                        <li>Consolidation et calculs instantanés</li>
+                        <li>Graphiques générés automatiquement</li>
+                        <li>Insights rédigés par l'IA avec recommandations</li>
+                        <li>Rapport livré par email chaque lundi à 8h précises</li>
+                        <li>Total : 0h — vous recevez, lisez et décidez</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">6h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.timesaved.title">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">24h/mois restituées à la prise de décision</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">300%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.roi.title">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 2 mois</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">400€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.cost.title">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 400€ selon le nombre d'outils connectés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+                <p><strong>Une PME e-commerce de 12 personnes</strong> dans le secteur cosmétique avait une responsable marketing qui consacrait tous les lundis matin à créer le rapport de performance hebdomadaire. Google Analytics, Shopify, Klaviyo, Meta Ads et Google Ads : 5 outils à exporter manuellement, consolidation dans Excel, puis rédaction d'un email de synthèse pour la direction. Durée : 5h invariablement.</p>
+                <p style="margin-top: 1rem;">Après déploiement du système, la responsable marketing reçoit le rapport automatique le lundi à 8h, comme tout le monde. Elle passe désormais son lundi matin à agir sur les recommandations plutôt qu'à les produire. En 6 semaines, le système a identifié automatiquement un problème de tracking sur les conversions Meta Ads qui faisait surestimer le ROAS de 35% — un bug qui aurait coûté 12 000€ sur l'année en mauvaises décisions d'allocation budgétaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.tools.title">Outils & technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">Google Analytics API</span>
+                <span class="tech-badge">HubSpot API</span>
+                <span class="tech-badge">Meta Ads API</span>
+                <span class="tech-badge">Stripe API</span>
+                <span class="tech-badge">Google Slides / Sheets</span>
+                <span class="tech-badge">OpenAI API</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à recevoir vos rapports automatiquement ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe connecte vos outils et déploie le système en moins d'une semaine.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="auto.cta.btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

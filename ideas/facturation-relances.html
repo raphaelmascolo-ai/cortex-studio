@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation facturation & relances — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Génération automatique de factures, suivi des paiements et relances intelligentes par email. Économisez 8h/semaine et réduisez vos retards de paiement de 60%.">
+    <meta property="og:title" content="Automatisation facturation & relances — Cortex Studio">
+    <meta property="og:description" content="Workflow automatisé qui génère les factures, suit les paiements en temps réel et envoie des relances IA personnalisées à J+7, J+15, J+30.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Automatisation facturation & relances</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation facturation & relances</h1>
+            <p class="hero-subtitle">Génération automatique de factures, suivi des paiements et relances intelligentes par email. Éliminez les retards de paiement et récupérez 8 heures de travail administratif chaque semaine.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>La facturation manuelle est l'un des postes les plus chronophages pour une PME. Créer chaque facture sur Excel ou Word, la mettre en forme, l'envoyer par email, puis noter manuellement dans un tableur si elle a été payée — tout cela représente facilement 5 à 10 heures par semaine pour une entreprise avec 20 à 50 clients actifs.</p>
+            <p>Les retards de paiement affectent 40% des entreprises françaises et représentent en moyenne 15 jours de trésorerie bloquée. Le problème n'est pas que les clients refusent de payer — c'est que les relances sont oubliées, envoyées trop tard, ou rédigées de façon trop froide pour être efficaces. Un client reçoit une relance générique trois semaines après l'échéance et l'ignore.</p>
+            <p>Les erreurs de facturation coûtent en moyenne 3% du chiffre d'affaires : mauvais taux de TVA, numéro de devis erroné, oubli d'une ligne de prestation. Ces erreurs obligent à émettre des avoirs, retardent le paiement et détériorent l'image professionnelle. L'ensemble du processus est inefficace, stressant et source d'impayés évitables.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Un workflow automatisé qui génère les factures directement à partir de vos devis validés. Dès qu'un devis est accepté dans votre CRM ou outil de gestion, la facture correspondante est créée automatiquement avec les bonnes informations, le bon format et le bon taux de TVA, puis envoyée au client sans intervention manuelle.</p>
+            <p>Le suivi des paiements est assuré en temps réel via connexion à Stripe, Mollie ou votre banque. Dès qu'un paiement est détecté, la facture est marquée comme réglée et une confirmation est envoyée automatiquement. Pour les factures non réglées, un système de relances intelligentes se déclenche automatiquement à J+7, J+15 et J+30. L'IA adapte le ton de chaque relance selon l'historique du client, le montant en jeu et le nombre de relances déjà envoyées.</p>
+            <p>Un tableau de bord en temps réel centralise toutes les factures, leur statut, les montants en attente et les prévisions de trésorerie pour les 30 prochains jours. Plus aucune facture ne tombe dans l'oubli, plus aucun client n'est relancé au mauvais moment ou avec le mauvais ton.</p>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+                        <li>Création manuelle de chaque facture sur Excel ou Word (30 min/facture)</li>
+                        <li>Envoi par email un par un depuis la boîte mail</li>
+                        <li>Suivi sur tableur mis à jour manuellement</li>
+                        <li>Relances oubliées ou envoyées avec 3-4 semaines de retard</li>
+                        <li>Erreurs fréquentes : TVA, numérotation, informations client</li>
+                        <li>Aucune visibilité sur la trésorerie à 30 jours</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+                        <li>Facture auto-générée et envoyée dès le devis accepté</li>
+                        <li>Suivi des paiements en temps réel via API bancaire</li>
+                        <li>Relances IA automatiques à J+7, J+15, J+30 avec ton adapté</li>
+                        <li>Zéro erreur de facturation grâce aux données CRM</li>
+                        <li>Tableau de bord trésorerie mis à jour en continu</li>
+                        <li>Notifications instantanées à chaque paiement reçu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">8h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.timesaved.title">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 32h par mois libérées pour votre cœur de métier</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">300%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.roi.title">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 2 mois</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.cost.title">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+                <p><strong>Une agence de communication avec 35 clients actifs</strong> émettait en moyenne 50 factures par mois. La comptable passait 2 heures par semaine à créer les factures, 1 heure à relancer les retardataires et 1 heure à mettre à jour le suivi. Sur 12 mois, 3 factures avaient été oubliées pour un total de 4 200€ non récupérés.</p>
+                <p style="margin-top: 1rem;">Après mise en place du workflow automatisé, les factures sont générées et envoyées automatiquement depuis HubSpot CRM. Les relances IA ont réduit le délai moyen de paiement de 28 jours à 12 jours. La comptable consacre désormais 30 minutes par semaine à valider les exceptions plutôt que 4 heures. Le taux de recouvrement est passé à 99,2%.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.tools.title">Outils & technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">Stripe / Mollie</span>
+                <span class="tech-badge">Gmail API</span>
+                <span class="tech-badge">Google Sheets</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">HubSpot / Pipedrive</span>
+                <span class="tech-badge">Pennylane / Freebe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser votre facturation ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe configure ce workflow en moins d'une semaine, adapté à vos outils existants.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="auto.cta.btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

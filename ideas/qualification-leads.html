@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification automatique de leads IA — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Scoring et qualification de prospects automatisés grâce à l'IA pour prioriser les meilleurs leads. Économisez 12h/semaine et augmentez votre taux de conversion.">
+    <meta property="og:title" content="Qualification automatique de leads IA — Cortex Studio">
+    <meta property="og:description" content="Chaque lead est enrichi, scoré et routé automatiquement vers le bon commercial avec un brief IA en 2 secondes.">
+    <meta property="og:type" content="article">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="../quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="../booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Qualification automatique de leads</span>
+        </nav>
+    </div>
+
+    <!-- Hero mini -->
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Qualification automatique de leads</h1>
+            <p class="hero-subtitle">Scoring et qualification de prospects automatisés grâce à l'IA pour prioriser les meilleurs leads. Fini le temps perdu sur des contacts sans potentiel — concentrez-vous sur ceux qui veulent vraiment acheter.</p>
+            <span class="badge badge-mrr">À partir de 500€</span>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les équipes commerciales passent 65% de leur temps sur des leads non qualifiés. Chaque lead entrant déclenche une recherche manuelle : qui est cette personne ? Quelle est sa taille d'entreprise ? A-t-il un budget ? Est-il décideur ? Cette qualification prend en moyenne 15 minutes par lead, soit plusieurs heures par jour pour une équipe commerciale active.</p>
+            <p>Le scoring manuel est subjectif et incohérent. Chaque commercial qualifie différemment selon son humeur, son expérience et ses préjugés. Un lead "moyen" pour un commercial junior peut être une opportunité en or pour un senior. Cette subjectivité entraîne des erreurs de priorisation coûteuses : les leads chauds refroidissent pendant qu'on traite des prospects sans budget ni urgence.</p>
+            <p>Une entreprise moyenne perd 25% de son chiffre d'affaires potentiel par mauvaise priorisation. Les leads à fort potentiel qui arrivent en dehors des heures de bureau attendent parfois 24 à 48 heures avant d'être contactés — une éternité dans un processus de vente moderne où le premier répondant remporte souvent le deal.</p>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Dès qu'un lead entre dans votre système (formulaire web, LinkedIn, email, événement), le workflow s'active automatiquement. En 2 secondes, le lead est enrichi : données LinkedIn, taille de l'entreprise, chiffre d'affaires, secteur, technologies utilisées, actualités récentes de la société. Ces données viennent de sources comme Clearbit, Apollo ou Hunter.</p>
+            <p>L'IA score ensuite le lead sur 100 selon des critères entièrement personnalisables : taille d'entreprise, budget estimé, urgence détectée dans le message, adéquation avec votre ICP (Ideal Customer Profile), poste du contact et pouvoir de décision. Ce score est calculé de façon identique pour chaque lead, sans biais humain.</p>
+            <p>Le lead est automatiquement routé vers le bon commercial avec un brief complet : qui est le prospect, ce qu'il cherche, pourquoi c'est une opportunité, et les 3 points clés à aborder lors du premier contact. Pour les leads à score > 80, une alerte Slack instantanée est envoyée. L'objectif : contacter les meilleurs leads en moins d'une heure, quelle que soit l'heure d'arrivée.</p>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+                        <li>Réception du lead dans la boîte mail ou CRM</li>
+                        <li>Recherche manuelle sur LinkedIn et Google : 15 min/lead</li>
+                        <li>Qualification subjective selon l'expérience du commercial</li>
+                        <li>Dispatch manuel vers le bon commercial (si méthode en place)</li>
+                        <li>Délai de réponse moyen : 24 à 48 heures</li>
+                        <li>Leads à fort potentiel manqués hors heures de bureau</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+                        <li>Lead enrichi automatiquement en 2 secondes</li>
+                        <li>Score IA calculé objectivement sur 100</li>
+                        <li>Routage automatique vers le commercial adéquat</li>
+                        <li>Brief complet fourni : contexte, points clés, opportunité</li>
+                        <li>Alerte Slack instantanée pour les leads à fort potentiel</li>
+                        <li>Délai de réponse : moins d'une heure, 24h/24</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">12h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.timesaved.title">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">48h/mois restituées à la vente active</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">400%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.roi.title">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 2 mois</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">500€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;" data-i18n="auto.cost.title">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 500€ selon le CRM utilisé</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+                <p><strong>Une société SaaS B2B avec 3 commerciaux</strong> recevait entre 40 et 80 leads par semaine via son site web et LinkedIn. Les commerciaux passaient 40% de leur temps à qualifier ces leads, sans méthode cohérente. Certains leads importants restaient sans réponse 2 jours parce qu'ils arrivaient le vendredi soir.</p>
+                <p style="margin-top: 1rem;">Après déploiement du système de qualification automatique, chaque lead est enrichi et scoré en temps réel. Les 15 leads à fort score (>75) de la semaine sont alertés instantanément sur Slack avec un brief complet. Les commerciaux consacrent 100% de leur temps aux prospects qualifiés. En 2 mois : taux de conversion en démo +65%, cycle de vente réduit de 18 à 11 jours, et un deal à 45 000€ signé grâce à une réponse en 20 minutes un samedi matin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.tools.title">Outils & technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Clearbit / Apollo</span>
+                <span class="tech-badge">HubSpot / Pipedrive CRM</span>
+                <span class="tech-badge">Slack (alertes)</span>
+                <span class="tech-badge">LinkedIn API</span>
+                <span class="tech-badge">Google Sheets</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à qualifier vos leads automatiquement ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe configure ce système sur votre CRM existant en moins de 2 semaines.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="auto.cta.btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="../services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
