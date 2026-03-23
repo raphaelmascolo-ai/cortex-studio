@@ -132,6 +132,62 @@
   padding-bottom: var(--spacing-lg);
 }
 
+/* Form row: stack on mobile */
+.form-row {
+  grid-template-columns: 1fr;
+}
+
+/* Booking steps: stack */
+.booking-steps {
+  grid-template-columns: 1fr;
+}
+
+/* Contact grid: stack */
+.contact-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Service details: stack */
+.service-details {
+  grid-template-columns: 1fr;
+}
+
+/* Hero actions: stack */
+.hero-actions {
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-actions .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* CTA actions: stack */
+.cta-actions {
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-actions .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Breadcrumb offset smaller on mobile */
+.breadcrumb {
+  padding-top: calc(60px + var(--spacing-sm));
+}
+
+/* Hero mini: smaller offset */
+.hero-mini {
+  padding-top: calc(60px + var(--spacing-md));
+}
+
+.section-hero-mini {
+  padding-top: calc(60px + var(--spacing-md));
+}
+
 /* Container padding */
 .container {
   padding-left: var(--spacing-sm);
@@ -205,6 +261,46 @@
   .hero .btn-group .btn {
     width: auto;
     max-width: none;
+  }
+
+  /* Hero actions */
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .hero-actions .btn {
+    width: auto;
+    max-width: none;
+  }
+
+  /* CTA actions */
+  .cta-actions {
+    flex-direction: row;
+  }
+
+  .cta-actions .btn {
+    width: auto;
+    max-width: none;
+  }
+
+  /* Form row: 2 columns */
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Booking steps */
+  .booking-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Contact grid */
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Service details */
+  .service-details {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* Section */

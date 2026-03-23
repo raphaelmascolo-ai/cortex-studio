@@ -370,3 +370,13 @@ a:focus-visible {
 .hidden {
   display: none !important;
 }
+
+/* Main content offset for fixed header */
+main {
+  position: relative;
+}
+
+/* Ensure body doesn't clip behind header */
+main:first-of-type > .section:first-child:not(.hero) {
+  padding-top: calc(70px + var(--spacing-xl));
+}
