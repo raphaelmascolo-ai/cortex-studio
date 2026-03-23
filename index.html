@@ -55,20 +55,33 @@
 <main>
 
     <!-- ============================================================
-         HERO
+         HERO — Video background with scroll effects
          ============================================================ -->
-    <section class="hero" aria-label="Introduction">
-        <div class="hero-bg" aria-hidden="true"></div>
+    <section class="hero hero-video-section" aria-label="Introduction">
+        <!-- Video background -->
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+
+        <!-- Content -->
         <div class="container">
-            <div class="hero-content fade-in">
+            <div class="hero-content hero-scroll-content">
                 <span class="hero-tag" data-i18n="hero.tag">Agence IA</span>
                 <h1 data-i18n="hero.title">Transformez vos idées en solutions IA rentables</h1>
                 <p data-i18n="hero.subtitle">Nous concevons et développons des applications IA, des automatisations intelligentes, des sites web augmentés et des applications web sur mesure pour accélérer votre croissance.</p>
                 <div class="hero-actions">
-                    <a href="services.html" class="btn btn-primary" data-i18n="hero.cta.services">Découvrir nos services</a>
-                    <a href="ideas.html" class="btn btn-secondary" data-i18n="hero.cta.ideas">Voir les idées de projets</a>
+                    <a href="services.html" class="btn btn-primary btn-lg" data-i18n="hero.cta.services">Découvrir nos services</a>
+                    <a href="ideas.html" class="btn btn-ghost" data-i18n="hero.cta.ideas">Voir les idées de projets</a>
                 </div>
             </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
         </div>
     </section>
 
@@ -346,6 +359,7 @@
 <!-- Scripts -->
 <script src="assets/js/translations.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/hero-scroll.js"></script>
 <script src="assets/js/cortex-anim.js"></script>
 <script>lucide.createIcons();</script>
 
