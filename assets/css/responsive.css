@@ -1,0 +1,457 @@
+/* ============================================================
+   CORTEX STUDIO — RESPONSIVE
+   responsive.css: Mobile-first breakpoints & print styles
+   ============================================================ */
+
+/* ============================================================
+   BASE / MOBILE  (<768px)
+   Default styles — smallest screens first
+   ============================================================ */
+
+/* Grid: collapse all multi-column grids to single column */
+.grid-2,
+.grid-3,
+.grid-4 {
+  grid-template-columns: 1fr;
+}
+
+/* Hero */
+.hero {
+  min-height: 70vh;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 6vw + 0.5rem, 2.5rem);
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+.hero .btn-group {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.hero .btn-group .btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Header */
+.header .container {
+  height: 60px;
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+/* Nav: hidden on mobile, shown as overlay when .nav-open */
+.nav-links {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(11, 17, 32, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  z-index: 999;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.nav-links.nav-open {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+}
+
+/* Burger: visible on mobile */
+.burger {
+  display: flex;
+}
+
+/* Footer */
+.footer-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.footer-bottom {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.footer-bottom-links {
+  gap: var(--spacing-sm);
+}
+
+/* Service blocks: stack vertically */
+.service-block,
+.service-block:nth-child(even) {
+  flex-direction: column;
+}
+
+.service-block .service-visual {
+  flex: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Stats: 2 columns on mobile */
+.stats-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Projection table: horizontal scroll on small screens */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Modal */
+.modal {
+  margin: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-sm);
+}
+
+/* Section padding reduced */
+.section {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Container padding */
+.container {
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+/* Filter bar: allow wrapping naturally */
+.filter-bar {
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  font-size: 0.8125rem;
+  padding: 0.4rem 1rem;
+}
+
+/* Page hero */
+.page-hero {
+  padding-top: calc(60px + var(--spacing-lg));
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Section header */
+.section-header {
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================================
+   TABLET  (min-width: 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  /* Grid columns */
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero .btn-group .btn {
+    width: auto;
+    max-width: none;
+  }
+
+  /* Section */
+  .section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding-top: calc(70px + var(--spacing-xl));
+    padding-bottom: var(--spacing-xl);
+  }
+
+  /* Container */
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  /* Modal */
+  .modal {
+    margin: 0;
+    padding: var(--spacing-md);
+  }
+}
+
+/* ============================================================
+   DESKTOP  (min-width: 1024px)
+   ============================================================ */
+@media (min-width: 1024px) {
+  /* Grid columns: full layouts */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Nav: visible, burger hidden */
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 0.25rem;
+    z-index: auto;
+    inset: auto;
+  }
+
+  .nav-links a {
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    max-width: none;
+    text-align: left;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  /* Service blocks: row layout */
+  .service-block {
+    flex-direction: row;
+  }
+
+  .service-block:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .service-block .service-visual {
+    flex: 0 0 45%;
+    max-width: 45%;
+    width: auto;
+  }
+
+  /* Header */
+  .header .container {
+    height: 70px;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+/* ============================================================
+   WIDE  (min-width: 1280px)
+   ============================================================ */
+@media (min-width: 1280px) {
+  .footer-grid {
+    gap: var(--spacing-xl);
+  }
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  /* Colors: light background, dark text */
+  *,
+  *::before,
+  *::after {
+    background: white !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #cccccc !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+
+  html,
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Hide non-print elements */
+  .header,
+  .footer,
+  nav,
+  .nav-links,
+  .burger,
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost,
+  .modal-overlay,
+  .filter-bar,
+  .lang-toggle,
+  .breadcrumb,
+  .fade-in {
+    display: none !important;
+  }
+
+  /* Links */
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #555 !important;
+  }
+
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Page breaks */
+  h1 {
+    page-break-before: always;
+  }
+
+  h1:first-child {
+    page-break-before: avoid;
+  }
+
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+
+  p,
+  blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Tables */
+  .projection-table th,
+  .projection-table td {
+    border: 1px solid #cccccc !important;
+    padding: 0.5rem !important;
+  }
+
+  .projection-table th {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+  }
+
+  /* Cards: flatten */
+  .card,
+  .idea-card,
+  .testimonial-card {
+    border: 1px solid #cccccc !important;
+    border-radius: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Grid: collapse to 1 or 2 columns */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Container */
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Section */
+  .section {
+    padding: 1rem 0 !important;
+  }
+
+  /* Hide decorative pseudo-elements */
+  .hero::before,
+  .page-hero::before,
+  .testimonial-card::before {
+    display: none !important;
+  }
+
+  /* Opacity resets */
+  .fade-in,
+  .fade-in.visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
