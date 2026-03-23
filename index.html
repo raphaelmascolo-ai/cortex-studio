@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortex Studio — Agence IA | Applications, Automatisations &amp; Sites Web IA</title>
+    <meta name="description" content="Cortex Studio développe des applications IA, automatisations intelligentes, sites web IA et applications web sur mesure. Transformez vos idées en solutions rentables.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cortex Studio — Agence IA">
+    <meta property="og:description" content="Applications IA, automatisations, sites web IA et applications web sur mesure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cortex-studio.com/">
+    <meta property="og:image" content="https://cortex-studio.com/assets/images/og-image.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
+                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
+                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <button class="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" aria-label="Introduction">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-tag" data-i18n="hero.tag">Agence IA</span>
+                <h1 data-i18n="hero.title">Transformez vos idées en solutions IA rentables</h1>
+                <p data-i18n="hero.subtitle">Nous concevons et développons des applications IA, des automatisations intelligentes, des sites web augmentés et des applications web sur mesure pour accélérer votre croissance.</p>
+                <div class="hero-actions">
+                    <a href="services.html" class="btn btn-primary" data-i18n="hero.cta.services">Découvrir nos services</a>
+                    <a href="ideas.html" class="btn btn-secondary" data-i18n="hero.cta.ideas">Voir les idées de projets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES PREVIEW
+         ============================================================ -->
+    <section class="section" aria-labelledby="services-heading">
+        <div class="container">
+            <h2 id="services-heading" data-i18n="services.title" class="text-center fade-in">Nos services</h2>
+            <p data-i18n="services.subtitle" class="text-center text-secondary fade-in">Des solutions IA adaptées à chaque besoin et chaque budget</p>
+
+            <div class="grid-4">
+
+                <!-- Application IA -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3 data-i18n="services.app-ia.title">Application IA</h3>
+                    <span class="price-badge" data-i18n="services.app-ia.price">À partir de 2 500€</span>
+                    <p data-i18n="services.app-ia.desc">Applications intelligentes sur mesure intégrant machine learning, NLP et vision par ordinateur.</p>
+                    <a href="quote.html" class="btn btn-primary btn-sm" data-i18n="services.cta">Demander un devis</a>
+                </article>
+
+                <!-- Automatisation IA -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 data-i18n="services.auto-ia.title">Automatisation IA</h3>
+                    <span class="price-badge" data-i18n="services.auto-ia.price">À partir de 250€</span>
+                    <p data-i18n="services.auto-ia.desc">Automatisez vos processus répétitifs grâce à l'intelligence artificielle et gagnez des heures chaque semaine.</p>
+                    <a href="quote.html" class="btn btn-primary btn-sm" data-i18n="services.cta">Demander un devis</a>
+                </article>
+
+                <!-- Site IA -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 data-i18n="services.site-ia.title">Site IA</h3>
+                    <span class="price-badge" data-i18n="services.site-ia.price">À partir de 1 000€</span>
+                    <p data-i18n="services.site-ia.desc">Sites web nouvelle génération avec chatbot IA, recherche intelligente et recommandations personnalisées.</p>
+                    <a href="quote.html" class="btn btn-primary btn-sm" data-i18n="services.cta">Demander un devis</a>
+                </article>
+
+                <!-- Application Web -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3 data-i18n="services.app-web.title">Application Web</h3>
+                    <span class="price-badge" data-i18n="services.app-web.price">À partir de 1 500€</span>
+                    <p data-i18n="services.app-web.desc">Applications web complètes : SaaS, dashboards, marketplaces et outils métier sur mesure.</p>
+                    <a href="quote.html" class="btn btn-primary btn-sm" data-i18n="services.cta">Demander un devis</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOCIAL PROOF
+         ============================================================ -->
+    <section class="section section-light" aria-labelledby="proof-heading">
+        <div class="container">
+            <h2 id="proof-heading" data-i18n="proof.title" class="text-center fade-in">Ils nous font confiance</h2>
+            <p data-i18n="proof.subtitle" class="text-center text-secondary fade-in">Des entreprises de toutes tailles nous confient leurs projets IA</p>
+
+            <div class="grid-3">
+
+                <!-- Testimonial 1 -->
+                <article class="testimonial-card fade-in" aria-label="Témoignage de Marie Laurent">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>
+                        <p data-i18n="testimonial.1.quote">Cortex Studio a transformé notre service client grâce à un chatbot IA qui gère 80% des demandes automatiquement. ROI atteint en 3 mois.</p>
+                    </blockquote>
+                    <footer class="testimonial-author">
+                        <strong data-i18n="testimonial.1.author">Marie Laurent</strong>
+                        <span data-i18n="testimonial.1.role">Directrice Marketing, TechFlow</span>
+                    </footer>
+                </article>
+
+                <!-- Testimonial 2 -->
+                <article class="testimonial-card fade-in" aria-label="Témoignage de Thomas Dubois">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>
+                        <p data-i18n="testimonial.2.quote">L'automatisation de notre prospection nous a fait gagner 15 heures par semaine. L'équipe peut enfin se concentrer sur la vente.</p>
+                    </blockquote>
+                    <footer class="testimonial-author">
+                        <strong data-i18n="testimonial.2.author">Thomas Dubois</strong>
+                        <span data-i18n="testimonial.2.role">CEO, GrowthLab</span>
+                    </footer>
+                </article>
+
+                <!-- Testimonial 3 -->
+                <article class="testimonial-card fade-in" aria-label="Témoignage de Sophie Martin">
+                    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                    <blockquote>
+                        <p data-i18n="testimonial.3.quote">Notre application de gestion locative développée par Cortex Studio nous a permis de scaler de 50 à 500 biens gérés sans embaucher.</p>
+                    </blockquote>
+                    <footer class="testimonial-author">
+                        <strong data-i18n="testimonial.3.author">Sophie Martin</strong>
+                        <span data-i18n="testimonial.3.role">Fondatrice, ImmoGest</span>
+                    </footer>
+                </article>
+
+            </div>
+
+            <!-- Partner logos placeholder -->
+            <div class="partner-logos fade-in" aria-label="Nos partenaires">
+                <div class="partner-logo" aria-hidden="true"></div>
+                <div class="partner-logo" aria-hidden="true"></div>
+                <div class="partner-logo" aria-hidden="true"></div>
+                <div class="partner-logo" aria-hidden="true"></div>
+                <div class="partner-logo" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WHY US
+         ============================================================ -->
+    <section class="section" aria-labelledby="why-heading">
+        <div class="container">
+            <h2 id="why-heading" data-i18n="why.title" class="text-center fade-in">Pourquoi Cortex Studio</h2>
+            <p data-i18n="why.subtitle" class="text-center text-secondary fade-in">Une expertise unique au service de votre réussite</p>
+
+            <div class="grid-4">
+
+                <!-- Expertise IA -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h3 data-i18n="why.expertise.title">Expertise IA</h3>
+                    <p data-i18n="why.expertise.desc">Une équipe spécialisée en intelligence artificielle, machine learning et automatisation depuis plus de 4 ans.</p>
+                </article>
+
+                <!-- Rapidité -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 data-i18n="why.speed.title">Rapidité</h3>
+                    <p data-i18n="why.speed.desc">Du concept au déploiement en quelques semaines. MVP livré en 2-4 semaines, itérations rapides.</p>
+                </article>
+
+                <!-- Accompagnement -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="headphones"></i>
+                    </div>
+                    <h3 data-i18n="why.support.title">Accompagnement</h3>
+                    <p data-i18n="why.support.desc">Un suivi personnalisé de A à Z. Conseil stratégique, développement, déploiement et maintenance.</p>
+                </article>
+
+                <!-- ROI Garanti -->
+                <article class="card fade-in">
+                    <div class="card-icon" aria-hidden="true">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 data-i18n="why.roi.title">ROI Garanti</h3>
+                    <p data-i18n="why.roi.desc">Chaque projet est conçu pour générer un retour sur investissement mesurable et rapide.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="section section-cta fade-in" aria-labelledby="cta-heading" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 id="cta-heading" data-i18n="cta.title">Prêt à lancer votre projet IA ?</h2>
+            <p data-i18n="cta.subtitle" class="text-secondary">Discutons de votre idée et transformons-la en réalité.</p>
+            <div class="cta-actions">
+                <a href="quote.html" class="btn btn-primary" data-i18n="cta.button">Demander un devis gratuit</a>
+                <a href="booking.html" class="btn btn-ghost" data-i18n="cta.booking">Ou réservez un appel découverte</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <img src="assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+
+            <!-- Quick links -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
+                    <li><a href="services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
+                    <li><a href="services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
+                    <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/main.js"></script>
+<script>lucide.createIcons();</script>
+
+</body>
+</html>
