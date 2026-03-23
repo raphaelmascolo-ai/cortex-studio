@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Formation IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>App de Micro-Formation IA</h1>
+        <div class="subtitle">EdTech &amp; Apprentissage Adaptatif</div>
+        <p class="description">Plateforme de micro-cours (5–10 min) entièrement générés par IA, personnalisés au niveau de chaque apprenant, avec spaced repetition et adaptation de difficulté en temps réel. Domaines : langues, code, business.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">4 500 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 4</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">5,3 Mds €</div>
+                <div class="label">E-learning France</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>Notre plateforme de micro-formation IA révolutionne l'apprentissage en ligne en générant des cours entièrement personnalisés, adaptatifs et disponibles en sessions de 5 à 10 minutes. À rebours des MOOCs traditionnels aux taux de complétion inférieurs à 5%, notre approche combine micro-learning (sessions courtes, intégrées au quotidien), spaced repetition (révisions optimisées selon la courbe d'Ebbinghaus) et génération de contenu IA (cours ajustés en temps réel au niveau exact de l'apprenant). Trois domaines au lancement : langues étrangères, programmation et compétences business. L'offre gratuite permet 1 cours/jour dans 1 domaine ; le Premium à 7,99 €/mois déverrouille l'ensemble du catalogue, les certificats et le mode hors-ligne. Avec 600 €/mois de charges et un marché e-learning de 5,3 milliards d'euros en France, la rentabilité est attendue au mois 4.</p>
+            <div class="highlight-box">
+                <p>"Duolingo a prouvé que 5 minutes par jour suffisent pour apprendre une langue. Notre IA applique ce principe à tous les domaines de compétence, avec un contenu généré et adapté pour chaque apprenant."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>L'e-learning traditionnel souffre d'un paradoxe : les plateformes comme Coursera ou Udemy offrent un contenu abondant, mais le taux de complétion moyen des MOOCs ne dépasse pas 5–7%. La raison est structurelle : les cours sont longs (plusieurs heures), génériques (conçus pour un niveau moyen fictif) et passifs (vidéos sans interaction). L'apprenant progresse à une vitesse imposée par le créateur du cours, pas à son propre rythme. Les moments libres du quotidien — trajet, pause déjeuner, 10 minutes avant de dormir — restent inexploités faute de contenu adapté à ces créneaux courts.</p>
+            <p>Le coût de production du contenu e-learning est également un frein majeur pour les plateformes : un cours de qualité coûte 10 000 à 50 000 € à produire. Cela limite la diversité des sujets couverts et crée des angles morts importants dans les catalogues existants. L'IA générative résout ce problème à la racine : le contenu peut être créé à la demande, pour n'importe quel sujet, au coût marginal quasi nul.</p>
+            <h3>La solution</h3>
+            <p>Notre plateforme génère des micro-cours en temps réel selon le profil de l'apprenant. À l'inscription, un test de niveau rapide (5 minutes) positionne l'utilisateur sur chaque domaine. Ensuite, chaque session quotidienne est une leçon unique générée par l'IA, calibrée exactement au niveau actuel, introduisant juste assez de nouveauté pour stimuler sans décourager. Le système de spaced repetition planifie automatiquement les révisions des points appris pour maximiser la mémorisation à long terme.</p>
+            <p>La gamification (streaks quotidiennes, badges de progression, classements amicaux) maintient l'engagement. Le mode certificat permet à l'utilisateur de valider ses compétences acquises par un test de certification généré et corrigé par l'IA. En version entreprise, les gestionnaires RH peuvent créer des parcours de formation sur mesure pour leurs équipes, avec suivi de progression individuel.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle freemium s'inspire directement de Duolingo, leader mondial de l'apprentissage mobile avec 600 millions d'utilisateurs. La limite de 1 cours/jour et 1 domaine crée la frustration de progression qui convertit les apprenants engagés vers le Premium. Le taux de conversion attendu est de 8–12%, supérieur à la moyenne des apps freemium (5%) grâce à la forte motivation inhérente à l'apprentissage.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gratuit</strong></td>
+                    <td>0 €</td>
+                    <td>1 cours/jour, 1 domaine, quiz, streak quotidienne, progression basique</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>7,99 €/mois</td>
+                    <td>Cours illimités, tous les domaines, spaced repetition avancé, certificats, mode hors-ligne, sans publicité, statistiques détaillées</td>
+                </tr>
+                <tr>
+                    <td><strong>Entreprise</strong></td>
+                    <td>Sur devis (moy. 15 €/user/mois)</td>
+                    <td>Tout Premium + parcours sur mesure, tableau de bord RH, API LMS, rapport de progression équipe, support dédié</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Certifications payantes :</strong> certificats officiels co-brandés avec des partenaires (écoles, employeurs) facturés à l'unité (9,99 €/certificat).</li>
+            <li><strong>CPF (Compte Personnel de Formation) :</strong> certification Qualiopi en cours de démarche pour intégrer les offres éligibles au CPF — levier majeur d'acquisition B2C financé par l'État.</li>
+            <li><strong>Marketplace de cours :</strong> à terme, permettre à des experts humains de publier des cours enrichis par l'IA (revshare 70/30).</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">4 500</div>
+                <div class="kpi-label">Apprenants actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">560</div>
+                <div class="kpi-label">Abonnés Premium</div>
+                <div class="kpi-sub">Taux de conversion 12%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">4 500 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Hors entreprise</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>250 €</td><td>400 €</td><td>750 €</td></tr>
+                <tr><td>Mois 3</td><td>500 €</td><td>800 €</td><td>1 500 €</td></tr>
+                <tr><td>Mois 6</td><td>1 000 €</td><td>1 800 €</td><td>3 000 €</td></tr>
+                <tr><td>Mois 9</td><td>1 800 €</td><td>2 800 €</td><td>5 000 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">2 500 €</td><td class="highlight">4 500 €</td><td class="highlight">8 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>APIs IA — génération de cours, quiz, corrections (OpenAI GPT-4o)</td><td>250 €</td></tr>
+                <tr><td>Infrastructure cloud (hébergement, BDD, CDN, offline sync)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (ASO, réseaux sociaux, partenariats éducatifs)</td><td>200 €</td></tr>
+                <tr><td>Contrôle qualité du contenu IA (révision pédagogique manuelle)</td><td>50 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>600 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec 600 €/mois de charges et un ARPU de 7,99 €, le seuil de rentabilité est atteint à <strong>75 abonnés Premium</strong>. Dans le scénario réaliste, ce palier est franchi au <strong>mois 4</strong>. Les coûts d'API IA sont la variable la plus sensible : à fort volume d'utilisateurs gratuits générant des cours quotidiennement, la consommation GPT-4o peut augmenter. Pour mitiger ce risque, les utilisateurs gratuits reçoivent des cours générés en batch (moins coûteux en API), tandis que les Premium bénéficient de la génération temps réel ultra-personnalisée. Le scénario pessimiste atteint l'équilibre au mois 7, l'optimiste dès le mois 3.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché de la formation en ligne en France représente 5,3 milliards d'euros en 2025, dont 2,1 milliards pour la formation professionnelle digitale. Le segment du micro-learning connaît une croissance de +17% par an, stimulé par la réduction des temps d'attention et l'adoption massive des smartphones comme premier écran d'apprentissage. Le CPF (Compte Personnel de Formation) a injecté 2,5 milliards d'euros en 2024 dans la formation digitale, créant une demande structurelle et solvable.</p>
+        <p>Le marché adressable réaliste (SAM) cible les 5 millions de Français qui utilisent déjà une app éducative sur mobile (Duolingo, LinkedIn Learning, Khan Academy). L'avantage compétitif de notre solution sur Duolingo est la couverture multi-domaines et l'absence de limite à un seul format de contenu ; sur LinkedIn Learning, la supériorité est le micro-format adaptatif et le prix 5x inférieur. Le marché mondial de l'e-learning IA atteindra 47 milliards de dollars d'ici 2030.</p>
+        <p>La réduction des coûts de production de contenu de 90% grâce à l'IA générative est notre avantage structurel décisif : là où un MOOC traditionnel nécessite 6 mois et 30 000 € de production, notre plateforme peut générer un nouveau domaine complet en quelques heures pour un coût marginal de quelques centaines d'euros.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Cours texte générés par IA</li>
+                    <li>Quiz adaptatifs (QCM, vrai/faux)</li>
+                    <li>3 domaines : anglais, Python, marketing</li>
+                    <li>Streak quotidienne et gamification</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Contenu audio (narration IA)</li>
+                    <li>Algorithme spaced repetition</li>
+                    <li>Tableau de progression multi-domaines</li>
+                    <li>Mode hors-ligne (Premium)</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Contenu vidéo (avatar IA enseignant)</li>
+                    <li>Certificats de compétence IA</li>
+                    <li>Module entreprise B2B (parcours RH)</li>
+                    <li>Démarche Qualiopi / CPF</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

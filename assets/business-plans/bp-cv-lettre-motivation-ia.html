@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Lettres de Motivation IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>Générateur de CV &amp; Lettres de Motivation IA</h1>
+        <div class="subtitle">HR Tech &amp; Emploi</div>
+        <p class="description">Plateforme qui génère des CV optimisés ATS et des lettres de motivation personnalisées par secteur et par offre d'emploi, avec scoring ATS en temps réel et suivi des candidatures.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">5 000 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 3</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">5M</div>
+                <div class="label">Candidats/an FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>Chaque année, plus de 5 millions de Français sont en recherche active d'emploi ou de reconversion. Pourtant, 75% des CV ne passent jamais le filtre des logiciels ATS (Applicant Tracking System) utilisés par les recruteurs. Notre plateforme génère en quelques minutes un CV parfaitement structuré pour l'ATS et une lettre de motivation sur mesure, personnalisée à l'offre d'emploi et au secteur cible. Le scoring ATS temps réel guide l'utilisateur pour maximiser ses chances. Le modèle hybride (pay-per-use à 1,99 €/document + abonnement illimité à 9,99 €/mois) cible à la fois les candidats ponctuels et les chercheurs d'emploi intensifs. Avec des coûts opérationnels de 500 €/mois et une conversion rapide, le seuil de rentabilité est atteint dès le mois 3 dans le scénario réaliste.</p>
+            <div class="highlight-box">
+                <p>"75% des CV sont éliminés avant d'être lus par un humain. Notre IA optimise chaque document pour passer ce filtre invisible et mettre en valeur le vrai potentiel du candidat."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>La majorité des chercheurs d'emploi ignorent que leurs candidatures sont analysées par des algorithmes avant d'atterrir sur le bureau d'un recruteur. Ces ATS (logiciels de tri automatique) rejettent les CV qui ne contiennent pas les bons mots-clés, ne respectent pas une mise en page lisible par la machine, ou n'adressent pas spécifiquement les compétences mentionnées dans l'annonce. Résultat : des candidats qualifiés sont invisibles. Par ailleurs, rédiger une lettre de motivation convaincante, personnalisée par secteur et par entreprise, est une compétence rare et chronophage — même pour les candidats expérimentés.</p>
+            <p>Les outils existants (Zety, Canva, modèles Word) proposent des templates esthétiques mais aucune intelligence sur la pertinence ATS, le ciblage sectoriel ou la personnalisation par offre. Le marché HR tech croît de +20% par an, mais aucun acteur dominant en France ne combine IA, ATS et suivi de candidatures dans une interface accessible et abordable.</p>
+            <h3>La solution</h3>
+            <p>Notre plateforme propose un workflow en trois étapes : l'utilisateur colle son expérience (ou importe son LinkedIn), sélectionne l'offre d'emploi cible, et l'IA génère instantanément un CV optimisé ATS et une lettre de motivation sur mesure. Le scoring ATS en temps réel affiche un pourcentage de compatibilité avec l'offre et liste les améliorations prioritaires : mots-clés manquants, formulations à renforcer, sections à ajouter.</p>
+            <p>Le module de suivi des candidatures permet de centraliser toutes les démarches en cours : statut de chaque candidature, relances automatiques, statistiques de réponse par secteur. L'IA apprend de chaque retour pour affiner les générations suivantes. Les exports Word et PDF professionnels sont disponibles en un clic, compatibles avec tous les ATS du marché.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le double modèle (pay-per-use + abonnement) est stratégique : il abaisse la barrière à l'entrée pour les candidats qui testent une seule fois (1,99 € par document, sans engagement), tout en capturant la valeur maximale auprès des chercheurs d'emploi actifs qui posent des dizaines de candidatures par mois et préfèrent l'illimité pour 9,99 €/mois. Le mix attendu est 60% d'abonnés / 40% de pay-per-use en volume de revenus à 12 mois.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pay-per-use</strong></td>
+                    <td>1,99 €/doc</td>
+                    <td>1 CV ou 1 lettre de motivation, 5 templates, export PDF</td>
+                </tr>
+                <tr>
+                    <td><strong>Abonnement</strong></td>
+                    <td>9,99 €/mois</td>
+                    <td>Documents illimités, scoring ATS temps réel, analyse d'annonce, templates premium, export Word + PDF, suivi candidatures</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Partenariats jobboards :</strong> affiliation sur les offres d'emploi recommandées par l'IA (Indeed, LinkedIn, Hellowork) — revenus au clic ou à la candidature.</li>
+            <li><strong>B2B cabinets de recrutement :</strong> offre dédiée pour les cabinets qui accompagnent des candidats en reclassement (contrat annuel).</li>
+            <li><strong>Coaching entretien (V2) :</strong> module simulateur d'entretien IA facturé en add-on à 4,99 €/session.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">500</div>
+                <div class="kpi-label">Abonnés actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">1 500</div>
+                <div class="kpi-label">Docs pay-per-use/mois</div>
+                <div class="kpi-sub">À 1,99 €/doc</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">5 000 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Mix abos + pay-per-use</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>250 €</td><td>400 €</td><td>750 €</td></tr>
+                <tr><td>Mois 3</td><td>500 €</td><td>800 €</td><td>1 500 €</td></tr>
+                <tr><td>Mois 6</td><td>1 200 €</td><td>2 000 €</td><td>3 500 €</td></tr>
+                <tr><td>Mois 9</td><td>2 000 €</td><td>3 000 €</td><td>6 000 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">3 000 €</td><td class="highlight">5 000 €</td><td class="highlight">10 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>APIs IA — GPT-4o pour génération CV + LM (OpenAI)</td><td>200 €</td></tr>
+                <tr><td>Infrastructure cloud (hébergement, BDD, exports PDF)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (SEA, SEO, LinkedIn ads)</td><td>200 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>500 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec 500 €/mois de charges et un ARPU mixte de ~6,20 € (mix abonnements à 9,99 € et pay-per-use à 1,99 €), le seuil de rentabilité est atteint à <strong>~80 abonnés équivalents</strong>. Dans le scénario réaliste, ce palier est franchi dès le <strong>mois 3</strong> — l'un des délais les plus courts du portefeuille grâce à la forte intention d'achat des chercheurs d'emploi actifs et à la valeur perçue immédiate du produit. Le scénario pessimiste atteint l'équilibre au mois 5, l'optimiste dès le mois 2.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché adressable total (TAM) regroupe les 3 millions de demandeurs d'emploi inscrits à France Travail, auxquels s'ajoutent 2 millions de personnes en reconversion ou changement de poste chaque année, soit 5 millions de candidats actifs annuels. Ces profils ont un besoin immédiat et récurrent d'outils de candidature performants. La forte temporalité des recherches d'emploi (durée médiane de 4 à 6 mois) implique un abonnement moyen de 4,5 mois, soit un LTV de ~45 € par abonné.</p>
+        <p>Le marché HR tech connaît une croissance de +20% par an en France et en Europe. L'IA générative a radicalement transformé les possibilités de personnalisation à l'échelle : ce qui prenait 2 heures à un conseiller emploi humain peut désormais être produit en 30 secondes par notre moteur IA, pour un coût marginal proche de zéro. Les concurrents Zety et Canva occupent le segment des templates visuels mais n'investissent pas l'IA conversationnelle et le scoring ATS. Resume.io et Kickresume restent anglophones et peu optimisés pour le marché français.</p>
+        <p>L'acquisition peut s'appuyer sur des canaux à forte intention : SEA sur des requêtes comme "créer un CV en ligne" (15 000+ recherches mensuelles en France), partenariats avec France Travail, missions locales et écoles de reconversion professionnelle.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Génération CV IA (5 templates)</li>
+                    <li>Génération lettre de motivation</li>
+                    <li>Analyse d'annonce par URL</li>
+                    <li>Export PDF propre</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Scoring ATS temps réel</li>
+                    <li>Suggestions d'amélioration IA</li>
+                    <li>Export Word (.docx)</li>
+                    <li>Suivi candidatures (tableau de bord)</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Import LinkedIn (profil auto-rempli)</li>
+                    <li>Coaching entretien IA (simulateur)</li>
+                    <li>Recommandation d'offres personnalisées</li>
+                    <li>Offre B2B cabinets de recrutement</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

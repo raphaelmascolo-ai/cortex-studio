@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Locative IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>App de Gestion Locative IA</h1>
+        <div class="subtitle">PropTech &amp; Immobilier</div>
+        <p class="description">Plateforme de gestion locative automatisée : quittances et documents auto, estimation de loyer par IA (données DVF), alertes réglementaires personnalisées et suivi des paiements avec relances automatiques.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">3 493 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 5</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">2,5M</div>
+                <div class="label">Propriétaires bailleurs</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>La gestion locative est l'une des activités administratives les plus chronophages pour les 2,5 millions de propriétaires bailleurs français. Notre plateforme automatise l'intégralité de la gestion documentaire — quittances mensuelles, avis d'échéance, contrats, états des lieux — grâce à des modèles IA mis à jour en temps réel selon les évolutions réglementaires (encadrement des loyers, DPE, loi Alur). Un moteur d'estimation de loyer basé sur les données DVF (Demandes de Valeurs Foncières) permet à chaque propriétaire de positionner son loyer au prix de marché. Les relances de paiement impayé sont envoyées automatiquement, par paliers, avec les modèles juridiques appropriés. Le modèle tarifaire est simple : 4,99 €/bien/mois, avec 1 mois d'essai gratuit sur 1 bien. À 700 biens gérés au mois 12, le MRR atteint 3 493 €, avec rentabilité au mois 5.</p>
+            <div class="highlight-box">
+                <p>"Un propriétaire bailleur passe en moyenne 8 heures par mois sur la gestion administrative de ses biens. Notre plateforme réduit ce temps à moins de 30 minutes, sans aucune erreur réglementaire."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Gérer un bien locatif en direct expose le propriétaire à deux risques majeurs : la charge administrative (quittances, révisions de loyer, charges, relances) et le risque réglementaire (non-conformité au DPE, dépassement des plafonds d'encadrement, manquement aux obligations d'information du locataire). La législation locative française est l'une des plus complexes d'Europe et évolue en permanence. Un propriétaire non informé peut se retrouver exposé à des sanctions ou à la nullité de clauses contractuelles.</p>
+            <p>Les solutions existantes sont soit trop basiques (Rentila : tableau de suivi sans IA, sans alertes réglementaires), soit trop coûteuses pour les petits propriétaires (Hektor, Flatlooker : tarifs à partir de 50 €/bien/mois). Entre les deux, le marché des propriétaires bailleurs possédant 1 à 5 biens — soit 80% du parc locatif privé — reste mal servi. Ce segment représente 2 millions de propriétaires, pour la plupart non professionnels, cherchant simplicité et sécurité.</p>
+            <h3>La solution</h3>
+            <p>Notre plateforme centralise toute la gestion locative dans un dashboard clair, avec automatisation complète des tâches récurrentes. Chaque premier du mois, les quittances sont générées et envoyées automatiquement aux locataires par email. L'IA surveille la conformité réglementaire de chaque bien : elle alerte si le DPE est expiré, si le loyer dépasse le plafond d'encadrement en zone tendue, ou si une nouvelle obligation légale s'applique. Le moteur DVF analyse les données de marché pour recommander un loyer optimal lors d'une remise en location.</p>
+            <p>En cas d'impayé, un protocole de relance progressif s'enclenche automatiquement : relance amiable J+3, mise en demeure J+15, modèle de lettre recommandée J+30. Tous les documents générés sont conformes aux templates officiels et personnalisés aux données de chaque bail. La plateforme gère jusqu'à 50 biens par compte, ce qui couvre largement les petits investisseurs comme les marchands de biens.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle à l'unité (par bien géré) est le plus naturel pour ce marché : les propriétaires comprennent immédiatement la logique de payer par bien, et le prix de 4,99 €/bien/mois est nettement inférieur au coût d'un gestionnaire d'agence (7–10% des loyers, soit 50–80 €/bien/mois en moyenne). La proposition de valeur en économies réalisées est immédiate et quantifiable. Un propriétaire de 3 biens paie 14,97 €/mois contre 150–240 €/mois en gestion agence — soit 90% d'économies.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Essai gratuit</strong></td>
+                    <td>0 € (1 mois, 1 bien)</td>
+                    <td>Quittances auto, dashboard, suivi paiement, 1 bien uniquement, accès limité 30 jours</td>
+                </tr>
+                <tr>
+                    <td><strong>Standard</strong></td>
+                    <td>4,99 €/bien/mois</td>
+                    <td>Biens illimités, quittances + avis d'échéance auto, estimation loyer DVF, alertes réglementaires, relances impayés automatiques, exports comptables</td>
+                </tr>
+                <tr>
+                    <td><strong>Pro (>10 biens)</strong></td>
+                    <td>3,99 €/bien/mois</td>
+                    <td>Tout Standard + assistant déclaration fiscale (revenus fonciers), tableau de bord patrimonial, support prioritaire</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Assurance loyers impayés :</strong> commissionnement sur la souscription GLI (Garantie Loyers Impayés) via partenaires assureurs intégrés.</li>
+            <li><strong>Marketplace artisans (V2) :</strong> mise en relation propriétaires et artisans pour les travaux d'entretien (commission 8–12% sur les devis).</li>
+            <li><strong>Déclaration fiscale IA :</strong> module de préparation de la déclaration 2044 (revenus fonciers) facturé 19,99 €/an en complément.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">700</div>
+                <div class="kpi-label">Biens gérés</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">~250</div>
+                <div class="kpi-label">Propriétaires actifs</div>
+                <div class="kpi-sub">Moy. 2,8 biens/proprio</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">3 493 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">à 4,99 €/bien</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection biens gérés et MRR sur 12 mois</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste (biens / MRR)</th><th>Réaliste (biens / MRR)</th><th>Optimiste (biens / MRR)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 / 0 €</td><td>0 / 0 €</td><td>0 / 0 €</td></tr>
+                <tr><td>Mois 2</td><td>25 / 125 €</td><td>50 / 250 €</td><td>100 / 499 €</td></tr>
+                <tr><td>Mois 3</td><td>50 / 250 €</td><td>100 / 499 €</td><td>200 / 998 €</td></tr>
+                <tr><td>Mois 6</td><td>120 / 599 €</td><td>250 / 1 248 €</td><td>500 / 2 495 €</td></tr>
+                <tr><td>Mois 9</td><td>200 / 998 €</td><td>450 / 2 246 €</td><td>900 / 4 491 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">300 / 1 497 €</td><td class="highlight">700 / 3 493 €</td><td class="highlight">1 500 / 7 485 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Infrastructure cloud (hébergement, génération PDF, emails auto)</td><td>150 €</td></tr>
+                <tr><td>APIs IA + données DVF (estimation loyers, veille réglementaire)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (SEO immobilier, forums propriétaires, LinkedIn)</td><td>200 €</td></tr>
+                <tr><td>Support client (juridique + technique — temps partiel)</td><td>100 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>550 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec 550 €/mois de charges et un revenu de 4,99 €/bien/mois, le seuil de rentabilité est atteint à <strong>110 biens gérés</strong>, soit environ 40 propriétaires actifs (à 2,75 biens en moyenne). Dans le scénario réaliste, ce palier est franchi au <strong>mois 5</strong>. Le modèle est particulièrement résilient car le churn est très faible : une fois que le propriétaire a configuré ses biens et ses locataires sur la plateforme, le coût de migration est élevé. Le taux de churn mensuel est estimé à 2%, nettement inférieur à la moyenne des apps SaaS (5–7%). Le scénario pessimiste atteint l'équilibre au mois 8, l'optimiste dès le mois 4.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché immobilier locatif privé en France représente 7,5 millions de logements, gérés par 2,5 millions de propriétaires bailleurs. 80% de ces propriétaires gèrent leurs biens en direct (sans agence), soit 2 millions de personnes potentiellement intéressées par notre solution. Le marché adressable réaliste (SAM) cible les propriétaires de 1 à 10 biens qui gèrent déjà en direct et cherchent une solution simple et conforme : environ 800 000 personnes en France.</p>
+        <p>La réglementation locative française ne cesse de se complexifier : loi ALUR, loi ELAN, encadrement des loyers dans les zones tendues (Paris, Lyon, Bordeaux, Montpellier…), nouvelles obligations DPE et rénovation énergétique, encadrement des meublés de tourisme. Cette complexité croissante est notre meilleur allié commercial : chaque nouvelle loi crée une nouvelle raison pour un propriétaire non professionnel de chercher une aide automatisée.</p>
+        <p>Les concurrents directs sont peu nombreux et mal positionnés : Rentila est gratuit mais sans IA et sans alertes réglementaires ; Hektor propose une solution complète mais à des prix d'agence (49–99 €/bien/mois). Aucun acteur ne combine IA, conformité automatisée et tarif accessible pour les petits propriétaires. Cette fenêtre de marché est idéale pour s'imposer avant que les grands acteurs immobiliers (SeLoger, PAP, Logic-Immo) développent leur propre offre.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Quittances automatiques mensuelles</li>
+                    <li>Dashboard multi-biens</li>
+                    <li>Suivi paiements loyer</li>
+                    <li>Génération avis d'échéance</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Estimation loyer IA (données DVF)</li>
+                    <li>Alertes réglementaires (DPE, encadrement)</li>
+                    <li>Relances impayés automatiques</li>
+                    <li>Export comptable (CSV, PDF)</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Assistant déclaration fiscale 2044</li>
+                    <li>Suivi travaux et garanties</li>
+                    <li>Marketplace artisans partenaires</li>
+                    <li>Module assurance GLI intégré</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

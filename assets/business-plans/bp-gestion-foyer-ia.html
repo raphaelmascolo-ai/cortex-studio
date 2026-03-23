@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Foyer IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag {
+            display: inline-block;
+            background: rgba(201,168,76,0.15);
+            border: 1px solid #C9A84C;
+            color: #C9A84C;
+            padding: 0.35rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>App de Gestion de Foyer IA</h1>
+        <div class="subtitle">Famille &amp; Quotidien</div>
+        <p class="description">Application tout-en-un pour la gestion familiale : menus personnalisés par IA, liste de courses optimisée avec détection de promos, budget familial temps réel et planning des tâches ménagères réparti équitablement.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">4 000 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 4</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">18M</div>
+                <div class="label">Ménages FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>L'application de gestion de foyer IA centralise les quatre piliers du quotidien familial — alimentation, courses, budget et tâches — dans une seule interface collaborative. L'IA génère des menus hebdomadaires adaptés aux préférences et aux contraintes de chaque famille, transforme ces menus en liste de courses optimisée avec détection automatique des promotions en cours, et surveille le budget familial en temps réel. Le planning des tâches ménagères est réparti automatiquement entre les membres du foyer selon leur disponibilité. Le modèle repose sur un freemium avec 2 membres et des fonctions basiques gratuitement, et un abonnement Familial à 5,99 €/mois pour 6 membres et l'IA complète. Le point de rentabilité est atteint dès le mois 4 (réaliste, ~80 foyers abonnés) pour un MRR projeté à 4 000 € à 12 mois.</p>
+            <div class="highlight-box">
+                <p>"Le gaspillage alimentaire coûte en moyenne 600 € par an et par foyer français. Notre IA peut réduire ce chiffre de 40% dès le premier mois d'utilisation."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>La gestion du quotidien familial est fragmentée entre une multitude d'outils : application de courses, tableur budget, calendrier partagé, groupes WhatsApp pour les tâches. Aucun outil ne fait le lien entre ce qu'on mange, ce qu'on achète et ce qu'on dépense. Le résultat est prévisible : du gaspillage alimentaire (16 milliards d'euros par an pour les ménages français), des achats en double, des déséquilibres dans la répartition des tâches et un manque de visibilité sur le budget familial réel.</p>
+            <p>La planification des repas est une tâche chronophage : une étude Nielsen révèle que les parents consacrent en moyenne 2h30 par semaine à décider quoi cuisiner, quoi acheter et comment organiser les courses. Cette charge mentale est une source majeure de stress familial, particulièrement pour les parents actifs.</p>
+            <h3>La solution</h3>
+            <p>Notre application centralise toute la gestion domestique en un seul endroit collaboratif. À partir des préférences alimentaires, des intolérances, du budget hebdomadaire et du nombre de membres du foyer, l'IA génère un menu sur 7 jours avec les recettes associées. La liste de courses est générée automatiquement, regroupée par rayon, et enrichie en temps réel avec les promotions disponibles dans les enseignes choisies par la famille (via des partenariats avec Intermarché, Leclerc, etc.).</p>
+            <p>Le module budget affiche en temps réel le solde familial, catégorise les dépenses et alerte si un poste dépasse le seuil fixé. Le planning des tâches ménagères est généré automatiquement et distribué équitablement entre les membres du foyer, avec notifications et suivi de complétion. L'ensemble fonctionne en mode collaboratif : chaque membre de la famille voit et contribue à l'application commune.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle freemium cible la cellule familiale comme unité d'abonnement. Contrairement aux apps individuelles, une seule conversion monétise jusqu'à 6 membres. La friction à la désinstallation est très forte une fois que la famille est organisée autour de l'outil, garantissant un excellent taux de rétention (churn mensuel estimé &lt; 5%). La valeur perçue est immédiate et mesurable : économies sur les courses, réduction du gaspillage, moins de stress organisationnel.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gratuit</strong></td>
+                    <td>0 €</td>
+                    <td>2 membres, menus basiques (sans IA), liste de courses manuelle, budget tracker simplifié</td>
+                </tr>
+                <tr>
+                    <td><strong>Familial</strong></td>
+                    <td>5,99 €/mois</td>
+                    <td>Jusqu'à 6 membres, menus IA personnalisés, détection de promos, budget temps réel, planning tâches automatique, recettes frigo, historique 12 mois</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Affiliation grande distribution :</strong> commissions sur les courses en ligne passées via l'application (1–3% du panier, partenariats Leclerc Drive, Carrefour).</li>
+            <li><strong>Partenariats marques :</strong> mise en avant de produits dans les suggestions de recettes (format natif, éditorial).</li>
+            <li><strong>API B2B :</strong> intégration dans les applications de mutuelles santé ou d'employeurs pour les avantages salariés "bien-être familial".</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">2 500</div>
+                <div class="kpi-label">Foyers actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">670</div>
+                <div class="kpi-label">Foyers abonnés</div>
+                <div class="kpi-sub">Taux de conversion 27%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">4 000 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Hors affiliation</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>200 €</td><td>350 €</td><td>500 €</td></tr>
+                <tr><td>Mois 3</td><td>400 €</td><td>700 €</td><td>1 000 €</td></tr>
+                <tr><td>Mois 6</td><td>900 €</td><td>1 600 €</td><td>2 500 €</td></tr>
+                <tr><td>Mois 9</td><td>1 500 €</td><td>2 500 €</td><td>4 000 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">2 200 €</td><td class="highlight">4 000 €</td><td class="highlight">6 500 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Infrastructure cloud (BDD, hébergement, push notifications)</td><td>150 €</td></tr>
+                <tr><td>APIs IA — génération de menus et recettes (OpenAI)</td><td>100 €</td></tr>
+                <tr><td>API promotions grande distribution (partenaires)</td><td>50 €</td></tr>
+                <tr><td>Marketing digital (contenu, réseaux sociaux, parenting blogs)</td><td>150 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>450 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 450 €/mois et un ARPU de 5,99 €, le seuil de rentabilité est atteint à <strong>76 foyers abonnés</strong>. Dans le scénario réaliste, ce palier est franchi au <strong>mois 4</strong>. La faible charge variable (les coûts d'API IA sont conditionnés par l'usage, mais restent marginaux par foyer) permet une scalabilité favorable : chaque nouvel abonné au-delà du seuil génère ~5 € de marge brute mensuelle. Le scénario pessimiste atteint l'équilibre au mois 6, l'optimiste dès le mois 3.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché adressable total (TAM) couvre les 18 millions de ménages français, dont 7,5 millions avec enfants — cible principale. Le marché adressable réaliste (SAM) est estimé à 4 millions de foyers équipés de smartphones et ouverts aux outils de gestion numérique. Notre marché cible initial (SOM) vise 15 000 foyers dans les 18 premiers mois via un ciblage précis des parents de 30–45 ans sur Facebook/Instagram et les communautés parentales en ligne.</p>
+        <p>Le marché foodtech grand public en France croît de +18% par an. L'explosion du meal planning et des apps de recettes (Marmiton, 750g) témoigne d'une appétence forte pour l'organisation alimentaire digitale. La grande distribution investit massivement dans le digital et cherche des partenaires pour capter les foyers dans leur planification d'achats — opportunité directe de partenariats commerciaux lucratifs.</p>
+        <p>Les concurrents fragmentés (Cozi pour l'organisation familiale, Yummly pour les recettes, YNAB pour le budget) ne couvrent chacun qu'un seul pilier. Notre avantage compétitif réside dans l'intégration verticale de ces quatre piliers avec une couche IA unificatrice, créant une expérience sans équivalent sur le marché français.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Génération de menus par IA</li>
+                    <li>Liste de courses automatique</li>
+                    <li>Budget tracker familial</li>
+                    <li>Mode collaboratif multi-membres</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Planning des tâches ménagères IA</li>
+                    <li>Recettes à partir du frigo (scan)</li>
+                    <li>Détection de promotions en temps réel</li>
+                    <li>Notifications et gamification tâches</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Communauté partage de menus</li>
+                    <li>Partenariats marques (natif)</li>
+                    <li>Commandes courses intégrées (Drive)</li>
+                    <li>Bilan nutritionnel familial mensuel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

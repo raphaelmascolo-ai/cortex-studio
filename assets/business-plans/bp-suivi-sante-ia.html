@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Santé & Bien-être IA — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid #C9A84C; color: #C9A84C; padding: 0.35rem 1rem; border-radius: 2rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+        .cover h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        .cover .subtitle { font-size: 1.1rem; color: #C9A84C; margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+        .cover .description { font-size: 1rem; color: #94A3B8; max-width: 480px; line-height: 1.7; margin-bottom: 3rem; }
+        .cover-meta { display: flex; gap: 3rem; margin-bottom: 3rem; }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value { font-size: 1.5rem; font-weight: 700; color: #C9A84C; }
+        .cover-meta-item .label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; }
+        .cover .logo-text { font-size: 0.9rem; color: #64748B; margin-top: 3rem; }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date { color: #64748B; margin-top: 0.5rem; font-size: 0.85rem; }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 { color: #0B1120; font-size: 1.4rem; font-weight: 700; border-bottom: 3px solid #C9A84C; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .bp-section h3 { color: #C9A84C; font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box { background: #F8FAFC; border-left: 4px solid #C9A84C; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .bp-table th { background: #0B1120; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .roadmap-phase { flex: 1; padding: 1.25rem; border: 2px solid #E2E8F0; border-radius: 0.75rem; }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 { color: #C9A84C; font-size: 0.9rem; margin-bottom: 0.75rem; font-weight: 700; }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .kpi-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 0.75rem; padding: 1.25rem; text-align: center; }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); color: #fff; padding: 3rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a { display: inline-block; background: #C9A84C; color: #0B1120; padding: 0.9rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; margin-top: 1.5rem; font-size: 0.95rem; }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>App de Suivi Santé &amp; Bien-être IA</h1>
+        <div class="subtitle">Health Tech &amp; Wellness</div>
+        <p class="description">Journal de santé intelligent centralisant le suivi d'humeur, sommeil, alimentation et activité physique, avec analyse de corrélations IA et recommandations personnalisées quotidiennes.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">4 000 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 5</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">9 Mds $</div>
+                <div class="label">Marché mondial 2027</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>Notre application de suivi santé et bien-être IA propose un journal de santé intelligent qui centralise humeur, sommeil, alimentation et activité physique dans une seule interface. Là où les apps existantes se contentent d'afficher des métriques, notre moteur IA analyse les corrélations entre ces données pour délivrer des insights actionnables : "Quand vous dormez moins de 6h, votre humeur baisse de 30% le surlendemain" ou "Votre pratique de yoga du lundi améliore significativement votre énergie en milieu de semaine". L'offre Premium à 4,99 €/mois débloque ces analyses de corrélations, le coaching IA quotidien et les rapports exportables pour les professionnels de santé. Le marché mondial du bien-être numérique atteindra 9 milliards de dollars en 2027 ; en France, 1 adulte sur 4 souffre d'un trouble mental. La demande est structurelle et croissante.</p>
+            <div class="highlight-box">
+                <p>"Notre corps envoie des signaux constants que nous ignorons faute d'outils pour les relier. L'IA transforme ces données silencieuses en conseils concrets et personnalisés."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Les applications de santé et bien-être explosent en nombre, mais leur usage reste fragmenté et superficiel. Les utilisateurs trackent leur sommeil sur une app, leur humeur sur une autre, leur alimentation sur une troisième, et leur activité physique directement sur leur montre connectée. Ces silos empêchent toute compréhension holistique de leur état de santé. Plus grave : sans analyse intelligente des corrélations, l'utilisateur est noyé sous des données brutes sans signification actionnable.</p>
+            <p>La santé mentale représente un enjeu croissant : 1 Français sur 4 souffre d'un trouble anxieux ou dépressif, et l'accès aux professionnels de santé mentale reste limité (délais, coûts). Les applications de méditation comme Headspace ou Petit Bambou proposent des exercices guidés mais n'analysent pas les données de santé personnelle. Il manque un outil de prévention intelligent, personnel et accessible.</p>
+            <h3>La solution</h3>
+            <p>Notre application centralise cinq dimensions du bien-être dans un journal quotidien : humeur (échelle et tags émotionnels), sommeil (heures, qualité perçue), alimentation (repas et hydratation), activité physique (type, durée, intensité) et niveau de stress (score quotidien). La saisie est volontairement simplifiée (moins de 90 secondes par jour) pour maximiser la régularité.</p>
+            <p>L'intelligence réside dans le moteur de corrélations : après 2 semaines de données, l'IA commence à détecter des patterns personnalisés et à formuler des recommandations concrètes. Les rapports hebdomadaires et mensuels synthétisent les tendances avec des visualisations claires. En mode professionnel, l'utilisateur peut partager ses rapports avec son médecin ou son psychologue, créant un dossier de suivi objectif entre les consultations.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le freemium est ici particulièrement efficace : l'utilisateur crée gratuitement l'habitude de journalisation quotidienne (en moyenne 21 jours pour ancrer un comportement), puis découvre via les graphiques basiques qu'il lui manque les corrélations et le coaching IA pour comprendre réellement ses données. La conversion s'opère naturellement à partir du moment où l'utilisateur a suffisamment de données pour vouloir les analyser en profondeur.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gratuit</strong></td>
+                    <td>0 €</td>
+                    <td>Journal humeur + sommeil, graphiques basiques 30 jours, rappels quotidiens, pas de corrélations IA</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>4,99 €/mois</td>
+                    <td>Toutes dimensions, analyse de corrélations IA, coaching quotidien personnalisé, rapports hebdomadaires + mensuels, export PDF professionnel, historique illimité</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Partenariats assureurs :</strong> intégration dans les offres de prévention santé des mutuelles (contrat B2B annuel) — marché à très fort potentiel avec la réforme 100% Santé.</li>
+            <li><strong>Certifications professionnels de santé :</strong> abonnement spécifique pour les médecins, psychologues et coachs qui souhaitent accéder aux rapports patients (49 €/mois/praticien).</li>
+            <li><strong>Wearable data premium :</strong> intégration Fitbit, Apple Health, Oura Ring avec analyse enrichie facturée en add-on.</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">3 000</div>
+                <div class="kpi-label">Utilisateurs actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">800</div>
+                <div class="kpi-label">Abonnés Premium</div>
+                <div class="kpi-sub">Taux de conversion 27%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">4 000 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Hors B2B assureurs</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>200 €</td><td>350 €</td><td>600 €</td></tr>
+                <tr><td>Mois 3</td><td>400 €</td><td>700 €</td><td>1 200 €</td></tr>
+                <tr><td>Mois 6</td><td>900 €</td><td>1 600 €</td><td>2 800 €</td></tr>
+                <tr><td>Mois 9</td><td>1 500 €</td><td>2 500 €</td><td>4 500 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">2 200 €</td><td class="highlight">4 000 €</td><td class="highlight">7 000 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Infrastructure cloud (BDD time-series, hébergement, push)</td><td>150 €</td></tr>
+                <tr><td>APIs IA — analyse corrélations et génération conseils (OpenAI)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital (SEO santé mentale, réseaux, influenceurs bien-être)</td><td>200 €</td></tr>
+                <tr><td>Support client et outils (Intercom, helpdesk)</td><td>50 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>500 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec 500 €/mois de charges et un ARPU de 4,99 €, le seuil de rentabilité est atteint à <strong>100 abonnés payants</strong>. Dans le scénario réaliste, ce palier est franchi au <strong>mois 5</strong> — la courbe de conversion est légèrement plus longue que pour les apps transactionnelles car le produit requiert 2–3 semaines de données pour démontrer sa valeur IA. Une fois converti, le taux de rétention est excellent (churn estimé à 4%/mois) grâce à l'accumulation de données historiques qui rend difficile le départ. Le scénario pessimiste atteint l'équilibre au mois 7, l'optimiste dès le mois 3.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Le marché mondial du wellness numérique atteindra 9 milliards de dollars en 2027 selon Grand View Research, avec une croissance annuelle de +15%. En France, ce marché représente environ 1,2 milliard d'euros. Le segment le plus dynamique est celui des applications de santé mentale et de bien-être personnel, qui croissent de +30%/an depuis 2020, portées par la démocratisation des wearables et la prise de conscience post-Covid des enjeux de santé mentale.</p>
+        <p>Le marché adressable réaliste (SAM) cible les 8 millions de Français qui utilisent déjà une application de suivi santé ou sport sur smartphone. Notre différenciation par l'analyse de corrélations IA est défendable : aucun acteur du marché français ne propose aujourd'hui un moteur d'insights multi-dimensions comparable. Headspace et Calm se limitent à la méditation guidée. Daylio (journal humeur) n'intègre pas l'IA. Santé Connect (Apple/Google) agrège les données sans les analyser.</p>
+        <p>Le cadre réglementaire (RGPD, certification CE Dispositif Médical de classe I) est une barrière à l'entrée qui protège les acteurs qui s'y conforment tôt. Nous positionnerons notre application en dehors du dispositif médical (pas de diagnostic) pour éviter les contraintes de la classe IIa, tout en assurant les standards RGPD les plus élevés sur les données de santé.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Journal humeur quotidien (tags + note)</li>
+                    <li>Suivi sommeil (heures + qualité)</li>
+                    <li>Graphiques d'évolution 30 jours</li>
+                    <li>Rappels quotidiens personnalisables</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Suivi nutrition et activité physique</li>
+                    <li>Moteur de corrélations IA</li>
+                    <li>Recommandations quotidiennes</li>
+                    <li>Rapport hebdomadaire automatique</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Coach IA conversationnel (chatbot)</li>
+                    <li>Rapport PDF professionnel (médecin)</li>
+                    <li>Sync wearables (Apple Health, Fitbit)</li>
+                    <li>Module B2B assureurs / praticiens</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>

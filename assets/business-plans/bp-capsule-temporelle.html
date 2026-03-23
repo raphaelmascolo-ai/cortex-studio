@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capsule Temporelle — Business Plan | Cortex Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            line-height: 1.7;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 0;
+            page-break-after: always;
+        }
+        .cover .tag {
+            display: inline-block;
+            background: rgba(201,168,76,0.15);
+            border: 1px solid #C9A84C;
+            color: #C9A84C;
+            padding: 0.35rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .cover h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+        .cover .subtitle {
+            font-size: 1.1rem;
+            color: #C9A84C;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .cover .description {
+            font-size: 1rem;
+            color: #94A3B8;
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+        .cover-meta {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #C9A84C;
+        }
+        .cover-meta-item .label {
+            font-size: 0.75rem;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cover .logo-text {
+            font-size: 0.9rem;
+            color: #64748B;
+            margin-top: 3rem;
+        }
+        .cover .logo-text strong { color: #C9A84C; }
+        .cover .date {
+            color: #64748B;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .section-page { padding-top: 3rem; }
+        .bp-section { margin-bottom: 3rem; }
+        .bp-section h2 {
+            color: #0B1120;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-bottom: 3px solid #C9A84C;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .bp-section h3 {
+            color: #C9A84C;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .bp-section p { margin-bottom: 1rem; color: #334155; }
+        .bp-section ul { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .bp-section li { margin-bottom: 0.4rem; color: #334155; }
+        .highlight-box {
+            background: #F8FAFC;
+            border-left: 4px solid #C9A84C;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p { margin: 0; font-style: italic; color: #475569; }
+        .bp-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .bp-table th {
+            background: #0B1120;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .bp-table th:first-child { border-radius: 0.5rem 0 0 0; }
+        .bp-table th:last-child { border-radius: 0 0.5rem 0 0; }
+        .bp-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #E2E8F0; }
+        .bp-table tr:nth-child(even) td { background: #F8FAFC; }
+        .bp-table .highlight { color: #C9A84C; font-weight: 700; }
+        .bp-table .total-row td { font-weight: 700; background: #F1F5F9; border-top: 2px solid #E2E8F0; }
+        .roadmap {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .roadmap-phase {
+            flex: 1;
+            padding: 1.25rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 0.75rem;
+        }
+        .roadmap-phase.active { border-color: #C9A84C; background: #FFFBF0; }
+        .roadmap-phase h4 {
+            color: #C9A84C;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .roadmap-phase ul { padding-left: 1rem; font-size: 0.85rem; }
+        .roadmap-phase li { margin-bottom: 0.35rem; color: #475569; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .kpi-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .kpi-card .kpi-value { font-size: 1.6rem; font-weight: 700; color: #0B1120; }
+        .kpi-card .kpi-label { font-size: 0.75rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 0.25rem; }
+        .kpi-card .kpi-sub { font-size: 0.8rem; color: #C9A84C; font-weight: 600; margin-top: 0.25rem; }
+        .bp-cta {
+            background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%);
+            color: #fff;
+            padding: 3rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .bp-cta h2 { color: #fff; border-bottom: none; font-size: 1.5rem; margin-bottom: 1rem; }
+        .bp-cta p { color: #94A3B8; margin-bottom: 0; }
+        .bp-cta a {
+            display: inline-block;
+            background: #C9A84C;
+            color: #0B1120;
+            padding: 0.9rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+        @media print {
+            body { padding: 0; max-width: none; }
+            .cover { margin: 0; min-height: auto; padding: 3cm 2cm; }
+            .bp-section { page-break-inside: avoid; }
+            .bp-table { page-break-inside: avoid; }
+            .roadmap { page-break-inside: avoid; }
+            .kpi-grid { page-break-inside: avoid; }
+            .bp-cta { display: none; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="cover">
+        <div class="tag">Business Plan</div>
+        <h1>App Capsule Temporelle</h1>
+        <div class="subtitle">Mémoire Numérique &amp; IA</div>
+        <p class="description">Créez des capsules temporelles numériques (texte, photos, vidéos) verrouillées jusqu'à une date choisie, enrichies par l'IA avec des montages automatiques et la restauration de photos anciennes.</p>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">3 000 €</div>
+                <div class="label">MRR cible M12</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">Mois 5</div>
+                <div class="label">Rentabilité</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">25M</div>
+                <div class="label">Smartphones FR</div>
+            </div>
+        </div>
+        <p class="logo-text">Préparé par <strong>Cortex Studio</strong></p>
+        <p class="date">Mars 2026</p>
+    </div>
+
+    <!-- Page 2: Executive Summary + Problem & Solution -->
+    <div class="section-page">
+        <div class="bp-section">
+            <h2>1. Résumé exécutif</h2>
+            <p>L'application capsule temporelle répond à un besoin universel et émotionnel : préserver des moments pour les rouvrir plus tard, à une date choisie. L'utilisateur compose une capsule avec textes, photos et vidéos, la verrouille jusqu'à une échéance précise — un anniversaire, une naissance, la fin des études d'un enfant — et l'IA enrichit automatiquement le contenu : montage photo animé, amélioration de vieux clichés, texte de synthèse. Le modèle freemium propose 3 capsules gratuites puis passe à 2,99 €/mois pour un usage illimité et les fonctions IA. Avec un MRR cible de 3 000 € à 12 mois et un marché de nostalgie numérique en forte croissance, ce projet combine viralité émotionnelle et monétisation claire.</p>
+            <div class="highlight-box">
+                <p>"Dans 10 ans, vous serez heureux d'avoir preservé ce moment. Notre application rend ce geste simple, beau et permanent."</p>
+            </div>
+        </div>
+
+        <div class="bp-section">
+            <h2>2. Le problème &amp; la solution</h2>
+            <h3>Le problème</h3>
+            <p>Chaque jour, des milliards de photos et de messages sont créés et immédiatement noyés dans le flux ininterrompu des réseaux sociaux. Les souvenirs importants — lettre à un futur soi, message à ses enfants, témoignage d'un moment rare — disparaissent dans le bruit numérique ou restent coincés dans des galeries photo désorganisées. Il n'existe pas d'espace numérique dédié à la préservation intentionnelle des moments, avec une dimension temporelle choisie par l'utilisateur.</p>
+            <p>Les solutions alternatives sont inadaptées : les e-mails programmés sont impersonnels, les albums photo ne verrouillent rien, les applications de journal intime manquent de la dimension "ouverture différée" et des enrichissements IA. Le marché des apps mémoire reste sous-exploité malgré une demande croissante liée à la nostalgie numérique et aux grands événements de vie.</p>
+            <h3>La solution</h3>
+            <p>Notre application propose une expérience de création de capsule en trois étapes : composer le contenu (textes, photos, vidéos, enregistrements vocaux), définir une date d'ouverture et éventuellement des destinataires, puis laisser l'IA enrichir la capsule. Cette phase d'enrichissement est la clé de la différenciation : l'IA génère un montage vidéo animé des photos, restaure et améliore les vieux clichés en qualité HD, et rédige un texte de synthèse émotionnel du contenu pour accompagner l'ouverture.</p>
+            <p>À la date choisie, les destinataires reçoivent une notification et découvrent leur capsule dans une interface immersive conçue pour l'émotion. Le partage familial et le mode "héritage" (capsule transmissible après décès) créent une proposition de valeur unique sur le marché.</p>
+        </div>
+    </div>
+
+    <!-- Page 3: Business Model -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>3. Modèle économique</h2>
+        <p>Le modèle freemium est construit autour du moment de conversion naturel : après avoir créé ses 3 capsules gratuites, l'utilisateur est pleinement convaincu de la valeur émotionnelle du produit et prêt à s'abonner pour continuer. La viralité est intégrée au produit : les destinataires d'une capsule téléchargent l'application pour la recevoir, générant une acquisition organique sans coût.</p>
+        <h3>Grille tarifaire</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Offre</th><th>Prix</th><th>Fonctionnalités incluses</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gratuit</strong></td>
+                    <td>0 €</td>
+                    <td>3 capsules, 1 Go de stockage, texte + photos, verrouillage temporel, notifications</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>2,99 €/mois</td>
+                    <td>Capsules illimitées, 50 Go de stockage, vidéos, montages IA, restauration photos, partage familial, mode héritage</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sources de revenus complémentaires</h3>
+        <ul>
+            <li><strong>Achats in-app :</strong> stockage supplémentaire (+10 Go pour 0,99 €), capsules "imprimées" envoyées par courrier physique (9,99 € la capsule).</li>
+            <li><strong>Partenariats événementiels :</strong> mariage, naissance, remise de diplôme — offres co-brandées avec photographes et organisateurs d'événements.</li>
+            <li><strong>API pour entreprises :</strong> capsules d'entreprise (messages d'anniversaire clients, onboarding différé, culture d'entreprise).</li>
+        </ul>
+        <h3>Métriques cibles (mois 12)</h3>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-value">3 000</div>
+                <div class="kpi-label">Utilisateurs actifs</div>
+                <div class="kpi-sub">Scénario réaliste</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">1 000</div>
+                <div class="kpi-label">Abonnés Premium</div>
+                <div class="kpi-sub">Taux de conversion 33%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-value">3 000 €</div>
+                <div class="kpi-label">MRR mensuel</div>
+                <div class="kpi-sub">Hors in-app</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Financial Projections -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>4. Projections financières</h2>
+        <h3>Projection MRR sur 12 mois (€)</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Période</th><th>Pessimiste</th><th>Réaliste</th><th>Optimiste</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mois 1</td><td>0 €</td><td>0 €</td><td>0 €</td></tr>
+                <tr><td>Mois 2</td><td>150 €</td><td>250 €</td><td>450 €</td></tr>
+                <tr><td>Mois 3</td><td>300 €</td><td>500 €</td><td>900 €</td></tr>
+                <tr><td>Mois 6</td><td>700 €</td><td>1 200 €</td><td>2 000 €</td></tr>
+                <tr><td>Mois 9</td><td>1 200 €</td><td>2 000 €</td><td>3 500 €</td></tr>
+                <tr><td>Mois 12</td><td class="highlight">1 800 €</td><td class="highlight">3 000 €</td><td class="highlight">5 500 €</td></tr>
+            </tbody>
+        </table>
+        <h3>Coûts opérationnels mensuels</h3>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Poste de dépense</th><th>Coût mensuel estimé</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Stockage cloud (AWS S3 / Google Cloud Storage)</td><td>200 €</td></tr>
+                <tr><td>APIs IA — montage vidéo, restauration photos (Replicate)</td><td>100 €</td></tr>
+                <tr><td>Marketing digital et contenu (réseaux sociaux, SEO)</td><td>150 €</td></tr>
+                <tr><td>Support client et outils</td><td>50 €</td></tr>
+                <tr class="total-row"><td><strong>Total charges fixes</strong></td><td><strong>500 €/mois</strong></td></tr>
+            </tbody>
+        </table>
+        <h3>Analyse du point de rentabilité</h3>
+        <p>Avec un coût opérationnel de 500 €/mois et un ARPU de 2,99 €, le seuil de rentabilité est atteint à <strong>168 abonnés payants</strong>. Dans le scénario réaliste, ce palier est franchi au <strong>mois 5</strong>, quand la base d'utilisateurs gratuits convertis atteint le volume critique. Le coût de stockage est variable (indexé sur l'usage), mais reste contenu grâce à la compression automatique des médias et à des quotas par offre. Le scénario pessimiste atteint l'équilibre au mois 7, l'optimiste dès le mois 3.</p>
+    </div>
+
+    <!-- Page 5: Market + Roadmap + CTA -->
+    <div class="bp-section" style="page-break-before: always;">
+        <h2>5. Analyse du marché</h2>
+        <p>Avec 25 millions de smartphones actifs en France, le marché adressable est considérable. Le marché ciblé initialement porte sur les parents (6–14 millions), les couples et les jeunes adultes (18–35 ans) sensibles à la préservation mémorielle et aux cadeaux numériques originaux. Ces segments ont en commun une forte présence sur Instagram et TikTok, canal privilégié pour une acquisition organique par partage émotionnel.</p>
+        <p>Le marché des applications de mémoire et nostalgie numérique connaît une croissance soutenue. La pandémie a renforcé l'attachement aux souvenirs et aux liens familiaux à distance. Les concurrents directs sont quasi inexistants : FutureMe propose uniquement des e-mails à soi-même, sans IA ni médias riches. Le marché des apps de journal intime (Day One, Daylio) ne couvre pas la dimension temporelle et le partage familial. Notre positionnement est différenciant et défendable.</p>
+        <p>L'opportunité d'une campagne virale est réelle : chaque capsule ouverte génère un moment émotionnel partageable, naturellement viral sur les réseaux sociaux. Le taux de recommandation attendu (NPS) est parmi les plus élevés du secteur app lifestyle.</p>
+    </div>
+
+    <div class="bp-section">
+        <h2>6. Roadmap technique</h2>
+        <div class="roadmap">
+            <div class="roadmap-phase active">
+                <h4>MVP — Mois 1–2</h4>
+                <ul>
+                    <li>Création de capsule texte + photos</li>
+                    <li>Verrouillage temporel avec date d'ouverture</li>
+                    <li>Notifications push à l'ouverture</li>
+                    <li>Stockage chiffré sécurisé</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V1 — Mois 3–4</h4>
+                <ul>
+                    <li>Ajout vidéo et audio</li>
+                    <li>Montages animés automatiques (IA)</li>
+                    <li>Partage de capsule (lien, email)</li>
+                    <li>Mode groupe / famille</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase">
+                <h4>V2 — Mois 5–6</h4>
+                <ul>
+                    <li>Restauration et amélioration photos IA</li>
+                    <li>Mode héritage (transmission légale)</li>
+                    <li>Capsule physique imprimée (partenaire)</li>
+                    <li>API entreprise (B2B)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bp-cta">
+        <h2>Prochaine étape</h2>
+        <p>Vous souhaitez développer ce projet ? Notre équipe est prête à transformer cette idée en réalité, du MVP au lancement en production.</p>
+        <a href="../../quote.html?service=app-ia">Demander un devis →</a>
+    </div>
+
+</body>
+</html>
