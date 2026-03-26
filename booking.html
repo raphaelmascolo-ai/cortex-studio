@@ -10,8 +10,8 @@
     <meta property="og:title" content="Réservez un appel — Cortex Studio">
     <meta property="og:description" content="Réservez un appel découverte gratuit de 30 minutes avec notre équipe IA.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cortex-studio.com/booking.html">
-    <meta property="og:image" content="https://cortex-studio.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://studio-cortex.ia/booking.html">
+    <meta property="og:image" content="https://studio-cortex.ia/assets/images/og-image.jpg">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,47 +25,132 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
+        /* Steps section */
         .booking-steps {
             padding: 4rem 0 2rem;
         }
         .step-card {
+            position: relative;
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 2rem;
+            background: var(--surface-container-low);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--radius-xl, 1rem);
+            transition: transform 0.3s, border-color 0.3s;
         }
-        .step-number {
-            display: inline-flex;
+        .step-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.1);
+        }
+        .step-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 1.5rem;
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 3rem;
-            height: 3rem;
             border-radius: 50%;
-            background: var(--color-primary, #6366f1);
+            background: linear-gradient(135deg, rgba(77,142,255,0.12) 0%, rgba(77,142,255,0.04) 100%);
+            border: 1px solid rgba(77,142,255,0.15);
+        }
+        .step-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary, #6366f1);
+        }
+        .step-number-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary, #6366f1);
             color: #fff;
-            font-size: 1.25rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.3);
         }
         .step-card h3 {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
         }
-        .calendly-container {
-            margin: 2rem 0 4rem;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        .step-card p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--on-surface-variant);
+        }
+
+        /* Connector arrows between steps */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+        .step-arrow {
+            color: var(--outline-variant);
+            opacity: 0.4;
         }
         @media (max-width: 768px) {
-            .calendly-container iframe {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .step-arrow { display: none; }
+        }
+
+        /* Calendly */
+        .calendly-section {
+            padding-bottom: 4rem;
+        }
+        .calendly-wrapper {
+            border-radius: var(--radius-xl, 1rem);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: var(--surface-container-low);
+        }
+        .calendly-wrapper iframe {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .calendly-wrapper iframe {
                 height: 900px;
             }
+        }
+
+        /* Trust badges under steps */
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8125rem;
+            color: var(--on-surface-variant);
+            opacity: 0.7;
+        }
+        .trust-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
         }
     </style>
 </head>
 <body>
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
+<!-- HEADER -->
 <header class="header">
     <div class="container">
         <a href="index.html" class="logo">
@@ -102,54 +187,75 @@
 
 <main>
 
-    <!-- ============================================================
-         HERO MINI
-         ============================================================ -->
+    <!-- HERO -->
     <section class="hero-mini" aria-label="En-tête de la page réservation">
         <div class="container text-center">
-            <h1 data-i18n="booking.title">Réservez votre appel découverte gratuit</h1>
-            <p class="text-secondary" data-i18n="booking.subtitle">30 minutes pour discuter de votre projet IA et recevoir une proposition personnalisée.</p>
+            <h1 data-i18n="booking.title">Réservez votre appel découverte</h1>
+            <p class="text-secondary" data-i18n="booking.subtitle">30 minutes pour discuter de votre projet et recevoir une proposition personnalisée. Sans engagement.</p>
         </div>
     </section>
 
-    <!-- ============================================================
-         STEPS
-         ============================================================ -->
+    <!-- STEPS -->
     <section class="booking-steps" aria-labelledby="steps-heading">
         <div class="container">
-            <h2 id="steps-heading" class="visually-hidden">Comment ça marche</h2>
-            <div class="grid-3">
+            <h2 id="steps-heading" class="visually-hidden">Comment ca marche</h2>
+            <div class="steps-grid">
 
-                <article class="card step-card fade-in">
-                    <div class="step-number" aria-hidden="true">1</div>
+                <article class="step-card fade-in">
+                    <span class="step-number-badge">1</span>
+                    <div class="step-icon"><i data-lucide="calendar-check"></i></div>
                     <h3 data-i18n="booking.step1.title">Choisissez un créneau</h3>
-                    <p data-i18n="booking.step1.desc">Sélectionnez le jour et l'heure qui vous conviennent dans notre calendrier en ligne.</p>
+                    <p data-i18n="booking.step1.desc">Sélectionnez le jour et l'heure qui vous conviennent dans le calendrier ci-dessous.</p>
                 </article>
 
-                <article class="card step-card fade-in">
-                    <div class="step-number" aria-hidden="true">2</div>
+                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
+
+                <article class="step-card fade-in">
+                    <span class="step-number-badge">2</span>
+                    <div class="step-icon"><i data-lucide="message-square"></i></div>
                     <h3 data-i18n="booking.step2.title">Décrivez votre projet</h3>
                     <p data-i18n="booking.step2.desc">Quelques mots sur votre idée et vos objectifs pour préparer un échange productif.</p>
                 </article>
 
-                <article class="card step-card fade-in">
-                    <div class="step-number" aria-hidden="true">3</div>
+                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
+
+                <article class="step-card fade-in">
+                    <span class="step-number-badge">3</span>
+                    <div class="step-icon"><i data-lucide="file-text"></i></div>
                     <h3 data-i18n="booking.step3.title">Recevez votre proposition</h3>
                     <p data-i18n="booking.step3.desc">Sous 48h après l'appel, nous vous envoyons une proposition détaillée et chiffrée.</p>
                 </article>
 
             </div>
+
+            <!-- Trust badges -->
+            <div class="trust-row fade-in">
+                <div class="trust-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>100% gratuit</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="clock"></i>
+                    <span>30 minutes</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="video"></i>
+                    <span>Visio ou téléphone</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="zap"></i>
+                    <span>V1 livrée en 1 semaine</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ============================================================
-         CALENDLY EMBED
-         ============================================================ -->
-    <section class="section" aria-label="Calendrier de réservation">
+    <!-- CALENDLY -->
+    <section class="calendly-section" aria-label="Calendrier de réservation">
         <div class="container">
-            <div class="calendly-container">
+            <div class="calendly-wrapper">
                 <iframe
-                    src="https://calendly.com/cortex-studio/consultation"
+                    src="https://calendly.com/cortex-studio/1ere-reunion"
                     width="100%"
                     height="700"
                     frameborder="0"
@@ -162,20 +268,14 @@
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-
-            <!-- Brand -->
             <div class="footer-col">
                 <img src="assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
                 <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
             </div>
-
-            <!-- Quick links -->
             <div class="footer-col">
                 <h4 data-i18n="footer.links.title">Liens rapides</h4>
                 <ul>
@@ -185,8 +285,6 @@
                     <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
                 </ul>
             </div>
-
-            <!-- Services -->
             <div class="footer-col">
                 <h4 data-i18n="footer.services.title">Services</h4>
                 <ul>
@@ -196,13 +294,10 @@
                     <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
                 </ul>
             </div>
-
-            <!-- Contact -->
             <div class="footer-col">
                 <h4 data-i18n="footer.contact.title">Contact</h4>
                 <ul>
                     <li><a href="mailto:raphael@studiocortex.io">raphael@studiocortex.io</a></li>
-                    
                     <li>Europe</li>
                 </ul>
                 <div class="social-links">
@@ -211,11 +306,9 @@
                     <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
                 </div>
             </div>
-
         </div>
-
         <div class="footer-bottom">
-            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
             <div>
                 <a href="#" data-i18n="footer.legal">Mentions légales</a>
                 <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
