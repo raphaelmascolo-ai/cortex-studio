@@ -5,149 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservez un appel — Cortex Studio | Consultation gratuite IA</title>
     <meta name="description" content="Réservez un appel découverte gratuit de 30 minutes avec notre équipe. Discutons de votre projet IA et recevez une proposition personnalisée.">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Réservez un appel — Cortex Studio">
     <meta property="og:description" content="Réservez un appel découverte gratuit de 30 minutes avec notre équipe IA.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://studio-cortex.ia/booking.html">
-    <meta property="og:image" content="https://studio-cortex.ia/assets/images/og-image.jpg">
 
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-    <style>
-        /* Steps section */
-        .booking-steps {
-            padding: 4rem 0 2rem;
-        }
-        .step-card {
-            position: relative;
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: var(--surface-container-low);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: var(--radius-xl, 1rem);
-            transition: transform 0.3s, border-color 0.3s;
-            flex: 1;
-            max-width: 280px;
-        }
-        .step-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255,255,255,0.1);
-        }
-        .step-icon {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(77,142,255,0.12) 0%, rgba(77,142,255,0.04) 100%);
-            border: 1px solid rgba(77,142,255,0.15);
-        }
-        .step-icon svg {
-            width: 24px;
-            height: 24px;
-            color: var(--primary, #6366f1);
-        }
-        .step-number-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--primary, #6366f1);
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(99,102,241,0.3);
-        }
-        .step-card h3 {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-        .step-card p {
-            font-size: 0.9rem;
-            line-height: 1.7;
-            color: var(--on-surface-variant);
-        }
-
-        /* Steps grid — simple 3 columns centered */
-        .steps-grid {
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 2rem !important;
-            max-width: 900px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            width: 100%;
-        }
-        @media (max-width: 768px) {
-            .steps-grid {
-                grid-template-columns: 1fr !important;
-                max-width: 400px !important;
-            }
-        }
-
-        /* Calendly */
-        .calendly-section {
-            padding-bottom: 4rem;
-        }
-        .calendly-wrapper {
-            border-radius: var(--radius-xl, 1rem);
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.06);
-            background: var(--surface-container-low);
-        }
-        .calendly-wrapper iframe {
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .calendly-wrapper iframe {
-                height: 900px;
-            }
-        }
-
-        /* Trust badges under steps */
-        .trust-row {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.04);
-        }
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8125rem;
-            color: var(--on-surface-variant);
-            opacity: 0.7;
-        }
-        .trust-item svg {
-            width: 16px;
-            height: 16px;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-    </style>
 </head>
 <body>
 
@@ -196,63 +65,59 @@
         </div>
     </section>
 
-    <!-- STEPS -->
-    <section class="booking-steps" aria-labelledby="steps-heading">
-        <div class="container">
-            <h2 id="steps-heading" class="visually-hidden">Comment ca marche</h2>
-            <div style="display:flex;justify-content:center;gap:2rem;">
+    <!-- STEPS — all styles scoped inline to avoid any CSS conflicts -->
+    <section style="padding: 4rem 0 2rem;">
+        <div style="width: 100%; max-width: 960px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box;">
 
-                <article class="step-card fade-in">
-                    <span class="step-number-badge">1</span>
-                    <div class="step-icon"><i data-lucide="calendar-check"></i></div>
-                    <h3 data-i18n="booking.step1.title">Choisissez un créneau</h3>
-                    <p data-i18n="booking.step1.desc">Sélectionnez le jour et l'heure qui vous conviennent dans le calendrier ci-dessous.</p>
-                </article>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
 
+                <!-- Step 1 -->
+                <div style="position: relative; text-align: center; padding: 2.5rem 1.5rem 2rem; background: rgba(16,28,46,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 1rem;">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); width: 28px; height: 28px; border-radius: 50%; background: #4d8eff; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(77,142,255,0.3);">1</div>
+                    <div style="width: 52px; height: 52px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(77,142,255,0.1); border: 1px solid rgba(77,142,255,0.15);">
+                        <i data-lucide="calendar-check" style="width: 22px; height: 22px; color: #4d8eff;"></i>
+                    </div>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: #d7e3fc;">Choisissez un créneau</h3>
+                    <p style="font-size: 0.875rem; line-height: 1.65; color: #8c909f; margin: 0;">Sélectionnez le jour et l'heure qui vous conviennent dans le calendrier ci-dessous.</p>
+                </div>
 
-                <article class="step-card fade-in">
-                    <span class="step-number-badge">2</span>
-                    <div class="step-icon"><i data-lucide="message-square"></i></div>
-                    <h3 data-i18n="booking.step2.title">Décrivez votre projet</h3>
-                    <p data-i18n="booking.step2.desc">Quelques mots sur votre idée et vos objectifs pour préparer un échange productif.</p>
-                </article>
+                <!-- Step 2 -->
+                <div style="position: relative; text-align: center; padding: 2.5rem 1.5rem 2rem; background: rgba(16,28,46,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 1rem;">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); width: 28px; height: 28px; border-radius: 50%; background: #4d8eff; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(77,142,255,0.3);">2</div>
+                    <div style="width: 52px; height: 52px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(77,142,255,0.1); border: 1px solid rgba(77,142,255,0.15);">
+                        <i data-lucide="message-square" style="width: 22px; height: 22px; color: #4d8eff;"></i>
+                    </div>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: #d7e3fc;">Présentez votre projet</h3>
+                    <p style="font-size: 0.875rem; line-height: 1.65; color: #8c909f; margin: 0;">Lors de l'appel, expliquez-nous votre idée, vos objectifs et vos contraintes.</p>
+                </div>
 
-
-                <article class="step-card fade-in">
-                    <span class="step-number-badge">3</span>
-                    <div class="step-icon"><i data-lucide="file-text"></i></div>
-                    <h3 data-i18n="booking.step3.title">Recevez votre proposition</h3>
-                    <p data-i18n="booking.step3.desc">Sous 48h après l'appel, nous vous envoyons une proposition détaillée et chiffrée.</p>
-                </article>
+                <!-- Step 3 -->
+                <div style="position: relative; text-align: center; padding: 2.5rem 1.5rem 2rem; background: rgba(16,28,46,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 1rem;">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); width: 28px; height: 28px; border-radius: 50%; background: #4d8eff; color: #fff; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(77,142,255,0.3);">3</div>
+                    <div style="width: 52px; height: 52px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(77,142,255,0.1); border: 1px solid rgba(77,142,255,0.15);">
+                        <i data-lucide="file-text" style="width: 22px; height: 22px; color: #4d8eff;"></i>
+                    </div>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: #d7e3fc;">Recevez votre proposition</h3>
+                    <p style="font-size: 0.875rem; line-height: 1.65; color: #8c909f; margin: 0;">Sous 48h, nous vous envoyons une proposition détaillée avec timeline et tarif.</p>
+                </div>
 
             </div>
 
             <!-- Trust badges -->
-            <div class="trust-row fade-in">
-                <div class="trust-item">
-                    <i data-lucide="shield-check"></i>
-                    <span>100% gratuit</span>
-                </div>
-                <div class="trust-item">
-                    <i data-lucide="clock"></i>
-                    <span>30 minutes</span>
-                </div>
-                <div class="trust-item">
-                    <i data-lucide="video"></i>
-                    <span>Visio ou téléphone</span>
-                </div>
-                <div class="trust-item">
-                    <i data-lucide="zap"></i>
-                    <span>V1 livrée en 1 semaine</span>
-                </div>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.04);">
+                <span style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #8c909f;"><i data-lucide="shield-check" style="width: 15px; height: 15px; color: #4d8eff;"></i> 100% gratuit</span>
+                <span style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #8c909f;"><i data-lucide="clock" style="width: 15px; height: 15px; color: #4d8eff;"></i> 30 minutes</span>
+                <span style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #8c909f;"><i data-lucide="video" style="width: 15px; height: 15px; color: #4d8eff;"></i> Visio ou téléphone</span>
+                <span style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #8c909f;"><i data-lucide="zap" style="width: 15px; height: 15px; color: #e9c349;"></i> V1 livrée en 1 semaine</span>
             </div>
+
         </div>
     </section>
 
     <!-- CALENDLY -->
-    <section class="calendly-section" aria-label="Calendrier de réservation">
-        <div class="container">
-            <div class="calendly-wrapper">
+    <section style="padding: 0 0 4rem;">
+        <div style="width: 100%; max-width: 960px; margin: 0 auto; padding: 0 2rem; box-sizing: border-box;">
+            <div style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); background: rgba(16,28,46,0.5);">
                 <iframe
                     src="https://calendly.com/cortex-studio/1ere-reunion"
                     width="100%"
@@ -287,10 +152,10 @@
             <div class="footer-col">
                 <h4 data-i18n="footer.services.title">Services</h4>
                 <ul>
-                    <li><a href="services.html#app-ia" data-i18n="services.app-ia.title">Application IA</a></li>
-                    <li><a href="services.html#auto-ia" data-i18n="services.auto-ia.title">Automatisation IA</a></li>
-                    <li><a href="services.html#site-ia" data-i18n="services.site-ia.title">Site IA</a></li>
-                    <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
+                    <li><a href="services.html#app-ia">Application IA</a></li>
+                    <li><a href="services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="services.html#site-ia">Site IA</a></li>
+                    <li><a href="services.html#app-web">Application Web</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -316,7 +181,6 @@
     </div>
 </footer>
 
-<!-- Scripts -->
 <script src="assets/js/translations.js"></script>
 <script src="assets/js/main.js"></script>
 <script>lucide.createIcons();</script>
