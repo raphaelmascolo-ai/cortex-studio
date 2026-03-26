@@ -87,16 +87,18 @@
 
         /* Steps grid — simple 3 columns centered */
         .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 2rem !important;
+            max-width: 900px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100%;
         }
         @media (max-width: 768px) {
             .steps-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
+                grid-template-columns: 1fr !important;
+                max-width: 400px !important;
             }
         }
 
