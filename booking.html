@@ -37,8 +37,8 @@
             border: 1px solid rgba(255,255,255,0.04);
             border-radius: var(--radius-xl, 1rem);
             transition: transform 0.3s, border-color 0.3s;
-            width: 260px;
-            flex-shrink: 0;
+            flex: 1;
+            max-width: 280px;
         }
         .step-card:hover {
             transform: translateY(-4px);
@@ -200,7 +200,7 @@
     <section class="booking-steps" aria-labelledby="steps-heading">
         <div class="container">
             <h2 id="steps-heading" class="visually-hidden">Comment ca marche</h2>
-            <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;">
+            <div style="display:flex;justify-content:center;gap:2rem;">
 
                 <article class="step-card fade-in">
                     <span class="step-number-badge">1</span>
