@@ -132,13 +132,24 @@
                 <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
                 <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                 <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
-                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
-                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
-                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
             </ul>
         </nav>
-        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <div class="header-actions">
+            <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
         <button class="burger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -168,7 +179,7 @@
 
                 <!-- LEFT: Contact form -->
                 <div>
-                    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="quote-form" id="contactForm" novalidate>
+                    <form action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST" class="quote-form" id="contactForm" novalidate>
                         <!-- Honeypot -->
                         <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
 
@@ -375,20 +386,22 @@
         submitBtn.disabled = true;
         submitBtn.textContent = '...';
 
+        var formData = new FormData(form);
+        var jsonData = {};
+        formData.forEach(function(value, key) { if (key !== '_gotcha') jsonData[key] = value; });
+        jsonData.source = 'contact';
+        jsonData.timestamp = new Date().toISOString();
+
         fetch(form.action, {
             method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
+            body: JSON.stringify(jsonData),
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'no-cors'
         })
-        .then(function (response) {
-            if (response.ok) {
-                form.reset();
-                if (successMsg) successMsg.style.display = 'block';
-                if (errorMsg) errorMsg.style.display = 'none';
-            } else {
-                if (errorMsg) errorMsg.style.display = 'block';
-                if (successMsg) successMsg.style.display = 'none';
-            }
+        .then(function () {
+            form.reset();
+            if (successMsg) successMsg.style.display = 'block';
+            if (errorMsg) errorMsg.style.display = 'none';
         })
         .catch(function () {
             if (errorMsg) errorMsg.style.display = 'block';

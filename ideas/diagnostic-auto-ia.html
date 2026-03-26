@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de diagnostic auto/moto IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Site de diagnostic auto/moto IA : symptômes véhicule, diagnostic probable, estimation coûts, garages recommandés. MRR estimé ~2 400€/mois.">
+    <meta property="og:title" content="Site de diagnostic auto/moto IA — Cortex Studio">
+    <meta property="og:description" content="Décrivez les symptômes de votre véhicule et obtenez un diagnostic probable par IA, avec estimation des coûts de réparation et garages proches recommandés.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Diagnostic Auto IA</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Site de diagnostic auto/moto IA</h1>
+            <p class="hero-subtitle">Décrivez les symptômes de votre véhicule et obtenez un diagnostic probable par IA, avec estimation des coûts de réparation et garages proches recommandés.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 400€/mois</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Quand un voyant s'allume sur le tableau de bord ou qu'un bruit suspect apparaît, la plupart des automobilistes sont incapables d'évaluer la gravité du problème. Ils hésitent entre ignorer le symptôme (risquant une panne grave) et foncer chez le garagiste (risquant une facture inutile). Cette incertitude coûte cher : 40% des visites au garage se soldent par un 'tout va bien' facturé 50 à 80€ de diagnostic.</p>
+            <p>Les forums auto sont une jungle d'informations contradictoires où chaque internaute donne un avis différent. Un même symptôme ('bruit de claquement à l'accélération') peut correspondre à 15 causes différentes, du simple cardan usé au problème de boîte de vitesses. Sans expertise, impossible de trier ces informations.</p>
+            <p>Les garages profitent souvent de l'ignorance des clients pour gonfler les devis. Sans référentiel de prix fiable, un automobiliste ne peut pas savoir si un devis de 800€ pour un changement de distribution est correct ou excessif. Le manque de transparence dans le secteur auto crée une méfiance généralisée.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Le site permet de décrire les symptômes du véhicule en langage naturel : 'ma voiture fait un bruit de sifflement quand je freine', 'le moteur cale au ralenti', 'odeur de brûlé après un long trajet'. L'IA croise ces symptômes avec la marque, le modèle, l'année et le kilométrage pour produire un diagnostic probabiliste classé par ordre de vraisemblance.</p>
+            <p>Chaque diagnostic est accompagné d'une estimation de coût (fourchette basse/haute), du niveau d'urgence (rouler est-il dangereux ?), et d'une explication pédagogique de la panne en termes simples. L'utilisateur peut ainsi prendre une décision éclairée : réparer immédiatement, surveiller, ou attendre la prochaine révision.</p>
+            <p>Le site recommande les garages les mieux notés à proximité, avec comparaison des tarifs moyens pour la réparation identifiée. Les garages partenaires peuvent proposer un devis en ligne directement depuis la plateforme, créant un circuit transparent du diagnostic au devis.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle combine publicité ciblée (pièces auto, assurances) et lead generation vers les garages partenaires à 29,99€/mois pour un référencement premium avec devis en ligne intégré. Chaque lead qualifié (client avec diagnostic précis) a une valeur bien supérieure à un simple visiteur.</p>
+            <p>Un abonnement utilisateur à 4,99€/mois offre des diagnostics illimités, l'historique d'entretien du véhicule, les alertes de rappel constructeur et les estimations de coûts détaillées. La version gratuite permet 2 diagnostics par mois.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>80 garages partenaires</th>
+                        <th>150 garages partenaires</th>
+                        <th>500 garages partenaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>2 397€</td><td>4 499€</td><td>14 995€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>500€</td><td>900€</td><td>3 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>1 897€</td><td>3 599€</td><td>11 995€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>4 mois</td><td>2 mois</td><td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Diagnostic IA par description de symptômes en langage naturel</li>
+                <li>Base de données de pannes par marque, modèle et année</li>
+                <li>Estimation des coûts de réparation avec fourchette basse/haute</li>
+                <li>Niveau d'urgence et recommandation de conduite</li>
+                <li>Carte des garages partenaires avec avis et tarifs comparés</li>
+                <li>Historique d'entretien du véhicule avec rappels automatiques</li>
+                <li>Devis en ligne depuis les garages partenaires</li>
+                <li>Alertes de rappel constructeur par modèle</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Google Maps API</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Stripe</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-diagnostic-auto-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required>
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required>
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

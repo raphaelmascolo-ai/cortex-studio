@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation de scoring de candidats RH — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Automatisation du scoring de candidats RH : tri CV, scoring compétences, pré-sélection IA. À partir de 250€.">
+    <meta property="og:title" content="Automatisation de scoring de candidats RH — Cortex Studio">
+    <meta property="og:description" content="Tri automatique des CV, scoring par compétences et expérience, pré-sélection IA pour ne garder que les meilleurs profils.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Accueil</a><span>/</span>
+            <a href="../ideas.html">Idées</a><span>/</span>
+            <span>Scoring Candidats RH</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation de scoring de candidats RH</h1>
+            <p class="hero-subtitle">Tri automatique des CV, scoring par compétences et expérience, pré-sélection IA pour ne garder que les meilleurs profils.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Une offre d'emploi reçoit en moyenne 150 à 250 candidatures. Le recruteur passe 6 à 8 secondes par CV en première lecture — un temps insuffisant pour évaluer correctement un profil. Résultat : des bons candidats sont écartés et des profils inadaptés passent en entretien.</p>
+            <p>Le tri manuel de 200 CV prend 8 à 15 heures par recrutement. Multiplié par 5 à 10 postes ouverts simultanément, le processus de présélection devient le goulot d'étranglement du recrutement, allongeant le time-to-hire et faisant perdre les meilleurs talents, captés par des entreprises plus réactives.</p>
+            <p>Les biais inconscients du tri manuel sont documentés : discrimination sur le nom, l'adresse, la photo, l'école. Ces biais exposent l'entreprise à des risques légaux et privent l'organisation de talents diversifiés.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'automatisation parse chaque CV reçu (PDF, Word, LinkedIn) et extrait les informations clés : compétences techniques, années d'expérience, formations, langues, certifications. L'IA compare chaque profil aux critères de l'offre et attribue un score de 0 à 100.</p>
+            <p>Les critères de scoring sont personnalisables par le recruteur : compétences obligatoires vs souhaitées, pondération de l'expérience vs la formation, importance des soft skills détectées dans la lettre de motivation. Le scoring est objectif et reproductible, éliminant les biais inconscients.</p>
+            <p>Les candidats sont classés par score et seuls les profils au-dessus du seuil défini sont transmis au recruteur avec un résumé synthétique de chaque candidature. Les candidats écartés reçoivent automatiquement un email de réponse négative personnalisé.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+<li>Lecture manuelle de chaque CV (6-8 secondes par CV)</li><li>Tri subjectif basé sur des impressions rapides</li><li>8 à 15 heures de travail par recrutement</li><li>Biais inconscients (nom, adresse, photo, école)</li><li>Bons candidats écartés par manque de temps</li><li>Candidats refusés sans réponse pendant des semaines</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+<li>Parsing et scoring automatique de chaque CV en secondes</li><li>Évaluation objective sur des critères pondérés et personnalisables</li><li>30 minutes pour valider la présélection IA</li><li>Scoring sans biais sur les informations non pertinentes</li><li>Meilleurs profils identifiés et priorisés systématiquement</li><li>Réponse automatique personnalisée à tous les candidats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">10h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 40h/mois libérées pour les entretiens à valeur ajoutée</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">500%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 4 semaines</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+            <p>Une ESN de 80 personnes recrutait 30 développeurs par an, recevant en moyenne 200 candidatures par poste. Les 2 chargés de recrutement passaient 60% de leur temps au tri de CV, ne laissant que 40% pour les entretiens et l'intégration — les phases qui créent réellement de la valeur.</p>
+            <p>Après déploiement de l'automatisation (réception candidature → parsing CV → scoring IA → classement → email auto), le temps de tri est passé de 12h à 45 minutes par poste. Le taux de candidats pertinents en entretien est passé de 30% à 75%. Les chargés de recrutement se concentrent désormais sur l'évaluation humaine et l'onboarding.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Outils intégrés</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">OpenAI GPT-4</span>
+                <span class="tech-badge">CV Parsing API</span>
+                <span class="tech-badge">ATS (Recruitee/Lever)</span>
+                <span class="tech-badge">Google Sheets</span>
+                <span class="tech-badge">SendGrid</span>
+                <span class="tech-badge">Slack</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser ce processus ?</h2>
+            <p class="text-secondary">Notre équipe peut mettre en place cette automatisation pour vous.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

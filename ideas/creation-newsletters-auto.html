@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation de la création de newsletters — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Automatisation de la création de newsletters : curation IA, rédaction, personnalisation, envoi automatique. À partir de 250€.">
+    <meta property="og:title" content="Automatisation de la création de newsletters — Cortex Studio">
+    <meta property="og:description" content="Curation de contenu IA, rédaction adaptée à votre audience, personnalisation par segment et envoi programmé.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Accueil</a><span>/</span>
+            <a href="../ideas.html">Idées</a><span>/</span>
+            <span>Newsletters Auto</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation de la création de newsletters</h1>
+            <p class="hero-subtitle">Curation de contenu IA, rédaction adaptée à votre audience, personnalisation par segment et envoi programmé.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>La newsletter reste le canal marketing avec le meilleur ROI (42€ pour 1€ investi selon DMA). Pourtant, 60% des entreprises n'envoient pas de newsletter régulière. La raison : créer du contenu pertinent chaque semaine prend 3 à 5 heures — trouver des sujets, rédiger, mettre en forme, programmer.</p>
+            <p>La régularité est la clé du succès d'une newsletter, mais c'est aussi le plus grand défi. Une newsletter envoyée de façon irrégulière (une semaine oui, trois semaines non) perd rapidement ses abonnés et son efficacité.</p>
+            <p>La personnalisation est quasi inexistante dans les newsletters classiques : le même contenu envoyé à toute la base, sans segmentation ni adaptation au profil du lecteur. Résultat : des taux d'ouverture en baisse constante (21% en moyenne).</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'automatisation gère l'intégralité du cycle de la newsletter. L'IA scanne les sources définies (blogs sectoriels, RSS, actualités, tendances) et sélectionne les contenus les plus pertinents pour l'audience. La curation est filtrée par thématique et niveau de pertinence.</p>
+            <p>La rédaction est générée par IA dans le ton et le style de la marque : introduction engageante, résumés des articles sélectionnés, appels à l'action personnalisés. Le contenu est adapté par segment d'audience pour maximiser la pertinence.</p>
+            <p>L'envoi est programmé au moment optimal pour chaque segment (déterminé par l'analyse des taux d'ouverture passés). Les A/B tests sont automatisés sur les objets et les horaires.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+<li>Recherche manuelle de sujets et contenus (1-2h/semaine)</li><li>Rédaction manuelle de la newsletter (2-3h/semaine)</li><li>Envoi irrégulier faute de temps</li><li>Même contenu envoyé à tous les abonnés</li><li>Pas de test A/B ni d'optimisation</li><li>Taux d'ouverture en baisse constante</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+<li>Curation automatique des meilleurs contenus sectoriels</li><li>Rédaction IA dans le ton de la marque en quelques minutes</li><li>Envoi régulier programmé (hebdo ou mensuel)</li><li>Contenu personnalisé par segment d'audience</li><li>A/B tests automatiques sur objets et horaires</li><li>Taux d'ouverture amélioré grâce à la personnalisation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">6h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 24h/mois libérées pour la stratégie marketing</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">400%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 5 semaines</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+            <p>Une agence de recrutement tech souhaitait envoyer une newsletter hebdomadaire à sa base de 5 000 candidats et 200 entreprises clientes. Le responsable marketing n'avait jamais le temps de la produire régulièrement — 3 newsletters en 6 mois, avec un taux d'ouverture de 18%.</p>
+            <p>L'automatisation scanne chaque semaine les blogs tech, les offres d'emploi publiées et les tendances RH. La newsletter est auto-générée en 2 versions : une pour les candidats (offres, conseils carrière) et une pour les entreprises (tendances marché, bonnes pratiques). Résultat : newsletter hebdomadaire sans effort, taux d'ouverture à 34%, et 12 leads qualifiés par mois attribués à la newsletter.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Outils intégrés</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">OpenAI GPT-4</span>
+                <span class="tech-badge">Mailchimp/Brevo API</span>
+                <span class="tech-badge">RSS feeds</span>
+                <span class="tech-badge">Google Sheets</span>
+                <span class="tech-badge">Slack</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser ce processus ?</h2>
+            <p class="text-secondary">Notre équipe peut mettre en place cette automatisation pour vous.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

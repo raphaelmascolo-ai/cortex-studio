@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation de la gestion de paie simplifiée — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Automatisation de la gestion de paie : calcul salaires, fiches de paie PDF, déclarations sociales, virements. À partir de 250€.">
+    <meta property="og:title" content="Automatisation de la gestion de paie simplifiée — Cortex Studio">
+    <meta property="og:description" content="Calcul automatique des salaires, génération des fiches de paie, déclarations sociales et virements programmés pour TPE/PME.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Accueil</a><span>/</span>
+            <a href="../ideas.html">Idées</a><span>/</span>
+            <span>Gestion Paie Auto</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation de la gestion de paie simplifiée</h1>
+            <p class="hero-subtitle">Calcul automatique des salaires, génération des fiches de paie, déclarations sociales et virements programmés pour TPE/PME.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>La paie est le processus administratif le plus stressant pour un dirigeant de TPE/PME. Une erreur sur un bulletin de paie expose à des amendes de l'URSSAF, des réclamations des salariés et une dégradation du climat social. Pourtant, 40% des PME de moins de 20 salariés gèrent encore la paie sur Excel ou via des logiciels complexes et coûteux.</p>
+            <p>Les cabinets comptables facturent la gestion de paie 25 à 50€ par bulletin. Pour une entreprise de 15 salariés, cela représente 375 à 750€ par mois — un budget conséquent pour une TPE. Les erreurs ne sont pas rares pour autant, et les délais de production dépassent souvent les dates légales.</p>
+            <p>Les évolutions réglementaires constantes (taux de cotisations, plafonds, conventions collectives) rendent la paie de plus en plus complexe. Un non-spécialiste ne peut plus gérer la paie correctement sans formation continue.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'automatisation calcule automatiquement chaque bulletin de paie à partir des données contractuelles (salaire brut, convention collective, temps de travail) et des variables du mois (heures supplémentaires, absences, primes). Les taux de cotisations sont mis à jour automatiquement.</p>
+            <p>Les fiches de paie sont générées au format PDF conforme et envoyées automatiquement à chaque salarié par email sécurisé. Les déclarations sociales mensuelles (DSN) sont pré-remplies et prêtes à valider.</p>
+            <p>Les virements de salaire sont préparés automatiquement avec les montants nets calculés et le fichier SEPA prêt à être importé dans la banque. Le dirigeant n'a qu'à valider et confirmer le virement — 15 minutes au lieu de 2 jours.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+<li>Calcul manuel des bulletins de paie (risque d'erreur élevé)</li><li>1 à 2 jours de travail par mois dédiés à la paie</li><li>Mise à jour manuelle des taux de cotisations</li><li>Déclarations DSN saisies manuellement</li><li>Virements individuels depuis l'interface bancaire</li><li>Coût cabinet comptable de 25-50€ par bulletin</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+<li>Calcul automatique et sans erreur de chaque bulletin</li><li>15 minutes pour valider l'ensemble de la paie</li><li>Taux de cotisations actualisés automatiquement</li><li>DSN pré-remplie prête à transmettre</li><li>Fichier SEPA généré pour virements groupés</li><li>Coût réduit à une fraction du prix cabinet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">8h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 32h/mois libérées pour la gestion d'entreprise</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">400%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 5 semaines</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+            <p>Un restaurant avec 12 salariés (CDI, CDD, extras) payait 480€/mois à son cabinet comptable pour la gestion de paie. Les bulletins arrivaient le 5 du mois, parfois avec des erreurs sur les heures supplémentaires ou les pourboires qui nécessitaient des correctifs.</p>
+            <p>L'automatisation intègre le planning du logiciel de caisse, calcule automatiquement les heures, majorations et pourboires, et génère les bulletins le 28 de chaque mois. Le restaurateur valide en 15 minutes. Le coût est passé de 480€ à 250€ one-shot + les coûts d'API. Les erreurs sont tombées à zéro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Outils intégrés</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">APIs URSSAF/DSN</span>
+                <span class="tech-badge">PDF Generator</span>
+                <span class="tech-badge">Banking API (SEPA)</span>
+                <span class="tech-badge">Google Sheets</span>
+                <span class="tech-badge">Email</span>
+                <span class="tech-badge">Slack</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser ce processus ?</h2>
+            <p class="text-secondary">Notre équipe peut mettre en place cette automatisation pour vous.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

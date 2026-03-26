@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation de la traduction de support client — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Automatisation de la traduction de support client : tickets, emails et chats multilingues en temps réel. À partir de 250€.">
+    <meta property="og:title" content="Automatisation de la traduction de support client — Cortex Studio">
+    <meta property="og:description" content="Traduction automatique des tickets, emails et chats clients en temps réel — offrez un support multilingue sans équipe polyglotte.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Accueil</a><span>/</span>
+            <a href="../ideas.html">Idées</a><span>/</span>
+            <span>Traduction Support Client</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation de la traduction de support client</h1>
+            <p class="hero-subtitle">Traduction automatique des tickets, emails et chats clients en temps réel — offrez un support multilingue sans équipe polyglotte.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>L'expansion internationale est le graal de toute entreprise, mais le support client multilingue représente un obstacle majeur. Recruter des agents parlant allemand, espagnol, italien, portugais et néerlandais coûte 2 à 3 fois plus cher qu'une équipe francophone.</p>
+            <p>Les clients non francophones qui contactent le support en anglais ou dans leur langue reçoivent des réponses tardives, souvent approximatives, ou sont redirigés vers un formulaire traduit automatiquement par Google Translate — une expérience humiliante qui fait fuir les clients internationaux.</p>
+            <p>Sans support dans leur langue, le taux de satisfaction des clients internationaux est 40% inférieur à celui des clients domestiques. Les avis négatifs en langues étrangères affectent la réputation sur les marchés cibles.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'automatisation intercepte chaque ticket, email ou message chat entrant et détecte automatiquement la langue. Le contenu est traduit en français pour l'agent de support, qui répond en français. La réponse est automatiquement traduite dans la langue du client avant envoi.</p>
+            <p>La traduction utilise DeepL API pour la qualité linguistique et GPT-4 pour l'adaptation du ton et du contexte métier. Le vocabulaire spécifique à l'entreprise est appris via un glossaire personnalisé, garantissant la cohérence terminologique.</p>
+            <p>L'agent de support travaille exclusivement en français tout en servant des clients dans 20+ langues. Le client reçoit des réponses dans sa langue, naturelles et professionnelles, sans jamais savoir que l'agent ne la parle pas.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+<li>Recrutement coûteux d'agents multilingues</li><li>Délais de réponse allongés pour les clients étrangers</li><li>Traductions Google Translate approximatives et embarrassantes</li><li>Clients redirigés vers le support anglais par défaut</li><li>Satisfaction client internationale 40% inférieure</li><li>Perte de clients sur les marchés non francophones</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+<li>Support 20+ langues avec une équipe 100% francophone</li><li>Temps de réponse identique quelle que soit la langue</li><li>Traductions professionnelles avec vocabulaire métier adapté</li><li>Chaque client servi dans sa propre langue</li><li>Satisfaction client homogène sur tous les marchés</li><li>Expansion internationale sans coût RH supplémentaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">8h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 32h/mois de traduction manuelle éliminées</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">400%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 5 semaines</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+            <p>Un éditeur SaaS français avec 2 000 clients répartis dans 12 pays recevait 150 tickets de support par semaine, dont 40% en anglais et 15% en allemand, espagnol ou italien. L'unique agent bilingue était surchargé, les tickets non anglais attendaient 48h en moyenne.</p>
+            <p>L'automatisation DeepL + GPT-4 intégrée à Zendesk traduit désormais chaque ticket en temps réel. Les 3 agents francophones traitent tous les tickets sans distinction de langue. Le temps de réponse moyen est passé de 48h à 4h pour les tickets internationaux, et le CSAT international est passé de 3.2/5 à 4.6/5.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Outils intégrés</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">DeepL API</span>
+                <span class="tech-badge">OpenAI GPT-4</span>
+                <span class="tech-badge">Zendesk/Intercom API</span>
+                <span class="tech-badge">Slack</span>
+                <span class="tech-badge">Google Sheets</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser ce processus ?</h2>
+            <p class="text-secondary">Notre équipe peut mettre en place cette automatisation pour vous.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

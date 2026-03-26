@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation de la planification de rendez-vous — Cortex Studio | Idée d'automatisation IA</title>
+    <meta name="description" content="Automatisation de la planification de rendez-vous : prise RDV, confirmations, rappels, gestion no-shows. À partir de 250€.">
+    <meta property="og:title" content="Automatisation de la planification de rendez-vous — Cortex Studio">
+    <meta property="og:description" content="Prise de RDV en ligne, confirmations automatiques, rappels SMS/email et gestion intelligente des no-shows.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html">Accueil</a><span>/</span>
+            <a href="../ideas.html">Idées</a><span>/</span>
+            <span>Planification RDV Auto</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-auto-ia" data-i18n="badge.auto-ia">Automatisation IA</span>
+            <h1>Automatisation de la planification de rendez-vous</h1>
+            <p class="hero-subtitle">Prise de RDV en ligne, confirmations automatiques, rappels SMS/email et gestion intelligente des no-shows.</p>
+            <span class="badge badge-mrr">À partir de 250€</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>La prise de rendez-vous par téléphone ou email est un aller-retour interminable de disponibilités. Un cabinet médical, un salon de coiffure ou un consultant passe 30 minutes à 1 heure par jour uniquement à gérer les RDV : répondre aux appels, trouver un créneau, confirmer, rappeler.</p>
+            <p>Les no-shows (rendez-vous non honorés) représentent 10 à 20% des créneaux dans les professions de service. Chaque no-show est un manque à gagner direct — et le créneau perdu ne peut pas être revendu si le client ne prévient pas.</p>
+            <p>Les modifications et annulations de dernière minute créent des trous dans l'agenda qui restent vides. Sans système de liste d'attente automatisé, ces créneaux libérés ne sont pas redistribués.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'automatisation offre une page de prise de rendez-vous en ligne accessible 24h/24. Le client choisit le service souhaité, voit les disponibilités en temps réel et réserve en quelques clics. La confirmation est envoyée instantanément par email et SMS.</p>
+            <p>Un système de rappels intelligents réduit les no-shows de 60% : rappel email à J-2, rappel SMS à J-1 avec bouton de confirmation/annulation. En cas d'annulation, le créneau est automatiquement proposé aux clients en liste d'attente.</p>
+            <p>La gestion des no-shows est automatisée : détection, notification au professionnel, proposition automatique de report au client absent, et scoring de fiabilité pour identifier les clients récidivistes.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.before.title">Avant / Après</h2>
+            <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid #ef4444;">
+                    <h3 style="color: #ef4444; margin-bottom: 1rem;">Avant — Processus manuel</h3>
+                    <ul class="feature-list">
+<li>Prise de RDV par téléphone (30-60 min/jour)</li><li>Aller-retours email pour trouver un créneau commun</li><li>No-shows fréquents (10-20% des RDV)</li><li>Créneaux annulés non redistribués</li><li>Agenda papier ou Excel sans synchronisation</li><li>Pas de rappel automatique aux clients</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid #22c55e;">
+                    <h3 style="color: #22c55e; margin-bottom: 1rem;">Après — Processus automatisé</h3>
+                    <ul class="feature-list">
+<li>Prise de RDV en ligne 24h/24 en autonomie</li><li>Confirmation instantanée par email et SMS</li><li>Rappels automatiques réduisant les no-shows de 60%</li><li>Liste d'attente automatique pour les créneaux libérés</li><li>Synchronisation temps réel avec Google Calendar</li><li>Scoring de fiabilité des clients</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Résultats clés</h2>
+            <div class="grid grid-3" style="gap: 1.5rem; margin-top: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">5h</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Temps gagné / semaine</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Soit 20h/mois libérées pour l'activité principale</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">300%</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">ROI estimé</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">Retour sur investissement en 8 semaines</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">250€</div>
+                    <div style="font-weight: 600; margin-bottom: 0.25rem;">Coût d'implémentation</div>
+                    <div style="color: var(--color-text-muted); font-size: 0.9rem;">À partir de 250€ selon la complexité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="auto.usecase.title">Cas d'usage concret</h2>
+            <div class="card">
+            <p>Un cabinet de kinésithérapie avec 3 praticiens gérait 80 rendez-vous par semaine. La secrétaire passait 2 heures par jour au téléphone pour les prises de RDV. Le taux de no-show était de 15%, soit 12 créneaux perdus par semaine — l'équivalent de 600€ de revenus manqués.</p>
+            <p>Après mise en place de l'automatisation (Calendly + Twilio + n8n + Google Calendar), 90% des RDV sont pris en ligne. Les rappels SMS ont réduit le no-show à 5%. La secrétaire consacre désormais 20 minutes par jour aux RDV (cas complexes uniquement). Le cabinet a récupéré 8 créneaux par semaine soit 400€/semaine de revenus.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2>Outils intégrés</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">Calendly API</span>
+                <span class="tech-badge">Twilio SMS</span>
+                <span class="tech-badge">Google Calendar API</span>
+                <span class="tech-badge">SendGrid</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Slack</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à automatiser ce processus ?</h2>
+            <p class="text-secondary">Notre équipe peut mettre en place cette automatisation pour vous.</p>
+            <a href="../quote.html?service=auto-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App web de gestion de salon de coiffure/beauté — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="App web gestion salon coiffure/beauté : agenda, clients, fidélité, stocks, caisse intégrée. MRR estimé ~3 000€/mois.">
+    <meta property="og:title" content="App web de gestion de salon de coiffure/beauté — Cortex Studio">
+    <meta property="og:description" content="Gérez votre salon de A à Z : agenda en ligne, fiches clients détaillées, programme de fidélité, stocks produits et caisse intégrée.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion Salon Beauté</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-web">App Web</span>
+            <h1>App web de gestion de salon de coiffure/beauté</h1>
+            <p class="hero-subtitle">Gérez votre salon de A à Z : agenda en ligne, fiches clients détaillées, programme de fidélité, stocks produits et caisse intégrée.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Il existe 85 000 salons de coiffure et 70 000 instituts de beauté en France, dont 80% sont des indépendants ou des petites structures de 1 à 3 personnes. La plupart utilisent encore un agenda papier, une caisse traditionnelle et aucun outil de fidélisation client. Cette gestion artisanale fait perdre 5 à 10 clients par mois à cause des rendez-vous manqués, des oublis de relance et du manque de suivi.</p>
+            <p>Les solutions existantes pour les salons (Planity, Treatwell) se concentrent sur la prise de rendez-vous en ligne mais prélèvent une commission sur chaque réservation (1 à 3€) qui grignote les marges. Sur 500 rendez-vous par mois, la facture atteint 500 à 1 500€ — un montant prohibitif pour un salon dont la marge nette est souvent de 10 à 15%.</p>
+            <p>La gestion des stocks de produits (shampoings, colorations, soins) est gérée mentalement ou sur cahier. Les ruptures de stock pendant une prestation dégradent le service, tandis que le surstock immobilise de la trésorerie. Sans historique des achats et de la consommation, impossible d'optimiser les commandes et de négocier avec les fournisseurs.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'application offre un agenda intelligent en ligne sans commission par réservation. Les clients prennent rendez-vous 24h/24 depuis le site web du salon ou Google. Les rappels automatiques par SMS réduisent les no-shows de 40%. Chaque coiffeur/esthéticien voit son planning sur son téléphone avec les détails de chaque prestation.</p>
+            <p>La fiche client centralisée conserve l'historique complet : prestations réalisées, formules de coloration, préférences, fréquence de visite, montant total dépensé. Le programme de fidélité intégré (points par visite, offre anniversaire, parrainage) incite au retour et augmente la fréquence de visite de 20%. Les campagnes SMS ciblent les clients qui n'ont pas visité depuis X semaines.</p>
+            <p>La caisse intégrée gère les encaissements (CB, espèces, chèques, tickets CESU), génère les tickets de caisse conformes et exporte automatiquement en comptabilité. Le module stock suit les produits en temps réel : consommation par prestation, alertes de réapprovisionnement et historique des commandes fournisseurs.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement à 34,99€/mois sans commission par réservation est le principal argument de différenciation face à Planity et Treatwell. Sur 500 rendez-vous par mois, le salon économise 465 à 1 465€ par rapport à un modèle à commission.</p>
+            <p>Le plan Solo à 34,99€/mois convient aux indépendants. Le plan Salon à 54,99€/mois gère jusqu'à 5 collaborateurs avec fidélité et stocks. Le plan Multi-salons à 89,99€/mois permet de gérer plusieurs établissements avec un dashboard consolidé.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>50 salons</th>
+                        <th>85 salons</th>
+                        <th>300 salons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>1 750€</td><td>2 974€</td><td>10 497€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>400€</td><td>700€</td><td>2 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>1 350€</td><td>2 274€</td><td>7 997€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>5 mois</td><td>3 mois</td><td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Agenda en ligne sans commission avec prise de RDV 24h/24</li>
+                <li>Rappels SMS automatiques pour réduire les no-shows</li>
+                <li>Fiches clients avec historique prestations et formules</li>
+                <li>Programme de fidélité intégré (points, anniversaire, parrainage)</li>
+                <li>Campagnes SMS ciblées pour relancer les clients inactifs</li>
+                <li>Caisse intégrée avec encaissement multi-modes</li>
+                <li>Gestion de stock produits avec alertes de réapprovisionnement</li>
+                <li>Statistiques (CA par coiffeur, prestations populaires, fidélité)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Twilio SMS</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Chart.js</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-gestion-salon-beaute.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-web" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required>
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required>
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-web" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

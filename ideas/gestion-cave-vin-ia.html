@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de gestion de cave à vin IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Application de gestion de cave à vin IA : inventaire par scan, accords mets-vins, apogée, valorisation collection. MRR ~2 994€/mois.">
+    <meta property="og:title" content="App de gestion de cave à vin IA — Cortex Studio">
+    <meta property="og:description" content="Inventaire par scan d'étiquette, accords mets-vins personnalisés, suivi de l'apogée et valorisation de votre collection.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Gestion Cave à Vin IA</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-ia">App IA</span>
+            <h1>App de gestion de cave à vin IA</h1>
+            <p class="hero-subtitle">Inventaire par scan d'étiquette, accords mets-vins personnalisés, suivi de l'apogée et valorisation de votre collection.</p>
+            <span class="badge badge-mrr">MRR estimé : ~2 994€/mois</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Les amateurs de vin accumulent des bouteilles sans véritable organisation. Un tiers des bouteilles sont ouvertes après leur apogée, perdant une grande partie de leur potentiel gustatif. L'inverse est aussi fréquent : des vins bus trop jeunes faute de suivi.</p>
+            <p>Les accords mets-vins restent mystérieux pour la majorité des consommateurs. Face à un plat spécifique ou un dîner à préparer, choisir la bonne bouteille dans sa cave relève du hasard plus que de la science. Les guides classiques ne tiennent pas compte des bouteilles réellement disponibles chez l'amateur.</p>
+            <p>La valorisation d'une collection est quasi impossible sans expertise : les prix du vin fluctuent selon les millésimes, les notations et la rareté. Les collectionneurs n'ont aucune idée de la valeur réelle de leur cave.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'application permet d'inventorier sa cave en scannant simplement l'étiquette de chaque bouteille. L'IA identifie automatiquement le domaine, le millésime, l'appellation et remplit la fiche complète : notes critiques, température de service, fenêtre d'apogée, potentiel de garde.</p>
+            <p>Le module accords mets-vins fonctionne dans les deux sens : à partir d'un plat prévu, l'IA recommande les meilleures bouteilles de la cave ; à partir d'une bouteille choisie, elle suggère les plats les plus adaptés. Les recommandations tiennent compte des goûts personnels de l'utilisateur.</p>
+            <p>Un suivi de valorisation en temps réel estime la valeur marchande de chaque bouteille et de la cave totale, basé sur les ventes aux enchères, les cotations spécialisées et les tendances du marché. Des alertes signalent les bouteilles approchant de leur apogée.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement à 4,99€/mois cible les amateurs éclairés possédant 30 à 500 bouteilles. La version gratuite permet de gérer 20 bouteilles. Le premium offre l'inventaire illimité, la valorisation, les accords mets-vins IA et les alertes d'apogée.</p>
+            <p>Des partenariats avec des domaines viticoles et des cavistes en ligne génèrent des commissions sur les achats recommandés par l'IA.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 utilisateurs</th>
+                        <th>600 utilisateurs</th>
+                        <th>1 500 utilisateurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>499€</td><td>2 994€</td><td>7 485€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>120€</td><td>350€</td><td>800€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>379€</td><td>2 644€</td><td>6 685€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>6 mois</td><td>3 mois</td><td>2 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Scan d'étiquette avec reconnaissance IA automatique</li>
+                <li>Fiche complète par bouteille (notes, apogée, température)</li>
+                <li>Accords mets-vins personnalisés bidirectionnels</li>
+                <li>Alertes d'apogée pour ne jamais rater le bon moment</li>
+                <li>Valorisation en temps réel de la collection</li>
+                <li>Historique de dégustation avec notes personnelles</li>
+                <li>Suggestions d'achat pour compléter la cave</li>
+                <li>Partage de cave et recommandations entre amis</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React Native</span>
+                <span class="tech-badge">Computer Vision</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Wine APIs</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-gestion-cave-vin-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required>
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required>
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

@@ -39,13 +39,24 @@
                 <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
                 <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                 <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
-                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
-                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
-                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
             </ul>
         </nav>
-        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <div class="header-actions">
+            <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
         <button class="burger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -57,10 +68,18 @@
     <!-- ============================================================
          HERO MINI
          ============================================================ -->
-    <section class="section section-hero-mini" aria-labelledby="ideas-heading">
-        <div class="container text-center">
-            <h1 id="ideas-heading" class="fade-in" data-i18n="ideas.title">Idées de projets IA rentables</h1>
-            <p class="fade-in text-secondary" data-i18n="ideas.subtitle">Explorez notre catalogue de projets avec projections de revenus incluses. Trouvez l'idée qui correspond à votre ambition.</p>
+    <section class="hero hero-video-section hero-ideas" aria-labelledby="ideas-heading">
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content hero-scroll-content text-center">
+                <h1 id="ideas-heading" class="fade-in" data-i18n="ideas.title">Idées de projets IA rentables</h1>
+                <p class="fade-in text-secondary" data-i18n="ideas.subtitle">Explorez notre catalogue de projets avec projections de revenus incluses. Trouvez l'idée qui correspond à votre ambition.</p>
+            </div>
         </div>
     </section>
 
@@ -467,6 +486,674 @@
                     <div class="idea-card-footer">
                         <span class="badge badge-mrr">~2 800€/mois</span>
                         <a href="ideas/gestion-projet-collaboratif.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <!-- ===== NEW APP-IA cards ===== -->
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de freelance IA</h3>
+                    <p>Facturez, gérez vos devis, suivez votre temps et vos déclarations URSSAF — le tout piloté par une IA qui automatise votre admin...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-freelance-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Détection de tendances e-commerce IA</h3>
+                    <p>Identifiez les produits tendance avant vos concurrents grâce à l'analyse IA de millions de données marché en temps réel.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/detection-tendances-ecommerce-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Coaching parental IA</h3>
+                    <p>Un accompagnement éducatif personnalisé par IA : conseils adaptés à l'âge de vos enfants, gestion des crises et suivi du dévelo...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/coaching-parental-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de stock IA pour commerces</h3>
+                    <p>Inventaire en temps réel, prédiction des ruptures et réapprovisionnement intelligent — l'IA optimise votre stock pour maximiser...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-stock-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Révision scolaire IA</h3>
+                    <p>Quiz adaptatifs, fiches de révision personnalisées et planning intelligent — l'IA s'adapte au niveau de chaque élève pour des r...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/revision-scolaire-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Matching colocataires IA</h3>
+                    <p>Trouvez le colocataire idéal grâce à un algorithme de compatibilité IA basé sur le mode de vie, les horaires et les habitudes.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/matching-colocataires-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Journal intime IA</h3>
+                    <p>Un journal numérique intelligent qui analyse vos émotions, détecte vos patterns d'humeur et propose des exercices de développem...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/journal-intime-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion d'événements IA</h3>
+                    <p>Organisez vos événements sans stress : l'IA gère les invitations, le budget, le planning et les prestataires pour vous.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-evenements-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Coaching sportif personnalisé IA</h3>
+                    <p>Des plans d'entraînement adaptatifs qui évoluent avec vous : l'IA analyse votre forme, ajuste l'intensité et optimise votre pro...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 196€/mois</span>
+                        <a href="ideas/coaching-sportif-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de patrimoine IA</h3>
+                    <p>Suivez tous vos investissements, optimisez votre fiscalité et simulez l'évolution de votre patrimoine avec un conseiller IA per...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 998€/mois</span>
+                        <a href="ideas/gestion-patrimoine-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Diagnostic immobilier IA</h3>
+                    <p>Photographiez un bien, l'IA génère un rapport d'état des lieux détaillé avec estimation des travaux nécessaires.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 999€/mois</span>
+                        <a href="ideas/diagnostic-immobilier-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Planification de voyages IA</h3>
+                    <p>Itinéraires sur mesure, budget optimisé et réservations centralisées — votre compagnon de voyage IA personnel.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 994€/mois</span>
+                        <a href="ideas/planification-voyages-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de restaurant IA</h3>
+                    <p>Réservations intelligentes, gestion des stocks cuisine, menus dynamiques et prédiction d'affluence — le tout-en-un IA du restau...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 999€/mois</span>
+                        <a href="ideas/gestion-restaurant-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Suivi de grossesse IA</h3>
+                    <p>Votre compagnon de grossesse intelligent : conseils personnalisés semaine par semaine, suivi médical et préparation à l'accouch...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 993€/mois</span>
+                        <a href="ideas/suivi-grossesse-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion d'animaux de compagnie IA</h3>
+                    <p>Suivi santé, alimentation adaptée, rappels vétérinaire et communauté — l'application qui prend soin de votre animal aussi bien ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 993€/mois</span>
+                        <a href="ideas/animaux-compagnie-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Rédaction académique IA</h3>
+                    <p>Votre assistant de rédaction pour thèses, mémoires et articles : reformulation, vérification des sources, mise en forme académi...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 997€/mois</span>
+                        <a href="ideas/redaction-academique-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de cave à vin IA</h3>
+                    <p>Inventaire par scan d'étiquette, accords mets-vins personnalisés, suivi de l'apogée et valorisation de votre collection.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 994€/mois</span>
+                        <a href="ideas/gestion-cave-vin-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Méditation et relaxation IA</h3>
+                    <p>Des séances de méditation personnalisées selon votre humeur, un coaching mental adaptatif et un suivi du stress en temps réel.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 995€/mois</span>
+                        <a href="ideas/meditation-relaxation-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Analyse de rêves IA</h3>
+                    <p>Dictez vos rêves au réveil, l'IA les interprète, identifie les thèmes récurrents et vous offre des insights psychologiques pers...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 993€/mois</span>
+                        <a href="ideas/analyse-reves-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Gestion de copropriété IA</h3>
+                    <p>Assemblées générales dématérialisées, suivi des travaux, répartition des charges et communication entre résidents — simplifiée ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 990€/mois</span>
+                        <a href="ideas/gestion-copropriete-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-ia">
+                    <span class="badge badge-app-ia">App IA</span>
+                    <h3>Préparation d'entretiens IA</h3>
+                    <p>Simulez vos entretiens d'embauche avec une IA qui s'adapte au poste visé, analysez vos réponses et recevez un coaching personna...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 997€/mois</span>
+                        <a href="ideas/preparation-entretiens-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <!-- ===== NEW AUTO-IA cards ===== -->
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Gestion des retours e-commerce</h3>
+                    <p>Labels de retour automatiques, suivi en temps réel, remboursements accélérés et analytics pour réduire le taux de retour.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/gestion-retours-ecommerce.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Comptes-rendus de réunion</h3>
+                    <p>Transcription IA, résumé structuré, extraction des actions et envoi automatique — plus jamais de CR en retard.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/comptes-rendus-reunion.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Veille juridique et réglementaire</h3>
+                    <p>Surveillance automatique des publications officielles, résumés IA des nouvelles lois et alertes personnalisées par secteur.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/veille-juridique.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Scoring de candidats RH</h3>
+                    <p>Tri automatique des CV, scoring par compétences et expérience, pré-sélection IA pour ne garder que les meilleurs profils.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/scoring-candidats-rh.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Suivi de trésorerie</h3>
+                    <p>Rapprochement bancaire automatique, prévisions de trésorerie IA, alertes seuils critiques et rapports hebdomadaires.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/suivi-tresorerie.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Traduction de support client</h3>
+                    <p>Traduction automatique des tickets, emails et chats clients en temps réel — offrez un support multilingue sans équipe polyglotte.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/traduction-support-client.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Gestion des stocks e-commerce</h3>
+                    <p>Alertes rupture automatiques, commandes fournisseurs déclenchées par IA, prévisions de vente et synchronisation multi-boutiques.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/gestion-stocks-ecommerce-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Planification de rendez-vous</h3>
+                    <p>Prise de RDV en ligne, confirmations automatiques, rappels SMS/email et gestion intelligente des no-shows.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/planification-rdv-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Création de newsletters</h3>
+                    <p>Curation de contenu IA, rédaction adaptée à votre audience, personnalisation par segment et envoi programmé.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/creation-newsletters-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Contrôle qualité photos produits</h3>
+                    <p>Vérification automatique du format, fond, luminosité et cohérence de votre catalogue produits par vision IA.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/controle-qualite-photos.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Gestion des réclamations client</h3>
+                    <p>Classification automatique, routage intelligent, réponses pré-rédigées par IA et escalade — traitez 3x plus de réclamations.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/gestion-reclamations-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Veille technologique</h3>
+                    <p>Scan automatique des sources tech, résumés IA, rapports hebdomadaires et alertes sur les innovations de votre secteur.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/veille-technologique-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Gestion de paie simplifiée</h3>
+                    <p>Calcul automatique des salaires, génération des fiches de paie, déclarations sociales et virements programmés pour TPE/PME.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/gestion-paie-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Reporting financier multi-sources</h3>
+                    <p>Agrégation de données Stripe, banque et comptabilité. Tableaux de bord automatiques, rapports PDF et alertes KPIs.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/reporting-financier-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>L'analyse de sentiments clients</h3>
+                    <p>Analyse automatique des avis, NPS automatisé, détection de mécontentement en temps réel et rapports de satisfaction.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/analyse-sentiments-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="auto-ia">
+                    <span class="badge badge-auto-ia">Automatisation IA</span>
+                    <h3>Génération de propositions commerciales</h3>
+                    <p>Devis personnalisés auto-générés, présentations client sur mesure, contrats pré-remplis et suivi des signatures.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">À partir de 250€</span>
+                        <a href="ideas/propositions-commerciales-auto.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <!-- ===== NEW SITE-IA cards ===== -->
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Recrutement IA de niche</h3>
+                    <p>Matching candidats-offres IA, parsing CV, recommandations sectorielles — un portail de recrutement intelligent spécialisé par s...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 500€/mois</span>
+                        <a href="ideas/portail-recrutement-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Diagnostic auto/moto IA</h3>
+                    <p>Décrivez les symptômes de votre véhicule et obtenez un diagnostic probable par IA, avec estimation des coûts de réparation et g...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 400€/mois</span>
+                        <a href="ideas/diagnostic-auto-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Mentorat IA</h3>
+                    <p>Matching intelligent mentor-mentoré, suivi des objectifs par IA, sessions vidéo intégrées et accompagnement personnalisé pour a...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 800€/mois</span>
+                        <a href="ideas/plateforme-mentorat-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Génération de logos IA</h3>
+                    <p>Créez votre logo professionnel en quelques minutes grâce à l'IA : charte graphique complète, déclinaisons multi-formats et fich...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/generation-logos-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Estimation de projets tech IA</h3>
+                    <p>Décrivez votre projet digital et obtenez instantanément une estimation de budget, de délai et de stack technique recommandée pa...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 700€/mois</span>
+                        <a href="ideas/estimation-projets-tech-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Coaching fitness avec IA</h3>
+                    <p>Des programmes sportifs 100% personnalisés générés par IA, adaptés à votre niveau, vos objectifs et votre équipement, avec suiv...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/coaching-fitness-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Matching freelances-entreprises IA</h3>
+                    <p>Mise en relation intelligente entre freelances et entreprises avec scoring de compatibilité IA, vérification des compétences et...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 500€/mois</span>
+                        <a href="ideas/matching-freelances-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Conseil juridique IA</h3>
+                    <p>Posez vos questions juridiques et obtenez des réponses IA sourcées et fiables, avec orientation vers un avocat spécialisé si né...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/conseil-juridique-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Design d'intérieur IA</h3>
+                    <p>Photographiez votre pièce et recevez des propositions de décoration par IA avec shopping list de meubles et liens d'achat directs.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 200€/mois</span>
+                        <a href="ideas/design-interieur-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Optimisation énergétique IA</h3>
+                    <p>Audit de votre consommation d'énergie par IA, recommandations d'économies personnalisées et simulation de travaux de rénovation...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 800€/mois</span>
+                        <a href="ideas/optimisation-energetique-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Formation cuisine IA</h3>
+                    <p>Apprenez à cuisiner avec un chef IA : recettes adaptées à votre niveau, tutoriels pas à pas, coaching culinaire personnalisé et...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/formation-cuisine-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Conseil en orientation professionnelle IA</h3>
+                    <p>Bilan de compétences IA, recommandations de métiers personnalisées et parcours de formation adaptés pour réussir votre reconver...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/orientation-professionnelle-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Recherche de biens immobiliers IA</h3>
+                    <p>Alertes immobilières intelligentes, scoring IA des biens, estimation de rentabilité locative et analyse de quartier pour invest...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 200€/mois</span>
+                        <a href="ideas/recherche-immobilier-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Diagnostic dermatologique IA</h3>
+                    <p>Photographiez votre problème de peau et obtenez une analyse IA instantanée avec recommandations de soins et orientation vers un...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~2 800€/mois</span>
+                        <a href="ideas/diagnostic-dermatologique-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="site-ia">
+                    <span class="badge badge-site-ia">Site IA</span>
+                    <h3>Aide aux devoirs IA</h3>
+                    <p>Photographiez un exercice et obtenez une résolution pas à pas par IA, avec cours adaptés au programme scolaire français et suiv...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/aide-devoirs-ia.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <!-- ===== NEW APP-WEB cards ===== -->
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion d'abonnements SaaS</h3>
+                    <p>Suivi centralisé de tous vos abonnements SaaS, facturation récurrente automatisée, analytics de churn et optimisation des dépen...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-abonnements-saas.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Feedback client</h3>
+                    <p>Collectez, analysez et agissez sur les retours clients avec des enquêtes NPS/CSAT automatisées, l'analyse de sentiments par IA ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/feedback-client.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de contenu multi-canaux</h3>
+                    <p>Publiez simultanément sur votre blog, vos réseaux sociaux et votre newsletter depuis une seule interface avec planification et ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-contenu-multicanaux.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de flotte véhicules</h3>
+                    <p>Gérez votre flotte automobile en temps réel : tracking GPS, planification maintenance, suivi des coûts par véhicule et gestion ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-flotte-vehicules.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion d'agence immobilière</h3>
+                    <p>Gérez vos biens, mandats, visites et contacts depuis une seule plateforme : CRM acquéreurs/vendeurs intégré, matching automatiq...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-agence-immobiliere.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Facturation et comptabilité PME</h3>
+                    <p>Facturez, établissez vos devis, suivez votre trésorerie et exportez vos écritures comptables depuis une interface moderne et in...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/facturation-comptabilite-pme.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de cabinet médical</h3>
+                    <p>Gérez votre cabinet médical de A à Z : agenda intelligent, dossiers patients sécurisés, ordonnances numériques et module de tél...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-cabinet-medical.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Planification d'événements</h3>
+                    <p>Organisez mariages, séminaires et événements sans stress : gestion des prestataires, suivi du budget, timeline et coordination ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/planification-evenements.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion d'école et crèche</h3>
+                    <p>Pilotez votre établissement scolaire ou crèche : inscriptions en ligne, pointage digital, communication parents et facturation ...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-ecole-creche.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de salle de sport</h3>
+                    <p>Gérez votre salle de sport en toute simplicité : abonnés, planning de cours, accès digital par QR code et encaissement automatisé.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-salle-sport.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Réservation d'espaces de coworking</h3>
+                    <p>Gérez votre espace de coworking : réservation de postes et salles de réunion, facturation automatique et animation de communauté.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/reservation-coworking.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de food truck</h3>
+                    <p>Pilotez votre food truck au quotidien : menus digitaux, commandes en ligne, gestion des stocks, planning d'emplacements et anal...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-food-truck.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion de salon de coiffure/beauté</h3>
+                    <p>Gérez votre salon de A à Z : agenda en ligne, fiches clients détaillées, programme de fidélité, stocks produits et caisse intég...</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-salon-beaute.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
+                    </div>
+                </article>
+
+                <article class="idea-card fade-in" data-category="app-web">
+                    <span class="badge badge-app-web">App Web</span>
+                    <h3>Gestion d'association</h3>
+                    <p>Gérez votre association simplement : adhérents, cotisations, événements, communication et comptabilité associative conforme.</p>
+                    <div class="idea-card-footer">
+                        <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+                        <a href="ideas/gestion-association.html" class="btn btn-primary btn-sm" data-i18n="ideas.card.view">Voir le projet →</a>
                     </div>
                 </article>
 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App web de planification d'événements — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="App web planification événements : mariages, events, prestataires, budget, timeline, coordination. MRR estimé ~3 000€/mois.">
+    <meta property="og:title" content="App web de planification d'événements — Cortex Studio">
+    <meta property="og:description" content="Organisez mariages, séminaires et événements sans stress : gestion des prestataires, suivi du budget, timeline et coordination le jour J.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Planification Événements</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-app-web">App Web</span>
+            <h1>App web de planification d'événements</h1>
+            <p class="hero-subtitle">Organisez mariages, séminaires et événements sans stress : gestion des prestataires, suivi du budget, timeline et coordination le jour J.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 000€/mois</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>Organiser un événement (mariage, séminaire, soirée d'entreprise) implique la coordination de 10 à 30 prestataires différents (traiteur, photographe, DJ, fleuriste, lieu, décorateur). La communication se fait par email, téléphone et SMS dans un chaos organisationnel où les informations sont dispersées et les oublis fréquents.</p>
+            <p>Le budget d'un mariage en France est en moyenne de 12 000 à 30 000€, et 65% des couples dépassent leur budget initial. Sans outil de suivi en temps réel, les petites dépenses s'accumulent invisiblement : un supplément ici, une option là, un imprévu — et la facture finale dépasse de 20 à 40% le budget prévu.</p>
+            <p>La timeline du jour J est le cauchemar de tout organisateur. Coordonner l'arrivée du traiteur à 14h, le photographe à 15h, la cérémonie à 16h et le DJ à 20h nécessite un planning minute par minute partagé avec tous les intervenants. Le moindre retard se répercute en cascade et la journée parfaitement planifiée peut basculer dans le chaos.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>L'application centralise toute l'organisation de l'événement dans un espace collaboratif. Le tableau de bord affiche l'avancement global, les tâches en retard, le budget consommé et les prochaines échéances. Les checklist thématiques (lieu, décoration, restauration, animation) guident l'organisateur étape par étape selon un planning type adapté au type d'événement.</p>
+            <p>Le module prestataires permet de gérer les devis, contrats et paiements pour chaque intervenant. Un annuaire de prestataires notés et vérifiés est intégré avec demande de devis en ligne. Le budget est suivi en temps réel avec catégorisation automatique des dépenses, alertes de dépassement et suggestions d'ajustement.</p>
+            <p>La timeline du jour J est un outil de coordination en temps réel partagé avec tous les prestataires. Chaque intervenant voit ses horaires, ses tâches et ses contacts. Des notifications automatiques sont envoyées 1h et 15min avant chaque intervention. L'organisateur suit le déroulement depuis son téléphone et peut communiquer instantanément avec chaque prestataire.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>Le modèle hybride propose un abonnement à 14,99€/mois pour les particuliers organisant leur événement (mariage, baptême) et un forfait par événement à 49,99€ pour les organisateurs professionnels et les entreprises. Ce pricing couvre les 6 à 18 mois de planification typiques d'un mariage.</p>
+            <p>Des revenus complémentaires viennent des prestataires référencés qui paient un abonnement de visibilité à 19,99€/mois et une commission de 5% sur chaque mise en relation concrétisée. Le modèle B2B pour les agences événementielles est proposé à 49,99€/mois avec gestion multi-événements.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>100 abonnés + 30 événements ponctuels</th>
+                        <th>200 abonnés + 60 événements ponctuels</th>
+                        <th>600 abonnés + 200 événements ponctuels</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>2 999€</td><td>5 999€</td><td>18 998€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>600€</td><td>1 200€</td><td>4 000€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>2 399€</td><td>4 799€</td><td>14 998€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>3 mois</td><td>2 mois</td><td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Tableau de bord d'avancement avec checklist par catégorie</li>
+                <li>Gestion des prestataires (devis, contrats, paiements, avis)</li>
+                <li>Budget en temps réel avec catégorisation et alertes de dépassement</li>
+                <li>Timeline du jour J partagée avec tous les intervenants</li>
+                <li>Annuaire de prestataires vérifiés avec demande de devis en ligne</li>
+                <li>Notifications automatiques de rappel pour chaque intervenant</li>
+                <li>Gestion des invités (RSVP, plan de table, restrictions alimentaires)</li>
+                <li>Espace collaboratif pour co-organisateurs</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">WebSocket</span>
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Twilio</span>
+                <span class="tech-badge">Google Calendar API</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-planification-evenements.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=app-web" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required>
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required>
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=app-web" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

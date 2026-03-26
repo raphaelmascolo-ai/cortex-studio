@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de recherche de biens immobiliers IA — Cortex Studio | Idée de projet IA</title>
+    <meta name="description" content="Site de recherche immobilier IA : alertes intelligentes, scoring biens, estimation rentabilité locative, analyse quartier. MRR estimé ~3 200€/mois.">
+    <meta property="og:title" content="Site de recherche de biens immobiliers IA — Cortex Studio">
+    <meta property="og:description" content="Alertes immobilières intelligentes, scoring IA des biens, estimation de rentabilité locative et analyse de quartier pour investisseurs et acquéreurs.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Cortex Studio" width="200" height="40">
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="../quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="../booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../index.html" data-i18n="idea.breadcrumb.home">Accueil</a>
+            <span>/</span>
+            <a href="../ideas.html" data-i18n="idea.breadcrumb.ideas">Idées</a>
+            <span>/</span>
+            <span>Recherche Immobilier IA</span>
+        </nav>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <span class="badge badge-site-ia">Site IA</span>
+            <h1>Site de recherche de biens immobiliers IA</h1>
+            <p class="hero-subtitle">Alertes immobilières intelligentes, scoring IA des biens, estimation de rentabilité locative et analyse de quartier pour investisseurs et acquéreurs.</p>
+            <span class="badge badge-mrr">MRR estimé : ~3 200€/mois</span>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.problem.title">Le problème</h2>
+            <p>La recherche immobilière est un processus épuisant qui dure en moyenne 7 mois en France. Les acheteurs consultent 3 à 5 sites d'annonces quotidiennement, visitent 15 à 20 biens et passent à côté des meilleures opportunités qui partent en quelques heures dans les marchés tendus. Les alertes email des sites classiques sont trop lentes et trop larges.</p>
+            <p>Évaluer objectivement un bien immobilier nécessite une expertise que la plupart des acheteurs n'ont pas. Le prix affiché est-il juste ? Le quartier va-t-il se valoriser ? Quels sont les projets urbains à proximité ? Quels coûts cachés (copropriété, travaux, taxe foncière) faut-il anticiper ? Sans ces informations, les acheteurs prennent des décisions à l'aveugle sur l'investissement le plus important de leur vie.</p>
+            <p>Pour les investisseurs locatifs, le calcul de rentabilité est un exercice complexe qui dépasse le simple rapport loyer/prix d'achat. La vacance locative, les charges non récupérables, la fiscalité (LMNP, SCI, Pinel), les frais de gestion et l'évolution prévisible du marché local doivent être intégrés. Les simulateurs existants sont trop simplistes pour être fiables.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.solution.title">La solution</h2>
+            <p>Le site agrège les annonces de tous les portails immobiliers et envoie des alertes instantanées dès qu'un bien correspondant aux critères précis de l'utilisateur est publié. L'IA va au-delà des filtres classiques : elle comprend des critères comme 'lumineux', 'calme', 'potentiel de rénovation' en analysant les photos et les descriptions.</p>
+            <p>Chaque bien est enrichi par un scoring IA multicritères : rapport qualité/prix par rapport au marché local, tendance du quartier (valorisation ou dépréciation), proximité des commerces/transports/écoles, projets urbains à venir, et estimation de la plus-value potentielle à 5 et 10 ans.</p>
+            <p>Pour les investisseurs, un simulateur de rentabilité avancé calcule le rendement net-net en intégrant tous les paramètres : frais d'acquisition, travaux estimés, charges de copropriété, taxe foncière, vacance locative prévisible, régime fiscal optimal et cash-flow mensuel. L'IA recommande les meilleurs biens d'investissement en fonction du profil fiscal de l'investisseur.</p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.monetization.title">Modèle de monétisation</h2>
+            <p>L'abonnement investisseur à 14,99€/mois offre les alertes instantanées, le scoring IA de chaque bien, le simulateur de rentabilité avancé et l'analyse de quartier. Ce prix est dérisoire comparé à l'enjeu financier : une bonne analyse permet d'économiser 10 000 à 50 000€ sur un achat.</p>
+            <p>Le modèle B2B propose aux agents immobiliers et mandataires un outil d'estimation et de scoring pour leurs propres biens à 49,99€/mois. La lead generation vers les courtiers en prêt immobilier et les notaires partenaires génère des revenus complémentaires.</p>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.projections.title">Projections financières</h2>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="idea.projections.metric">Métrique</th>
+                        <th>150 abonnés + leads partenaires</th>
+                        <th>300 abonnés + leads partenaires</th>
+                        <th>1 000 abonnés + leads partenaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="idea.projections.mrr">Revenu mensuel (MRR)</td>
+                        <td>3 249€</td><td>6 497€</td><td>19 990€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.costs">Coûts opérationnels</td>
+                        <td>700€</td><td>1 400€</td><td>4 500€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.profit">Bénéfice net</td>
+                        <td>2 549€</td><td>5 097€</td><td>15 490€</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="idea.projections.breakeven">Point de rentabilité</td>
+                        <td>3 mois</td><td>2 mois</td><td>1 mois</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.features.title">Fonctionnalités clés</h2>
+            <ul class="feature-list">
+                <li>Alertes immobilières instantanées multi-portails avec critères IA avancés</li>
+                <li>Scoring IA multicritères de chaque bien (prix, quartier, potentiel)</li>
+                <li>Simulateur de rentabilité locative net-net avec tous les paramètres</li>
+                <li>Analyse de quartier avec tendances, projets urbains et valorisation</li>
+                <li>Estimation de plus-value à 5 et 10 ans par analyse prédictive</li>
+                <li>Comparaison avec les ventes récentes dans le même secteur (DVF)</li>
+                <li>Recommandation du régime fiscal optimal (LMNP, SCI, Pinel)</li>
+                <li>Calcul de cash-flow mensuel et capacité d'emprunt intégrée</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-light fade-in">
+        <div class="container">
+            <h2 data-i18n="idea.stack.title">Stack technique recommandée</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Elasticsearch</span>
+                <span class="tech-badge">Google Maps API</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Redis</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <div class="container text-center">
+            <h2 data-i18n="idea.download.title">Obtenez le Business Plan complet</h2>
+            <p data-i18n="idea.download.desc">Projections financières détaillées, analyse de marché, stratégie d'acquisition et roadmap technique sur 18 mois.</p>
+            <button class="btn btn-primary" data-bp-url="../assets/business-plans/bp-recherche-immobilier-ia.html" data-i18n="idea.download.btn">Télécharger le Business Plan</button>
+        </div>
+    </section>
+
+    <section class="section section-cta fade-in" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);">
+        <div class="container text-center">
+            <h2 data-i18n="idea.cta.title">Prêt à lancer ce projet ?</h2>
+            <p data-i18n="idea.cta.desc" class="text-secondary">Notre équipe peut développer cette application pour vous.</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-primary" data-i18n="idea.cta.btn">Demander un devis</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
+                <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links.title">Liens rapides</h4>
+                <ul>
+                    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="../ideas.html" data-i18n="nav.ideas">Idées</a></li>
+                    <li><a href="../about.html" data-i18n="nav.about">À propos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.services.title">Services</h4>
+                <ul>
+                    <li><a href="../services.html#app-ia">Application IA</a></li>
+                    <li><a href="../services.html#auto-ia">Automatisation IA</a></li>
+                    <li><a href="../services.html#site-ia">Site IA</a></li>
+                    <li><a href="../services.html#app-web">Application Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact.title">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@cortex-studio.com">contact@cortex-studio.com</a></li>
+                    <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                    <li>Paris, France</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
+            <div>
+                <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2 data-i18n="modal.title">Télécharger le Business Plan</h2>
+        <p data-i18n="modal.subtitle">Recevez le business plan complet par email.</p>
+        <form class="modal-form" action="https://hook.eu2.make.com/4jqbd3xqouxrd050u21suijs55zxn4xv" method="POST">
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1">
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.firstname">Prénom</label>
+                <input type="text" name="firstName" class="form-input" required>
+                <span class="form-error">Ce champ est requis</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.email">Email</label>
+                <input type="email" name="email" class="form-input" required>
+                <span class="form-error">Email invalide</span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" data-i18n="modal.company">Entreprise (optionnel)</label>
+                <input type="text" name="company" class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Télécharger</button>
+        </form>
+        <div class="modal-success" style="display:none">
+            <h3 data-i18n="modal.success.title">Merci !</h3>
+            <p data-i18n="modal.success.desc">Votre business plan est prêt.</p>
+            <a class="btn btn-primary download-link" href="#" target="_blank" data-i18n="modal.success.download">Télécharger le PDF</a>
+            <p data-i18n="modal.success.cta">Vous souhaitez développer ce projet ?</p>
+            <a href="../quote.html?service=site-ia" class="btn btn-secondary" data-i18n="modal.success.cta.link">Demander un devis</a>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/translations.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

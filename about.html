@@ -25,87 +25,228 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
-        /* Team avatar */
-        .team-avatar {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 50%;
+        /* About-specific styles */
+        .about-hero-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .about-hero-wrapper .hero-video-wrap { position: absolute; inset: 0; z-index: 0; }
+        .about-hero-wrapper .hero-video { width: 100%; height: 100%; object-fit: cover; }
+        .about-hero-wrapper .hero-video-overlay {
+            position: absolute; inset: 0; z-index: 1;
+            background: linear-gradient(to bottom, rgba(7,19,37,0.4) 0%, rgba(7,19,37,0.6) 50%, rgba(7,19,37,0.85) 100%);
+        }
+        .about-hero {
+            min-height: 60vh;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #fff;
-            margin: 0 auto 1rem;
+            text-align: center;
+            padding-top: 72px;
+            z-index: 2;
+        }
+        .about-hero .container { position: relative; z-index: 3; }
+        .about-hero .about-logo-mark {
+            width: 80px; height: 80px;
+            margin: 0 auto 2rem;
+            opacity: 0.15;
+        }
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+        .about-hero .hero-lead {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--on-surface-variant);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Story section — split layout */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        .story-text p { line-height: 1.8; margin-bottom: 1.25rem; color: var(--on-surface-variant); }
+        .story-text p:last-child { margin-bottom: 0; }
+        .story-visual {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--surface-container);
+        }
+        .story-visual video {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .story-visual::after {
+            content: '';
+            position: absolute; inset: 0;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-xl);
+            pointer-events: none;
+        }
+
+        /* Mission banner */
+        .mission-banner {
+            position: relative;
+            padding: 5rem 2rem;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(77,142,255,0.08) 0%, transparent 50%, rgba(233,195,73,0.05) 100%);
+            border-top: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .mission-banner h2 {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            margin-bottom: 1rem;
+        }
+        .mission-banner p {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+        }
+        .mission-banner .mission-icon {
+            width: 48px; height: 48px;
+            margin: 0 auto 1.5rem;
+            color: var(--secondary);
+            opacity: 0.7;
+        }
+
+        /* Values */
+        .value-card {
+            padding: 2.5rem 2rem;
+            background: var(--surface-container-low);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .value-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.1);
+        }
+        .value-card .value-icon {
+            width: 40px; height: 40px;
+            color: var(--primary);
+            margin: 0 auto 1.25rem;
+            opacity: 0.8;
+        }
+        .value-card h3 { margin-bottom: 0.75rem; font-size: 1.125rem; }
+        .value-card p { font-size: 0.9rem; line-height: 1.7; color: var(--on-surface-variant); }
+
+        /* Team banner */
+        .team-banner {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem;
+            background: var(--surface-container-low);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-xl);
+        }
+        .team-banner-number {
+            font-size: clamp(4rem, 8vw, 6rem);
+            font-weight: 800;
+            font-family: var(--font-headline);
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: -0.03em;
             flex-shrink: 0;
         }
-        .avatar-1 { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
-        .avatar-2 { background: linear-gradient(135deg, #0ea5e9, #6366f1); }
-        .avatar-3 { background: linear-gradient(135deg, #10b981, #0ea5e9); }
+        .team-banner-text h2 { margin-bottom: 0.75rem; }
+        .team-banner-text p { color: var(--on-surface-variant); line-height: 1.7; font-size: 1rem; }
 
-        .team-card {
+        .team-skill-card {
             text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--surface-container-low);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: var(--radius-xl);
+            transition: transform 0.3s, border-color 0.3s;
         }
-        .team-card .team-role {
-            color: var(--color-primary, #6366f1);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .team-card .team-bio {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
+        .team-skill-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.1); }
+        .team-skill-icon { width: 32px; height: 32px; color: var(--primary); margin: 0 auto 1rem; opacity: 0.7; }
+        .team-skill-card h3 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+        .team-skill-card p { font-size: 0.8125rem; color: var(--on-surface-variant); line-height: 1.5; }
 
-        /* Stats grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-            text-align: center;
+        /* Story logo visual */
+        .story-logo-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--surface-container) 0%, var(--surface-container-high) 100%);
         }
-        .stat-item .stat-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-primary, #6366f1);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-        .stat-item .stat-label {
-            font-size: 0.9rem;
-            color: var(--color-text-secondary, #94a3b8);
-        }
-        @media (max-width: 768px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 480px) {
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        .story-logo-img {
+            width: 60%;
+            max-width: 240px;
+            height: auto;
+            opacity: 0.6;
+            filter: brightness(1.2);
         }
 
-        /* Mission block */
-        .mission-block {
-            background: var(--color-surface, #1e293b);
-            border-radius: 1rem;
-            padding: 3rem;
-            text-align: center;
-            max-width: 720px;
+        /* Stats section */
+        .about-stats {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 900px;
             margin: 0 auto;
         }
-        .mission-block h2 {
-            margin-bottom: 1rem;
+        .about-stat {
+            text-align: center;
+            padding: 2rem 3rem;
+            flex: 1;
+            position: relative;
+        }
+        .about-stat + .about-stat::before {
+            content: '';
+            position: absolute; left: 0; top: 25%; height: 50%;
+            width: 1px; background: var(--outline-variant);
+        }
+        .about-stat-number {
+            display: block;
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            font-weight: 800;
+            font-family: var(--font-headline);
+            color: var(--on-surface);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+        .about-stat-label {
+            font-size: 0.8125rem;
+            color: var(--on-surface-variant);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 767px) {
+            .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .story-visual { aspect-ratio: 16/9; }
+            .about-stats { flex-direction: column; align-items: center; }
+            .about-stat { padding: 1.25rem 2rem; }
+            .about-stat + .about-stat::before { display: none; }
+            .about-hero { min-height: 55vh; }
+            .team-banner { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2rem; }
+            .team-banner-number { font-size: 4rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
+<!-- HEADER -->
 <header class="header">
     <div class="container">
         <a href="index.html" class="logo">
@@ -116,13 +257,24 @@
                 <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
                 <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                 <li><a href="ideas.html" data-i18n="nav.ideas">Idées</a></li>
-                <li><a href="quote.html" data-i18n="nav.quote">Devis</a></li>
-                <li><a href="booking.html" data-i18n="nav.booking">RDV</a></li>
-                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-expanded="false"><span data-i18n="nav.more">Plus</span> <i data-lucide="chevron-down" class="nav-chevron"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-mobile-cta">
+                    <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+                    <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+                </li>
             </ul>
         </nav>
-        <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        <div class="header-actions">
+            <a href="quote.html" class="btn btn-header-outline" data-i18n="nav.cta.quote">Demander un devis</a>
+            <a href="booking.html" class="btn btn-header-primary" data-i18n="nav.cta.booking">Prendre un rendez-vous</a>
+            <button class="lang-toggle" onclick="switchLanguage()">EN</button>
+        </div>
         <button class="burger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -132,24 +284,67 @@
 <main>
 
     <!-- ============================================================
-         HERO MINI
+         HERO — Video background + logo
          ============================================================ -->
-    <section class="hero-mini" aria-label="En-tête de la page À propos">
-        <div class="container text-center">
-            <h1 data-i18n="about.title">Notre histoire</h1>
-            <p class="text-secondary" data-i18n="about.subtitle">Une équipe passionnée qui met l'IA au service de votre croissance.</p>
+    <div class="about-hero-wrapper">
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
         </div>
-    </section>
+
+        <!-- Hero title -->
+        <section class="about-hero">
+            <div class="container">
+                <img src="assets/images/logo.svg" alt="" class="about-logo-mark" aria-hidden="true">
+                <h1 class="fade-in" data-i18n="about.title">Nous construisons le futur avec l'IA</h1>
+                <p class="hero-lead fade-in" data-i18n="about.subtitle">Une equipe d'experts passionnes qui transforme les idees ambitieuses en solutions intelligentes et rentables.</p>
+            </div>
+        </section>
+
+        <!-- Stats bar — still inside video wrapper -->
+        <div class="container" style="position: relative; z-index: 2; padding-bottom: 4rem;">
+            <div class="about-stats fade-in">
+                <div class="about-stat">
+                    <span class="about-stat-number">+500</span>
+                    <span class="about-stat-label">Clients</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-number">+1&nbsp;000</span>
+                    <span class="about-stat-label">Projets finalisés</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-number">98%</span>
+                    <span class="about-stat-label">Taux de satisfaction</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-number">120M</span>
+                    <span class="about-stat-label">Utilisateurs cumulés</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-number" style="color: var(--secondary);">1&nbsp;sem.</span>
+                    <span class="about-stat-label">V1 livrée</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================================
-         STORY
+         STORY — Split layout with video
          ============================================================ -->
     <section class="section" aria-labelledby="story-heading">
         <div class="container">
-            <h2 id="story-heading" class="text-center fade-in" data-i18n="about.story.title">Notre parcours</h2>
-            <div style="max-width: 760px; margin: 2rem auto 0; line-height: 1.8;">
-                <p class="fade-in" data-i18n="about.story.p1">Fondé en 2022, Cortex Studio est né de la conviction que l'intelligence artificielle ne devrait pas être réservée aux grandes entreprises. Nous avons vu trop de PME et de startups passer à côté de cette révolution technologique, faute d'un partenaire accessible et de confiance.</p>
-                <p class="fade-in" style="margin-top: 1.5rem;" data-i18n="about.story.p2">Depuis nos débuts, nous avons accompagné plus de 50 entreprises dans leur transformation IA — des startups en phase d'amorçage jusqu'aux ETI souhaitant automatiser leurs processus. Chaque projet est pour nous l'occasion de créer de la valeur réelle et mesurable.</p>
+            <div class="story-grid">
+                <div class="story-text fade-in">
+                    <h2 id="story-heading" data-i18n="about.story.title">Notre parcours</h2>
+                    <p data-i18n="about.story.p1">Cortex Studio est né d'une conviction simple : l'intelligence artificielle ne devrait pas être un privilège réservé aux géants de la tech. Trop de PME, startups et entrepreneurs passent à côté de cette révolution faute d'un partenaire accessible et fiable.</p>
+                    <p data-i18n="about.story.p2">Depuis nos débuts, nous avons accompagné plus de 500 entreprises dans leur transformation IA — des startups en phase d'amorçage aux ETI souhaitant automatiser leurs processus. Chaque projet est l'occasion de créer de la valeur réelle, mesurable et durable.</p>
+                    <p>Notre approche est pragmatique : nous ne vendons pas de la technologie pour la technologie. Nous concevons des solutions qui génèrent du revenu, font gagner du temps et donnent un avantage concurrentiel tangible à nos clients.</p>
+                </div>
+                <div class="story-visual fade-in">
+                    <img src="assets/images/about-story.svg" alt="Cortex Studio - Notre histoire" style="width:100%;height:100%;object-fit:cover;">
+                </div>
             </div>
         </div>
     </section>
@@ -157,12 +352,11 @@
     <!-- ============================================================
          MISSION
          ============================================================ -->
-    <section class="section section-light" aria-labelledby="mission-heading">
+    <section class="mission-banner fade-in" aria-labelledby="mission-heading">
         <div class="container">
-            <div class="mission-block fade-in">
-                <h2 id="mission-heading" data-i18n="about.mission.title">Notre mission</h2>
-                <p data-i18n="about.mission.desc">Rendre l'intelligence artificielle accessible, rentable et compréhensible pour toutes les entreprises, quelle que soit leur taille ou leur secteur d'activité.</p>
-            </div>
+            <i data-lucide="target" class="mission-icon"></i>
+            <h2 id="mission-heading" data-i18n="about.mission.title">Notre mission</h2>
+            <p data-i18n="about.mission.desc">Rendre l'intelligence artificielle accessible, rentable et compréhensible pour toutes les entreprises — quelle que soit leur taille, leur secteur ou leur niveau technique. Nous croyons qu'une bonne idée mérite une bonne exécution.</p>
         </div>
     </section>
 
@@ -172,33 +366,26 @@
     <section class="section" aria-labelledby="values-heading">
         <div class="container">
             <h2 id="values-heading" class="text-center fade-in" data-i18n="about.values.title">Nos valeurs</h2>
+            <p class="text-center text-secondary fade-in" style="margin-bottom: 2.5rem;">Ce qui guide chacune de nos décisions</p>
 
-            <div class="grid-3" style="margin-top: 2.5rem;">
-
-                <article class="card fade-in" style="text-align:center;">
-                    <div class="card-icon" aria-hidden="true">
-                        <i data-lucide="lightbulb"></i>
-                    </div>
+            <div class="grid-3">
+                <article class="value-card fade-in">
+                    <i data-lucide="zap" class="value-icon"></i>
                     <h3 data-i18n="about.value1.title">Innovation</h3>
-                    <p data-i18n="about.value1.desc">Nous explorons constamment les dernières avancées en IA pour proposer des solutions à la pointe de la technologie.</p>
+                    <p data-i18n="about.value1.desc">Nous explorons constamment les dernières avancées en IA pour proposer des solutions à la pointe, pas des gadgets — de la valeur réelle.</p>
                 </article>
 
-                <article class="card fade-in" style="text-align:center;">
-                    <div class="card-icon" aria-hidden="true">
-                        <i data-lucide="award"></i>
-                    </div>
+                <article class="value-card fade-in">
+                    <i data-lucide="shield-check" class="value-icon"></i>
                     <h3 data-i18n="about.value2.title">Excellence</h3>
-                    <p data-i18n="about.value2.desc">Chaque livrable est soigné, testé et documenté. Nous ne livrons que ce dont nous sommes fiers.</p>
+                    <p data-i18n="about.value2.desc">Chaque livrable est soigné, testé et documenté. Nous ne livrons que ce dont nous sommes fiers — et que vous serez fier de montrer.</p>
                 </article>
 
-                <article class="card fade-in" style="text-align:center;">
-                    <div class="card-icon" aria-hidden="true">
-                        <i data-lucide="eye"></i>
-                    </div>
+                <article class="value-card fade-in">
+                    <i data-lucide="eye" class="value-icon"></i>
                     <h3 data-i18n="about.value3.title">Transparence</h3>
-                    <p data-i18n="about.value3.desc">Communication claire, tarifs lisibles et reporting régulier. Vous savez toujours où en est votre projet.</p>
+                    <p data-i18n="about.value3.desc">Communication claire, tarifs lisibles, reporting régulier. Vous savez toujours où en est votre projet et combien il coûte.</p>
                 </article>
-
             </div>
         </div>
     </section>
@@ -206,65 +393,37 @@
     <!-- ============================================================
          TEAM
          ============================================================ -->
-    <section class="section section-light" aria-labelledby="team-heading">
+    <section class="section" style="background: var(--surface-dim);" aria-labelledby="team-heading">
         <div class="container">
-            <h2 id="team-heading" class="text-center fade-in" data-i18n="about.team.title">Notre équipe</h2>
-
-            <div class="grid-3" style="margin-top: 2.5rem;">
-
-                <article class="card team-card fade-in">
-                    <div class="team-avatar avatar-1" aria-hidden="true">AL</div>
-                    <h3 data-i18n="about.team1.name">Alexandre Leclerc</h3>
-                    <p class="team-role" data-i18n="about.team1.role">Co-fondateur & CEO</p>
-                    <p class="team-bio" data-i18n="about.team1.bio">Expert en IA et machine learning, Alexandre pilote la vision produit et la stratégie de Cortex Studio.</p>
-                </article>
-
-                <article class="card team-card fade-in">
-                    <div class="team-avatar avatar-2" aria-hidden="true">CM</div>
-                    <h3 data-i18n="about.team2.name">Camille Moreau</h3>
-                    <p class="team-role" data-i18n="about.team2.role">Co-fondatrice & CTO</p>
-                    <p class="team-bio" data-i18n="about.team2.bio">Ingénieure full-stack spécialisée en LLM et automatisation, Camille supervise l'architecture technique de nos projets.</p>
-                </article>
-
-                <article class="card team-card fade-in">
-                    <div class="team-avatar avatar-3" aria-hidden="true">NB</div>
-                    <h3 data-i18n="about.team3.name">Nicolas Bernard</h3>
-                    <p class="team-role" data-i18n="about.team3.role">Lead Designer & UX</p>
-                    <p class="team-bio" data-i18n="about.team3.bio">Nicolas conçoit des interfaces intuitives qui rendent les outils IA accessibles à tous les utilisateurs.</p>
-                </article>
-
+            <div class="team-banner fade-in">
+                <div class="team-banner-number">42</div>
+                <div class="team-banner-text">
+                    <h2 id="team-heading">professionnels à votre service</h2>
+                    <p>Développeurs IA, data scientists, designers UX, chefs de projet et experts métier — une équipe pluridisciplinaire qui couvre l'ensemble de la chaîne de valeur, de l'idée au déploiement.</p>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ============================================================
-         STATS
-         ============================================================ -->
-    <section class="section" aria-labelledby="stats-heading">
-        <div class="container">
-            <h2 id="stats-heading" class="text-center fade-in" data-i18n="about.stats.title">Cortex Studio en chiffres</h2>
-            <div class="stats-grid fade-in">
-
-                <div class="stat-item">
-                    <div class="stat-value" data-i18n="about.stats.projects.value">50+</div>
-                    <div class="stat-label" data-i18n="about.stats.projects">Projets réalisés</div>
+            <div class="grid-4" style="margin-top: 3rem;">
+                <div class="team-skill-card fade-in">
+                    <i data-lucide="brain" class="team-skill-icon"></i>
+                    <h3>12</h3>
+                    <p>Ingénieurs IA & Data Scientists</p>
                 </div>
-
-                <div class="stat-item">
-                    <div class="stat-value" data-i18n="about.stats.clients.value">30+</div>
-                    <div class="stat-label" data-i18n="about.stats.clients">Clients satisfaits</div>
+                <div class="team-skill-card fade-in">
+                    <i data-lucide="code-2" class="team-skill-icon"></i>
+                    <h3>14</h3>
+                    <p>Développeurs Full-Stack</p>
                 </div>
-
-                <div class="stat-item">
-                    <div class="stat-value" data-i18n="about.stats.satisfaction.value">98%</div>
-                    <div class="stat-label" data-i18n="about.stats.satisfaction">Taux de satisfaction</div>
+                <div class="team-skill-card fade-in">
+                    <i data-lucide="palette" class="team-skill-icon"></i>
+                    <h3>8</h3>
+                    <p>Designers UX/UI</p>
                 </div>
-
-                <div class="stat-item">
-                    <div class="stat-value" data-i18n="about.stats.experience.value">4+</div>
-                    <div class="stat-label" data-i18n="about.stats.experience">Années d'expérience</div>
+                <div class="team-skill-card fade-in">
+                    <i data-lucide="briefcase" class="team-skill-icon"></i>
+                    <h3>8</h3>
+                    <p>Chefs de projet & Stratèges</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -285,20 +444,14 @@
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-
-            <!-- Brand -->
             <div class="footer-col">
                 <img src="assets/images/logo.svg" alt="Cortex Studio" width="160" height="32">
                 <p data-i18n="footer.tagline">L'intelligence artificielle au service de votre croissance.</p>
             </div>
-
-            <!-- Quick links -->
             <div class="footer-col">
                 <h4 data-i18n="footer.links.title">Liens rapides</h4>
                 <ul>
@@ -308,8 +461,6 @@
                     <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
                 </ul>
             </div>
-
-            <!-- Services -->
             <div class="footer-col">
                 <h4 data-i18n="footer.services.title">Services</h4>
                 <ul>
@@ -319,8 +470,6 @@
                     <li><a href="services.html#app-web" data-i18n="services.app-web.title">Application Web</a></li>
                 </ul>
             </div>
-
-            <!-- Contact -->
             <div class="footer-col">
                 <h4 data-i18n="footer.contact.title">Contact</h4>
                 <ul>
@@ -334,11 +483,9 @@
                     <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
                 </div>
             </div>
-
         </div>
-
         <div class="footer-bottom">
-            <p data-i18n="footer.copyright">© 2026 Cortex Studio. Tous droits réservés.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Cortex Studio. Tous droits réservés.</p>
             <div>
                 <a href="#" data-i18n="footer.legal">Mentions légales</a>
                 <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>

@@ -63,33 +63,33 @@ function handleModalSubmit(e) {
 
   if (!valid) return;
 
-  // Submit to Formspree
+  // Submit to Make webhook
   const formData = new FormData(form);
+  const jsonData = {};
+  formData.forEach((value, key) => { if (key !== '_gotcha') jsonData[key] = value; });
+  jsonData.source = 'business-plan';
+  jsonData.page = window.location.pathname;
+  jsonData.timestamp = new Date().toISOString();
 
   fetch(form.action, {
     method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+    body: JSON.stringify(jsonData),
+    headers: { 'Content-Type': 'application/json' },
+    mode: 'no-cors'
   })
-  .then(response => {
-    if (response.ok) {
-      // Show success state
-      form.style.display = 'none';
-      const success = modal.querySelector('.modal-success');
-      if (success) {
-        success.style.display = 'block';
-        // Set download link
-        const downloadLink = success.querySelector('.download-link');
-        if (downloadLink) {
-          downloadLink.href = modal.dataset.bpUrl;
-        }
+  .then(() => {
+    // Show success state
+    form.style.display = 'none';
+    const success = modal.querySelector('.modal-success');
+    if (success) {
+      success.style.display = 'block';
+      const downloadLink = success.querySelector('.download-link');
+      if (downloadLink) {
+        downloadLink.href = modal.dataset.bpUrl;
       }
-    } else {
-      throw new Error('Form submission failed');
     }
   })
-  .catch(error => {
-    // Show inline error
+  .catch(() => {
     const errorEl = form.querySelector('.form-submit-error');
     if (errorEl) errorEl.style.display = 'block';
   });
