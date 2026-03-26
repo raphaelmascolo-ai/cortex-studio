@@ -85,22 +85,19 @@
             color: var(--on-surface-variant);
         }
 
-        /* Connector arrows between steps */
+        /* Steps grid — simple 3 columns centered */
         .steps-grid {
             display: grid;
-            grid-template-columns: 1fr auto 1fr auto 1fr;
-            gap: 1rem;
-            align-items: center;
-        }
-        .step-arrow {
-            color: var(--outline-variant);
-            opacity: 0.4;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
         @media (max-width: 768px) {
             .steps-grid {
                 grid-template-columns: 1fr;
+                max-width: 400px;
             }
-            .step-arrow { display: none; }
         }
 
         /* Calendly */
@@ -208,7 +205,6 @@
                     <p data-i18n="booking.step1.desc">Sélectionnez le jour et l'heure qui vous conviennent dans le calendrier ci-dessous.</p>
                 </article>
 
-                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
 
                 <article class="step-card fade-in">
                     <span class="step-number-badge">2</span>
@@ -217,7 +213,6 @@
                     <p data-i18n="booking.step2.desc">Quelques mots sur votre idée et vos objectifs pour préparer un échange productif.</p>
                 </article>
 
-                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
 
                 <article class="step-card fade-in">
                     <span class="step-number-badge">3</span>
